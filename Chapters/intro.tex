@@ -1,8 +1,97 @@
-\myChapter{Introduzione}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula et risus et lacinia. Donec sollicitudin, justo non aliquet sodales, dolor turpis rutrum justo, in lacinia dui est sit amet diam. Donec sed porttitor turpis, a mattis lectus. Sed finibus convallis venenatis. Curabitur dignissim lorem ornare augue iaculis convallis. Suspendisse ligula felis, cursus sed fringilla at, gravida eget elit. In vestibulum fringilla diam sed interdum. Nam consectetur, urna sed sagittis lobortis, magna sem condimentum elit, maximus commodo orci ex a tellus. Morbi volutpat imperdiet ante ac ultricies. 
-
-%\section{prova}
-%Maecenas auctor ex neque, nec imperdiet ex accumsan a. Duis convallis turpis non ante posuere ullamcorper. Sed vulputate sem eu lacus egestas sollicitudin. Suspendisse vulputate volutpat consectetur. Cras pulvinar tortor vitae mauris convallis tristique. Maecenas volutpat fermentum ante porta pulvinar. Praesent lectus eros, tristique in diam quis, varius sagittis lectus. Vivamus ac consectetur ex. Fusce ultricies vel eros eget tristique. Vestibulum aliquam ipsum vitae aliquet gravida. Aliquam convallis, neque tempus cursus efficitur, enim elit gravida nisl, vel rhoncus sapien urna eu nisi. Sed gravida diam vitae malesuada semper. 
-
-%\section{Foo}
-%Phasellus vel tempus mauris, a porttitor lectus. Maecenas malesuada eros quis risus eleifend imperdiet. Nam gravida iaculis enim ut dictum. In hac habitasse platea dictumst. Vestibulum congue blandit urna non commodo. Proin id lobortis augue, sit amet fermentum urna. Etiam lobortis nulla vitae mollis ullamcorper. Donec sed luctus eros. In hac habitasse platea dictumst. Nullam auctor pretium quam eget commodo. Aliquam lacus quam, faucibus vitae cursus eu, semper id urna. Nunc egestas sed sem in aliquet. Suspendisse vulputate sodales urna. Cras non nulla at orci laoreet eleifend in et nisl. 
+\chapter{Introduzione}
+Lo scopo di questa introduzione \'e quello di introdurre i principali algoritmi di ordinamento che utilizzano sorting devices, in particolare stack-sort,
+queue-sort e bubble sort. Durante l'eseguzione questi algoritmi possono 
+salvare gli elementi in uno specifico contenitore (la diversa struttura 
+adottata definise i diversi algoritmi) dalla quale poi vengono prelevati
+per essere aggiunti all'output.\\
+Una sola iterazione non garantisce l'ordinamento della permutazione,
+dunque gli algoritmi devono essere iterati pi\'u volte, ogni volta sul risultato della iterazione precedente. In ogni caso alla fine delle i-esima
+iterazione i maggiori $i$ elementi avranno raggiunto la loro posizione finale, 
+dunque sono necessari al massimo $n-1$ iterazioni per ordinare la permutazione.
+\\\\L'oggetto di studio di questa tesi \'e la ricerca di condizioni che, per un
+algoritmo fissato, indicano che la permutazione \'e ordinabile con una sola
+iterazione, in particolare quando pi\'u algoritmi vengono concatenati.
+\\\\
+Essendo interessati al comportamento di una sola iterazione di questi
+algoritmi non si esaminer\'a tanto la consueta procedura di ordinamento,
+ma piuttoso un operatore, definito appositamente per ogni algoritmo, che
+descrive la singola iterazione. 
+Ad esempio, prendendo l'algoritmo bubble-sort si far\'a riferimento all'operatore $B(\pi)$, dove $\pi$ \'e una permutazione di
+interi, tale che n iterazioni del bubble-sort possano essere rappresentate
+da $B^n(\pi) = B(\dots B(\pi)\dots)$.
+\section*{Bubble sort}
+L'algoritmo di ordinamento bubble-sort prevede di scorrere gli elementi da 
+ordinare dal primo al penultimo, ed ogni volta confrontare ogni elemento 
+con il suo successivo per scambiarli se non sono ordinati.\\
+Il risultato si una singola iterazione di bubble-sort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \'e calcolato dall'operatore $B(\pi)$.
+\begin{algorithm}[H]
+   \caption{operatore B - bubble sort, single iteration }
+\begin{algorithmic}
+   \For{$i=1$ {\bfseries to} $n-1$}
+   \If{$\pi_i > \pi_{i+1}$} 
+   \State Swap $\pi_i$ and $\pi_{i+1}$
+   \EndIf
+   \EndFor
+\end{algorithmic}
+\end{algorithm}
+\section*{Stack sort}
+L'operatore $S(\pi)$ il risultato ottenuto applicando stack sort su una permutazione $\pi$.\\
+Il primo passo consiste nell'inserire $\pi_1$ nella pila. Poi lo si confronta con l'elemento $\pi_2$. Se $\pi_1>\pi_2$ allora il secondo viene messo nella pila sopra $\pi_1$, altrimenti $\pi_1$ viene estratto dalla pila e inserito nell'output e $\pi_2$ viene inserito nella pila.\\
+Gli stessi passi vengono eseguiti per tutti gli altri elementi presenti nell'input, se viene trovato un elemento nell'input maggiore dell'elemento in cima alla pila, la pila viene svuotata finchè questa condizione non diviene falsa, poi l'elemento viene spinto nella pila.\\
+Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.
+\begin{algorithm}[H]
+   \caption{operatore S - stack sort, single iteration }
+\begin{algorithmic}
+\State initialize an empty stack
+   \For{$i=1$ {\bfseries to} $n-1$}
+   \While{ unempty stack \textbf{and} $\pi_i>$peek}
+   \State pop the stack in the output
+   \EndWhile
+   \State push($\pi_i$)
+   \EndFor
+   \State emtpy the stack in the output
+\end{algorithmic}
+\end{algorithm}
+\section*{Queue sort}
+Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output.
+Si svuota la coda nell'output. 
+\begin{algorithm}[H]
+   \caption{operatore Q - queue sort, single iteration }
+\begin{algorithmic}
+\State initialize an empty queue
+\For{$i=1$ {\bfseries to} $n-1$}
+\If{empty queue \textbf{or} last in queue $<\pi_i$}
+\State enqueue($\pi_i$)
+\Else
+\While{first in queue $<\pi_i$}
+\State dequeue($\pi_i$)
+\EndWhile
+\State add $\pi_i$ to the output
+\EndIf
+\EndFor
+\State emtpy the queue in the output
+\end{algorithmic}
+\end{algorithm}
+\paragraph*{Osservazione}\textit{Bubble sort} \'e un caso particolare sia di \textit{queue sort} che di \textit{stack sort}.\\
+Se infatti si fissa a 1 la dimensione della pila o della coda dei rispettivi operatori il comportamento che questi assumono \'e quello di una cella che, scorrendo l'input, contiene sempre il massimo valore trovato, mentre gli altri vengono messi nell'output.
+\paragraph*{Contenitori POP}Un caso di studio interessante \'e quello in cui i contenitori di stack sort e queue sort vengano sostituiti dalla loro versione POP, cio\'e che quando viene eseguita un estrazione il contenitore viene svuotato completamente. 
+\paragraph*{Bypass}Nel queue sort si pu\'o osservare che a volte gli elementi vengono spostati direttamente dall'input all'output, senza passare dalla coda. Questa operazione \'e detta \textit{bypass} e pu\'o essere introdotta anche negli altri algoritmi.
+\section*{Classi di pattern}
+Si introduce una notazione per descrivere certi pattern nella permutazione:
+\paragraph*{pattern 231}Se gli elementi ${a,b,c}$ tali che $a<b<c$ compaiono nella permutazione in modo che $b$ precede $c$ e $c$ precede $a$ si dice che $\pi$ contiene un pattern 231.\\\\
+\'E noto in letteratura che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\
+Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatoro descritti precedentemente.
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+\textbf{Operatore} & \textbf{Pattern da evitare per l'oridnabilit\'a} \\ 
+\hline
+Satck sort & 231\\ 
+Queue sort & 321 \\ 
+Bubble sort & 231,321 \\ 
+Pop-stack sort & 231,312\\ 
+Pop-queue sort& 321,2413\\ 
+Pop-stack sort con bypass &231,4213 \\ 
+\hline
+\end{tabular}
+\end{center}

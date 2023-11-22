@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  20 NOV 2023 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  23 NOV 2023 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -431,12 +431,48 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \backup@length=\skip77
 \ar@cellbox=\box66
 ))
-(./dia-classicthesis-ldpkg.sty
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count313
+\float@exts=\toks26
+\float@box=\box67
+\@float@everytoks=\toks27
+\@floatcapt=\box68
+)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count314
+)
+(/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count315
+\c@ALG@rem=\count316
+\c@ALG@nested=\count317
+\ALG@tlm=\skip78
+\ALG@thistlm=\skip79
+\c@ALG@Lnr=\count318
+\c@ALG@blocknr=\count319
+\c@ALG@storecount=\count320
+\c@ALG@tmpcounter=\count321
+\ALG@tmplength=\skip80
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./dia-classicthesis-ldpkg.sty
 Package: dia-classicthesis-ldpkg 2008/10/01 v2.5 Package Loader for Classic The
 sis Style
- (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
@@ -449,8 +485,8 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen175
 \TX@target=\dimen176
 \TX@delta=\dimen177
-\TX@cols=\count313
-\TX@ftn=\toks26
+\TX@cols=\count322
+\TX@ftn=\toks29
 )
 (/usr/share/texmf-dist/tex/latex/mparhack/mparhack.sty
 Package: mparhack 2021-05-02 v1.5 (T. Sgouros and S. Ulrich)
@@ -476,14 +512,14 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count314
-\decimalpart=\count315
+\integerpart=\count323
+\decimalpart=\count324
 )
 Package: xstring 2023/01/14 v1.85 String manipulations (CT)
 )
-\AC@clearlist=\toks27
+\AC@clearlist=\toks30
 )
-\c@dummy=\count316
+\c@dummy=\count325
 
 (/usr/share/texmf-dist/tex/latex/carlisle/remreset.sty
 
@@ -556,11 +592,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count317
+\c@section@level=\count326
 )
 \@linkdim=\dimen178
-\Hy@linkcounter=\count318
-\Hy@pagecounter=\count319
+\Hy@linkcounter=\count327
+\Hy@pagecounter=\count328
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
@@ -573,7 +609,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count320
+\Hy@SavedSpaceFactor=\count329
 
 (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -611,7 +647,7 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 ))
-\c@Hy@tempcnt=\count321
+\c@Hy@tempcnt=\count330
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -623,7 +659,7 @@ LaTeX Info: Redefining \url on input line 4763.
 (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count322
+\Fld@menulength=\count331
 \Field@Width=\dimen180
 \Fld@charsize=\dimen181
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -638,16 +674,16 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count323
-\c@Item=\count324
+\Hy@abspage=\count332
+\c@Item=\count333
 )
 Package hyperref Info: Driver: hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
-\Fld@listcount=\count325
-\c@bookmark@seq@number=\count326
-\Hy@SectionHShift=\skip78
+\Fld@listcount=\count334
+\c@bookmark@seq@number=\count335
+\Hy@SectionHShift=\skip81
 )
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -706,24 +742,24 @@ Package: eulervm 2005/01/11 v4.0 (WaS)
 )
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks28
-\MT@tempbox=\box67
-\MT@count=\count327
+\MT@toks=\toks31
+\MT@tempbox=\box69
+\MT@count=\count336
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks29
+\MT@prot@toks=\toks32
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
 \MT@outer@kern=\dimen184
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count328
+\MT@listname@count=\count337
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 902.
 LaTeX Info: Redefining \lslig on input line 902.
-\MT@outer@space=\skip79
+\MT@outer@space=\skip82
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -760,12 +796,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen192
 \cmidrulekern=\dimen193
 \defaultaddspace=\dimen194
-\@cmidla=\count329
-\@cmidlb=\count330
+\@cmidla=\count338
+\@cmidlb=\count339
 \@aboverulesep=\dimen195
 \@belowrulesep=\dimen196
-\@thisruleclass=\count331
-\@lastruleclass=\count332
+\@thisruleclass=\count340
+\@lastruleclass=\count341
 \@thisrulewidth=\dimen197
 )
 (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
@@ -777,23 +813,23 @@ Package: soul 2023-02-18 v3.0 Permit use of UTF-8 characters in soul (HO)
 
 (/usr/share/texmf-dist/tex/generic/soul/soul-ori.sty
 Package: soul-ori 2023-02-18 v3.0 letterspacing/underlining (mf)
-\SOUL@word=\toks30
-\SOUL@lasttoken=\toks31
-\SOUL@syllable=\toks32
-\SOUL@cmds=\toks33
-\SOUL@buffer=\toks34
-\SOUL@token=\toks35
+\SOUL@word=\toks33
+\SOUL@lasttoken=\toks34
+\SOUL@syllable=\toks35
+\SOUL@cmds=\toks36
+\SOUL@buffer=\toks37
+\SOUL@token=\toks38
 \SOUL@syllgoal=\dimen198
 \SOUL@syllwidth=\dimen199
 \SOUL@charkern=\dimen256
 \SOUL@hyphkern=\dimen257
 \SOUL@dimen=\dimen258
 \SOUL@dimeni=\dimen259
-\SOUL@minus=\count333
-\SOUL@comma=\count334
-\SOUL@apo=\count335
-\SOUL@grave=\count336
-\SOUL@spaceskip=\skip80
+\SOUL@minus=\count342
+\SOUL@comma=\count343
+\SOUL@apo=\count344
+\SOUL@grave=\count345
+\SOUL@spaceskip=\skip83
 \SOUL@ttwidth=\dimen260
 \SOUL@uldp=\dimen261
 \SOUL@ulht=\dimen262
@@ -847,12 +883,12 @@ esformat
 
 (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box68
-\beforetitleunit=\skip81
-\aftertitleunit=\skip82
+\ttl@box=\box70
+\beforetitleunit=\skip84
+\aftertitleunit=\skip85
 \ttl@plus=\dimen263
 \ttl@minus=\dimen264
-\ttl@toksa=\toks36
+\ttl@toksa=\toks39
 \titlewidth=\dimen265
 \titlewidthlast=\dimen266
 \titlewidthfirst=\dimen267
@@ -902,56 +938,56 @@ Class scrbook Warning: Usage of package `tocloft' together
 (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip83
-\cftbeforetoctitleskip=\skip84
-\cftaftertoctitleskip=\skip85
-\cftbeforepartskip=\skip86
-\cftpartnumwidth=\skip87
-\cftpartindent=\skip88
-\cftbeforechapskip=\skip89
-\cftchapindent=\skip90
-\cftchapnumwidth=\skip91
-\cftbeforesecskip=\skip92
-\cftsecindent=\skip93
-\cftsecnumwidth=\skip94
-\cftbeforesubsecskip=\skip95
-\cftsubsecindent=\skip96
-\cftsubsecnumwidth=\skip97
-\cftbeforesubsubsecskip=\skip98
-\cftsubsubsecindent=\skip99
-\cftsubsubsecnumwidth=\skip100
-\cftbeforeparaskip=\skip101
-\cftparaindent=\skip102
-\cftparanumwidth=\skip103
-\cftbeforesubparaskip=\skip104
-\cftsubparaindent=\skip105
-\cftsubparanumwidth=\skip106
-\cftbeforeloftitleskip=\skip107
-\cftafterloftitleskip=\skip108
-\cftbeforefigskip=\skip109
-\cftfigindent=\skip110
-\cftfignumwidth=\skip111
-\cftbeforelottitleskip=\skip112
-\cftafterlottitleskip=\skip113
-\cftbeforetabskip=\skip114
-\cfttabindent=\skip115
-\cfttabnumwidth=\skip116
-\cftbeforesubfigskip=\skip117
-\cftsubfigindent=\skip118
-\cftsubfignumwidth=\skip119
-\cftbeforesubtabskip=\skip120
-\cftsubtabindent=\skip121
-\cftsubtabnumwidth=\skip122
+\cftparskip=\skip86
+\cftbeforetoctitleskip=\skip87
+\cftaftertoctitleskip=\skip88
+\cftbeforepartskip=\skip89
+\cftpartnumwidth=\skip90
+\cftpartindent=\skip91
+\cftbeforechapskip=\skip92
+\cftchapindent=\skip93
+\cftchapnumwidth=\skip94
+\cftbeforesecskip=\skip95
+\cftsecindent=\skip96
+\cftsecnumwidth=\skip97
+\cftbeforesubsecskip=\skip98
+\cftsubsecindent=\skip99
+\cftsubsecnumwidth=\skip100
+\cftbeforesubsubsecskip=\skip101
+\cftsubsubsecindent=\skip102
+\cftsubsubsecnumwidth=\skip103
+\cftbeforeparaskip=\skip104
+\cftparaindent=\skip105
+\cftparanumwidth=\skip106
+\cftbeforesubparaskip=\skip107
+\cftsubparaindent=\skip108
+\cftsubparanumwidth=\skip109
+\cftbeforeloftitleskip=\skip110
+\cftafterloftitleskip=\skip111
+\cftbeforefigskip=\skip112
+\cftfigindent=\skip113
+\cftfignumwidth=\skip114
+\cftbeforelottitleskip=\skip115
+\cftafterlottitleskip=\skip116
+\cftbeforetabskip=\skip117
+\cfttabindent=\skip118
+\cfttabnumwidth=\skip119
+\cftbeforesubfigskip=\skip120
+\cftsubfigindent=\skip121
+\cftsubfignumwidth=\skip122
+\cftbeforesubtabskip=\skip123
+\cftsubtabindent=\skip124
+\cftsubtabnumwidth=\skip125
 )
-\newnumberwidth=\skip123
-\beforebibskip=\skip124
-\figurelabelwidth=\skip125
-\tablelabelwidth=\skip126
+\newnumberwidth=\skip126
+\beforebibskip=\skip127
+\figurelabelwidth=\skip128
+\tablelabelwidth=\skip129
 
 (/usr/share/texmf-dist/tex/latex/koma-script/scrtime.sty
 Package: scrtime 2022/10/12 v3.38 KOMA-Script package (time of LaTeX run)
 ))
-\abcd=\skip127
+\abcd=\skip130
 
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -959,9 +995,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count337
-\Gm@cntv=\count338
-\c@Gm@tempcnt=\count339
+\Gm@cnth=\count346
+\Gm@cntv=\count347
+\c@Gm@tempcnt=\count348
 \Gm@bindingoffset=\dimen268
 \Gm@wd@mp=\dimen269
 \Gm@odd@mp=\dimen270
@@ -970,65 +1006,66 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen273
 \Gm@layouthoffset=\dimen274
 \Gm@layoutvoffset=\dimen275
-\Gm@dimlist=\toks37
+\Gm@dimlist=\toks40
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+pplj on input line 9
-0.
+2.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
-\l__pdf_internal_box=\box69
+\l__color_backend_stack_int=\count349
+\l__pdf_internal_box=\box71
 ) (./thesis.aux
 (./titlePage.aux) (./Chapters/intro.aux) (./Chapters/bibliografia.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-Package scrbase Info: activating italian \partname on input line 90.
-Package scrbase Info: activating italian \chaptername on input line 90.
-Package scrbase Info: activating italian \appendixname on input line 90.
-Package scrbase Info: activating italian \figurename on input line 90.
-Package scrbase Info: activating italian \tablename on input line 90.
-Package scrbase Info: activating italian \contentsname on input line 90.
-Package scrbase Info: activating italian \listfigurename on input line 90.
-Package scrbase Info: activating italian \listtablename on input line 90.
-Package scrbase Info: activating italian \bibname on input line 90.
-Package scrbase Info: activating italian \indexname on input line 90.
-LaTeX Info: Redefining \it@ocap on input line 90.
-LaTeX Info: Redefining \it@ccap on input line 90.
-LaTeX Info: Redefining \dots on input line 90.
-\c@lstlisting=\count341
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+Package scrbase Info: activating italian \partname on input line 92.
+Package scrbase Info: activating italian \chaptername on input line 92.
+Package scrbase Info: activating italian \appendixname on input line 92.
+Package scrbase Info: activating italian \figurename on input line 92.
+Package scrbase Info: activating italian \tablename on input line 92.
+Package scrbase Info: activating italian \contentsname on input line 92.
+Package scrbase Info: activating italian \listfigurename on input line 92.
+Package scrbase Info: activating italian \listtablename on input line 92.
+Package scrbase Info: activating italian \bibname on input line 92.
+Package scrbase Info: activating italian \indexname on input line 92.
+LaTeX Info: Redefining \it@ocap on input line 92.
+LaTeX Info: Redefining \it@ccap on input line 92.
+LaTeX Info: Redefining \dots on input line 92.
+\c@lstlisting=\count350
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-it
-alian.trsl' found. on input line 90.
-Package backref Info: ** backref set up for natbib ** on input line 90.
-Package hyperref Info: Link coloring OFF on input line 90.
+alian.trsl' found. on input line 92.
+Package backref Info: ** backref set up for natbib ** on input line 92.
+Package hyperref Info: Link coloring OFF on input line 92.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
@@ -1041,28 +1078,28 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 90.
+(scrbook)           before \begin{document} on input line 92.
 
 (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count342
+\BKM@id=\count351
 ))
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
+\scratchcounter=\count352
 \scratchdimen=\dimen276
-\scratchbox=\box70
-\nofMPsegments=\count344
-\nofMParguments=\count345
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count346
+\scratchbox=\box72
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count355
 \MPscratchDim=\dimen277
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks39
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks42
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1072,19 +1109,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 90.
-Package microtype Info: Applying patch `item' on input line 90.
-Package microtype Info: Applying patch `toc' on input line 90.
-Package microtype Info: Applying patch `eqnum' on input line 90.
-Package microtype Info: Applying patch `footnote' on input line 90.
-Package microtype Info: Applying patch `verbatim' on input line 90.
+LaTeX Info: Redefining \microtypecontext on input line 92.
+Package microtype Info: Applying patch `item' on input line 92.
+Package microtype Info: Applying patch `toc' on input line 92.
+Package microtype Info: Applying patch `eqnum' on input line 92.
+Package microtype Info: Applying patch `footnote' on input line 92.
+Package microtype Info: Applying patch `verbatim' on input line 92.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 90.
+LaTeX Info: Redefining \showhyphens on input line 92.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1183,57 +1220,10 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )) [2]
-
-Class scrbook Warning: Redefinition of \@makeschapterhead detected.
-(scrbook)              Note: KOMA-Script does use styles for commands like
-(scrbook)              \chapter. Currently it internally still provides and
-(scrbook)              uses \@makeschapterhead, but a completely different
-(scrbook)              definition compared to the standard classes.
-(scrbook)              So redefining or using internal \@makeschapterhead
-(scrbook)              by users or package authors may already break
-(scrbook)              KOMA-Script and will not work with a coming version,
-(scrbook)              that will remove this deprecated code.
-
-Package tocbasic Info: character protrusion at toc deactivated on input line 10
-6.
-(./thesis.toc
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
-)
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
-
- [1
-
-
+[1
 
 
 ] [2
-
-
-]
-
-Class scrbook Warning: Redefinition of \@makeschapterhead detected.
-(scrbook)              Note: KOMA-Script does use styles for commands like
-(scrbook)              \chapter. Currently it internally still provides and
-(scrbook)              uses \@makeschapterhead, but a completely different
-(scrbook)              definition compared to the standard classes.
-(scrbook)              So redefining or using internal \@makeschapterhead
-(scrbook)              by users or package authors may already break
-(scrbook)              KOMA-Script and will not work with a coming version,
-(scrbook)              that will remove this deprecated code.
-
-Package tocbasic Info: character protrusion at lof deactivated on input line 10
-7.
-(./thesis.lof)
-\tf@lof=\write5
-\openout5 = `thesis.lof'.
-
- [3] [4
-
-
-] [5] [6
 
 
 ]
@@ -1267,24 +1257,42 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [7
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--22
+
+ []
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 28.
+[3
 
 
 
 ]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
+
+ []
+
+[5]) [6]
 \openout2 = `Chapters/bibliografia.aux'.
 
  (./Chapters/bibliografia.tex (./thesis.brf)
-\tf@brf=\write6
-\openout6 = `thesis.brf'.
-
- [8
+\tf@brf=\write4
+\openout4 = `thesis.brf'.
 
 
-
-
-
-]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1296,7 +1304,13 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [9] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [7
+
+
+
+
+
+] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/bibliografia.aux))
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1304,29 +1318,24 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27513 strings out of 477985
- 539496 string characters out of 5840058
- 1857388 words of memory out of 5000000
- 47116 multiletter control sequences out of 15000+600000
- 554717 words of font info for 162 fonts, out of 8000000 for 9000
+ 28328 strings out of 477985
+ 552241 string characters out of 5840058
+ 1867388 words of memory out of 5000000
+ 47773 multiletter control sequences out of 15000+600000
+ 579811 words of font info for 295 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,20n,106p,10653b,1017s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share
-/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr
-i8a.pfb>
-Output written on thesis.pdf (11 pages, 116680 bytes).
+ 108i,22n,136p,10653b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8
+a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (9 pages, 164491 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 59918 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 117 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 77838 words of extra memory for PDF output out of 89155 (max. 10000000)
 
