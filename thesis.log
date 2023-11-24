@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  23 NOV 2023 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  24 NOV 2023 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1012,7 +1012,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+pplj on input line 9
-2.
+3.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
@@ -1025,37 +1025,37 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 (./titlePage.aux) (./Chapters/intro.aux) (./Chapters/bibliografia.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-Package scrbase Info: activating italian \partname on input line 92.
-Package scrbase Info: activating italian \chaptername on input line 92.
-Package scrbase Info: activating italian \appendixname on input line 92.
-Package scrbase Info: activating italian \figurename on input line 92.
-Package scrbase Info: activating italian \tablename on input line 92.
-Package scrbase Info: activating italian \contentsname on input line 92.
-Package scrbase Info: activating italian \listfigurename on input line 92.
-Package scrbase Info: activating italian \listtablename on input line 92.
-Package scrbase Info: activating italian \bibname on input line 92.
-Package scrbase Info: activating italian \indexname on input line 92.
-LaTeX Info: Redefining \it@ocap on input line 92.
-LaTeX Info: Redefining \it@ccap on input line 92.
-LaTeX Info: Redefining \dots on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+Package scrbase Info: activating italian \partname on input line 93.
+Package scrbase Info: activating italian \chaptername on input line 93.
+Package scrbase Info: activating italian \appendixname on input line 93.
+Package scrbase Info: activating italian \figurename on input line 93.
+Package scrbase Info: activating italian \tablename on input line 93.
+Package scrbase Info: activating italian \contentsname on input line 93.
+Package scrbase Info: activating italian \listfigurename on input line 93.
+Package scrbase Info: activating italian \listtablename on input line 93.
+Package scrbase Info: activating italian \bibname on input line 93.
+Package scrbase Info: activating italian \indexname on input line 93.
+LaTeX Info: Redefining \it@ocap on input line 93.
+LaTeX Info: Redefining \it@ccap on input line 93.
+LaTeX Info: Redefining \dots on input line 93.
 \c@lstlisting=\count350
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1063,9 +1063,9 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-it
-alian.trsl' found. on input line 92.
-Package backref Info: ** backref set up for natbib ** on input line 92.
-Package hyperref Info: Link coloring OFF on input line 92.
+alian.trsl' found. on input line 93.
+Package backref Info: ** backref set up for natbib ** on input line 93.
+Package hyperref Info: Link coloring OFF on input line 93.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
@@ -1078,7 +1078,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 92.
+(scrbook)           before \begin{document} on input line 93.
 
 (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1109,19 +1109,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 92.
-Package microtype Info: Applying patch `item' on input line 92.
-Package microtype Info: Applying patch `toc' on input line 92.
-Package microtype Info: Applying patch `eqnum' on input line 92.
-Package microtype Info: Applying patch `footnote' on input line 92.
-Package microtype Info: Applying patch `verbatim' on input line 92.
+LaTeX Info: Redefining \microtypecontext on input line 93.
+Package microtype Info: Applying patch `item' on input line 93.
+Package microtype Info: Applying patch `toc' on input line 93.
+Package microtype Info: Applying patch `eqnum' on input line 93.
+Package microtype Info: Applying patch `footnote' on input line 93.
+Package microtype Info: Applying patch `verbatim' on input line 93.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 92.
+LaTeX Info: Redefining \showhyphens on input line 93.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1288,43 +1288,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--84
 [5]) [6]
 \openout2 = `Chapters/bibliografia.aux'.
 
- (./Chapters/bibliografia.tex (./thesis.brf)
-\tf@brf=\write4
-\openout4 = `thesis.brf'.
 
-
-
-Class scrbook Warning: Redefinition of \@makeschapterhead detected.
-(scrbook)              Note: KOMA-Script does use styles for commands like
-(scrbook)              \chapter. Currently it internally still provides and
-(scrbook)              uses \@makeschapterhead, but a completely different
-(scrbook)              definition compared to the standard classes.
-(scrbook)              So redefining or using internal \@makeschapterhead
-(scrbook)              by users or package authors may already break
-(scrbook)              KOMA-Script and will not work with a coming version,
-(scrbook)              that will remove this deprecated code.
-
-) [7
-
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+No file Chapters/bibliografia.tex.
+(./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/bibliografia.aux))
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28328 strings out of 477985
- 552241 string characters out of 5840058
- 1867388 words of memory out of 5000000
- 47773 multiletter control sequences out of 15000+600000
- 579811 words of font info for 295 fonts, out of 8000000 for 9000
+ 28282 strings out of 477985
+ 551572 string characters out of 5840058
+ 1866388 words of memory out of 5000000
+ 47748 multiletter control sequences out of 15000+600000
+ 579256 words of font info for 286 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,22n,136p,10653b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,136p,10694b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sha
 re/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf-dist/fonts/ty
@@ -1332,10 +1310,10 @@ pe1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8
 a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (9 pages, 164491 bytes).
+Output written on thesis.pdf (8 pages, 164039 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  77838 words of extra memory for PDF output out of 89155 (max. 10000000)
 

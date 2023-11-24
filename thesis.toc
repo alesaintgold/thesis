@@ -1,5 +1,0 @@
-\babel@toc {italian}{}\relax 
-\babel@toc {italian}{}\relax 
-\vspace {-\cftbeforepartskip }
-\contentsline {chapter}{\numberline {1}Introduzione}{7}{chapter.1}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
