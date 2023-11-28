@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  24 NOV 2023 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  28 NOV 2023 21:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,7 +1022,7 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box71
 ) (./thesis.aux
-(./titlePage.aux) (./Chapters/intro.aux) (./Chapters/bibliografia.aux))
+(./titlePage.aux) (./Chapters/intro.aux) (./Chapters/combinations.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
@@ -1280,29 +1280,56 @@ put line 28.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+ [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[5]) [6]
-\openout2 = `Chapters/bibliografia.aux'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
 
 
-No file Chapters/bibliografia.tex.
-(./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
-(./Chapters/bibliografia.aux))
+Overfull \hbox (28.1118pt too wide) in paragraph at lines 88--100
+ [] 
+ []
+
+) [6]
+\openout2 = `Chapters/combinations.aux'.
+
+ (./Chapters/combinations.tex
+chapter 2.
+
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+) [7
+
+
+
+
+
+] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+(./Chapters/combinations.aux))
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28282 strings out of 477985
- 551572 string characters out of 5840058
+ 28291 strings out of 477985
+ 551663 string characters out of 5840058
  1866388 words of memory out of 5000000
  47748 multiletter control sequences out of 15000+600000
- 579256 words of font info for 286 fonts, out of 8000000 for 9000
+ 579537 words of font info for 290 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,22n,136p,10694b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,141p,10694b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sha
 re/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf-dist/fonts/ty
@@ -1310,10 +1337,10 @@ pe1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8
 a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (8 pages, 164039 bytes).
+Output written on thesis.pdf (9 pages, 164813 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 77838 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 77846 words of extra memory for PDF output out of 89155 (max. 10000000)
 

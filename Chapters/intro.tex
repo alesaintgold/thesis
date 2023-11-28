@@ -1,6 +1,6 @@
 \chapter{Introduzione}
 Lo scopo di questa introduzione \'e quello di introdurre i principali algoritmi di ordinamento che utilizzano sorting devices, in particolare stack-sort,
-queue-sort e bubble sort. Durante l'eseguzione questi algoritmi possono 
+queue-sort e bubble sort, e altri concetti necessari per l'analisi della loro composizione.\\Durante l'eseguzione questi algoritmi possono 
 salvare gli elementi in uno specifico contenitore (la diversa struttura 
 adottata definise i diversi algoritmi) dalla quale poi vengono prelevati
 per essere aggiunti all'output.\\
@@ -9,8 +9,8 @@ dunque gli algoritmi devono essere iterati pi\'u volte, ogni volta sul risultato
 iterazione i maggiori $i$ elementi avranno raggiunto la loro posizione finale, 
 dunque sono necessari al massimo $n-1$ iterazioni per ordinare la permutazione.
 \\\\L'oggetto di studio di questa tesi \'e la ricerca di condizioni che, per un
-algoritmo fissato, indicano che la permutazione \'e ordinabile con una sola
-iterazione, in particolare quando pi\'u algoritmi vengono concatenati.
+operatore fissato, indicano che la permutazione \'e ordinabile con una sola
+iterazione, in particolare quando pi\'u operatori vengono concatenati.
 \\\\
 Essendo interessati al comportamento di una sola iterazione di questi
 algoritmi non si esaminer\'a tanto la consueta procedura di ordinamento,
@@ -37,7 +37,7 @@ Il risultato si una singola iterazione di bubble-sort su una permutazione $\pi=\
 \section*{Stack sort}
 L'operatore $S(\pi)$ il risultato ottenuto applicando stack sort su una permutazione $\pi$.\\
 Il primo passo consiste nell'inserire $\pi_1$ nella pila. Poi lo si confronta con l'elemento $\pi_2$. Se $\pi_1>\pi_2$ allora il secondo viene messo nella pila sopra $\pi_1$, altrimenti $\pi_1$ viene estratto dalla pila e inserito nell'output e $\pi_2$ viene inserito nella pila.\\
-Gli stessi passi vengono eseguiti per tutti gli altri elementi presenti nell'input, se viene trovato un elemento nell'input maggiore dell'elemento in cima alla pila, la pila viene svuotata finchè questa condizione non diviene falsa, poi l'elemento viene spinto nella pila.\\
+Gli stessi passi vengono eseguiti per tutti gli altri elementi presenti nell'input, se viene trovato un elemento nell'input maggiore dell'elemento in cima alla pila, la pila viene svuotata finch\'e questa condizione non diviene falsa, poi l'elemento viene spinto nella pila.\\
 Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.
 \begin{algorithm}[H]
    \caption{operatore S - stack sort, single iteration }
@@ -79,19 +79,22 @@ Se infatti si fissa a 1 la dimensione della pila o della coda dei rispettivi ope
 \section*{Classi di pattern}
 Si introduce una notazione per descrivere certi pattern nella permutazione:
 \paragraph*{pattern 231}Se gli elementi ${a,b,c}$ tali che $a<b<c$ compaiono nella permutazione in modo che $b$ precede $c$ e $c$ precede $a$ si dice che $\pi$ contiene un pattern 231.\\\\
+
+%aggiungere definizione degli insiemi Av(M)
+
 \'E noto in letteratura che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\
 Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatoro descritti precedentemente.
 \begin{center}
 \begin{tabular}{ |c|c| } 
 \hline
-\textbf{Operatore} & \textbf{Pattern da evitare per l'ordinabilit\'a} \\ 
+\textbf{Operatore} & \textbf{Permutazioni ordinabili con una sola passata} \\ 
 \hline
-Satck sort & 231\\ 
-Queue sort & 321 \\ 
-Bubble sort & 231,321 \\ 
-Pop-stack sort & 231,312\\ 
-Pop-queue sort& 321,2413\\ 
-Pop-stack sort con bypass &231,4213 \\ 
+Satck sort & Av(231)\\ 
+Queue sort & Av(321)\\ 
+Bubble sort & Av(231,321)\\ 
+Pop-stack sort & Av(231,312)\\ 
+Pop-queue sort& Av(321,2413)\\ 
+Pop-stack sort con bypass &Av(231,4213)\\ 
 \hline
 \end{tabular}
 \end{center}
