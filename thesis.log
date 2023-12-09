@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  30 NOV 2023 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  9 DEC 2023 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,7 +1022,8 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box71
 ) (./thesis.aux
-(./titlePage.aux) (./Chapters/intro.aux) (./Chapters/combinations.aux))
+(./titlePage.aux) (./Chapters/intro.aux) (./Chapters/operators.aux)
+(./Chapters/software.aux) (./Chapters/opcomposition.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
@@ -1066,8 +1067,8 @@ Package translations Info: no dictionary file `translations-basic-dictionary-it
 alian.trsl' found. on input line 93.
 Package backref Info: ** backref set up for natbib ** on input line 93.
 Package hyperref Info: Link coloring OFF on input line 93.
-
-(./thesis.out) (./thesis.out)
+ (./thesis.out)
+(./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
@@ -1079,8 +1080,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
 (scrbook)           before \begin{document} on input line 93.
-
-(/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
+ (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1257,54 +1257,20 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--22
-
- []
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 28.
-[3
+) [3
 
 
 
 ]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+\openout2 = `Chapters/operators.aux'.
 
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
-
- []
+ (./Chapters/operators.tex [4
 
 
-Overfull \hbox (1.87111pt too wide) in paragraph at lines 87--87
-[] []\T1/pplj/m/sc/12 (-20) c l a s -s i d i p a t -t e r n[] \T1/pplj/m/n/12 (
--20) La re-lazione di sot-top-er-mu-tazione é una re-lazione
- []
 
 
-Overfull \hbox (28.1118pt too wide) in paragraph at lines 91--103
- [] 
- []
 
-) [6]
-\openout2 = `Chapters/combinations.aux'.
-
- (./Chapters/combinations.tex
+]
 chapter 2.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1317,17 +1283,112 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [7
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 23.
+[5]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 76--79
+
+ []
+
+[7]
+Overfull \hbox (1.87111pt too wide) in paragraph at lines 79--79
+[] []\T1/pplj/m/sc/12 (-20) c l a s -s i d i p a t -t e r n[] \T1/pplj/m/n/12 (
+-20) La re-lazione di sot-top-er-mu-tazione é una re-lazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+
+Overfull \hbox (28.1118pt too wide) in paragraph at lines 85--97
+ [] 
+ []
+
+) [8]
+\openout2 = `Chapters/software.aux'.
+
+ (./Chapters/software.tex
+chapter 3.
+
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 2.
+
+(/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 10.20007pt on input line 2.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+) [9
 
 
 
 
 
-] (./thesis.bbl (./thesis.brf)
+]
+\openout2 = `Chapters/opcomposition.aux'.
+
+
+(./Chapters/opcomposition.tex [10
+
+
+
+
+
+]
+chapter 4.
+
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+) [11] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
- [8
+ [12
 
 
 
@@ -1344,19 +1405,20 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [9] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
-(./Chapters/combinations.aux))
+) [13] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+(./Chapters/operators.aux) (./Chapters/software.aux)
+(./Chapters/opcomposition.aux))
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 106E537512AD7A698BFEE9631F87356D;146.
+(rerunfilecheck)             Checksum: D2F8A6B58B208DC4DDC82101FFBABC56;250.
  ) 
 Here is how much of TeX's memory you used:
- 28354 strings out of 477985
- 552543 string characters out of 5840058
- 1867388 words of memory out of 5000000
- 47777 multiletter control sequences out of 15000+600000
- 580668 words of font info for 309 fonts, out of 8000000 for 9000
+ 28508 strings out of 477985
+ 556011 string characters out of 5840058
+ 1868388 words of memory out of 5000000
+ 47874 multiletter control sequences out of 15000+600000
+ 582796 words of font info for 334 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,22n,138p,10694b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
@@ -1365,13 +1427,14 @@ fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1
 /public/amsfonts/euler/eurm10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/euler/eusm10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pf
 b></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-d
-ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
-palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-</usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (11 pages, 196602 bytes).
+ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (15 pages, 205989 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 77846 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 78374 words of extra memory for PDF output out of 89155 (max. 10000000)
 

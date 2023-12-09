@@ -1,0 +1,97 @@
+\chapter{Algoritmi di odrinamento e classi di pattern}
+In questo capitolo verranno introdotti i principali algoritmi di ordinamento che utilizzano sorting devices, in particolare stack-sort,
+queue-sort e bubble sort, e altri concetti necessari per l'analisi della loro composizione.\\\\
+Durante l'esecuzione questi algoritmi possono 
+salvare gli elementi in un contenitore (la diversa struttura dati
+adottata definise i diversi algoritmi) dalla quale poi vengono prelevati
+per essere aggiunti all'output.\\\\
+Una sola iterazione non garantisce l'ordinamento della permutazione,
+dunque gli algoritmi devono essere iterati pi\'u volte, ogni volta sul risultato della iterazione precedente. In ogni caso alla fine delle i-esima
+iterazione i maggiori $i$ elementi avranno raggiunto la loro posizione finale, 
+dunque sono necessari al massimo $n-1$ iterazioni per ordinare la permutazione.\\\\
+Essendo interessati al comportamento di una sola iterazione di questi
+algoritmi si esaminer\'a un operatore, definito appositamente per ogni algoritmo, che descrive la singola iterazione. \\
+Ad esempio, prendendo l'algoritmo bubble-sort si far\'a riferimento all'operatore $B(\pi)$, dove $\pi$ \'e una permutazione di
+interi, tale che n iterazioni del bubble-sort possano essere rappresentate
+da $B^n(\pi) = B(\dots B(\pi)\dots)$.
+\section*{Bubble sort}
+L'algoritmo di ordinamento bubble-sort prevede di scorrere gli elementi da 
+ordinare dal primo al penultimo, ed ogni volta confrontare ogni elemento 
+con il suo successivo per scambiarli se non sono ordinati.\\
+Il risultato di una singola iterazione di bubble-sort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \'e calcolato dall'operatore $B(\pi)$. Per una permutazione $\pi$ con valore massimo $n$ vale che $\pi = \pi_Ln\pi_R$, allora $B(\pi) = B(\pi_L)\pi_rn$.
+\begin{algorithm}[H]
+   \caption{$B(\pi)$}
+\begin{algorithmic}
+   \For{$i=1$ {\bfseries to} $n-1$}
+   \If{$\pi_i > \pi_{i+1}$} 
+   \State Swap $\pi_i$ and $\pi_{i+1}$
+   \EndIf
+   \EndFor
+\end{algorithmic}
+\end{algorithm}
+\section*{Stack sort}
+L'operatore $S(\pi)$ rappresenta il risultato ottenuto applicando un'iterazione di stack sort su una permutazione $\pi$.\\
+Il primo passo consiste nell'inserire $\pi_1$ nella pila. Poi lo si confronta con l'elemento $\pi_2$. Se $\pi_1>\pi_2$ allora il secondo viene messo nella pila sopra $\pi_1$, altrimenti $\pi_1$ viene estratto dalla pila e inserito nell'output e $\pi_2$ viene inserito nella pila.\\
+Gli stessi passi vengono eseguiti per tutti gli altri elementi presenti nell'input, se viene trovato un elemento nell'input maggiore dell'elemento in cima alla pila, la pila viene svuotata finch\'e questa condizione non diviene falsa, poi l'elemento viene spinto nella pila.\\
+Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.\\
+Sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, vale che $S(\pi)=S(\pi_L)S(\pi_R)n$
+\begin{algorithm}[H]
+   \caption{operatore S - stack sort, singola iterazione}
+\begin{algorithmic}
+\State initialize an empty stack
+   \For{$i=1$ {\bfseries to} $n-1$}
+   \While{ stack is unempty \textbf{and} $\pi_i>$top of the stack}
+   \State pop from the stack to the output
+   \EndWhile
+   \State push($\pi_i$)
+   \EndFor
+   \State emtpy the stack in the output
+\end{algorithmic}
+\end{algorithm}
+\section*{Queue sort}
+Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output.
+Si svuota la coda nell'output. 
+\begin{algorithm}[H]
+   \caption{operatore Q - queue sort, singola iterazione}
+\begin{algorithmic}
+\State initialize an empty queue
+\For{$i=1$ {\bfseries to} $n-1$}
+\If{empty queue \textbf{or} last in queue $<\pi_i$}
+\State enqueue($\pi_i$)
+\Else
+\While{first in queue $<\pi_i$}
+\State dequeue($\pi_i$)
+\EndWhile
+\State add $\pi_i$ to the output
+\EndIf
+\EndFor
+\State emtpy the queue in the output
+\end{algorithmic}
+\end{algorithm}
+\paragraph*{Bypass} L'operazione che pone un elemento nell'output senza passare dal contenitore si dice \textbf{bypass}. Questa viene svolta normalmente nel queuesort, ma talvolta pu\'o essere introdotta in altri algoritmi.
+\paragraph*{Osservazione}\textit{Bubble sort} \'e un caso particolare sia di \textit{queue sort} che di \textit{stack sort}.\\
+Se infatti si fissa a 1 la dimensione della pila o della coda dei rispettivi operatori il comportamento che questi assumono \'e quello di una cella che, scorrendo l'input, contiene sempre il massimo valore trovato, mentre gli altri vengono messi nell'output.
+\paragraph*{Contenitori POP}Un caso di studio interessante \'e quello in cui i contenitori di stack sort e queue sort vengano sostituiti dalla loro versione POP, cio\'e che quando viene eseguita un estrazione il contenitore viene svuotato completamente. Si definiscono con questa variante, gli algoritmi \textbf{pop-stacksort} e \textbf{pop-queuesort} 
+\section*{Classi di pattern di permtuazioni}
+\cite{bouvel2022preimages}
+Siano $\alpha,\beta$ due sequenze di interi, si indica con $\alpha \subseteq \beta$ che $\alpha$ \'e una sottosequenza di $\beta$, anche se non necessariamente una sottosequenza consecutiva.\\\\
+Si dice che una permutazione $\delta$ \'e un pattern contenuto in una permutazione $\tau$ se esiste una sottosequenza di $\tau$ di ordine isomorfico rispetto a $\delta$, e si indica con $\delta\preceq\tau$. Ad esempio $24153$ contiene il pattern $312$ perch\'e $413\subset{24153}$.
+\paragraph*{Classi di pattern} La relazione di sottopermutazione \'e una relazione di ordine parziale che viene studiata con dei sottoinsiemi chiamati \textbf{pattern di classi}. Ogni classe di pattern $D$ pu\'o essere caratterizzata dall'insieme minimo $M$ che evita:$$ D = Av(M) = \{\beta:\mu\not\preceq\beta\forall\mu\in M\}$$
+\section*{Algoritmi e pattern-avoidance}
+\'E noto in letteratura \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.
+\paragraph*{pattern 231}Si dice che una permutazione $\pi$ contiene un pattern 231 se $231\preceq\pi$, ovvero se $\exists a<b<c: \pi =\dots{b}\dots{c}\dots{a}\dots$.\\\\
+Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatoro descritti precedentemente.
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+\textbf{Operatore} & \textbf{Permutazioni ordinabili con una sola passata} \\ 
+\hline
+Stack sort & Av(231)\\ 
+Queue sort & Av(321)\\ 
+Bubble sort & Av(231,321)\\ 
+Pop-stack sort & Av(231,312)\\ 
+Pop-queue sort& Av(321,2413)\\ 
+Pop-stack sort con bypass &Av(231,4213)\\ 
+\hline
+\end{tabular}
+\end{center}

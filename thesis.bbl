@@ -1,12 +1,29 @@
 \begin{thebibliography}{1}
 
+\bibitem{albert2010inverse}
+Michael~H Albert, Mike~D Atkinson, Mathilde Bouvel, Anders Claesson, and Mark
+  Dukes.
+\newblock On the inverse image of pattern classes under bubble sort.
+\newblock {\em arXiv preprint arXiv:1008.5299}, 2010.
+
 \bibitem{bouvel2022preimages}
 Mathilde Bouvel, Lapo Cioni, and Luca Ferrari.
 \newblock Preimages under the bubblesort operator.
 \newblock {\em arXiv preprint arXiv:2204.12936}, 2022.
 
+\bibitem{claesson2012sorting}
+Anders Claesson and Henning Ulfarsson.
+\newblock Sorting and preimages of pattern classes.
+\newblock {\em Discrete Mathematics \& Theoretical Computer Science},
+  (Proceedings), 2012.
+
 \bibitem{limbrief}
 CONG~HAN LIM.
 \newblock Brief introduction on stack sorting.
+
+\bibitem{magnusson2013sorting}
+Hjalti Magn{\'u}sson.
+\newblock Sorting operators and their preimages.
+\newblock {\em Computer Science}, 2013.
 
 \end{thebibliography}
