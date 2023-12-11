@@ -21,7 +21,7 @@ con il suo successivo per scambiarli se non sono ordinati.\\
 Il risultato di una singola iterazione di bubble-sort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \'e calcolato dall'operatore $B(\pi)$. Per una permutazione $\pi$ con valore massimo $n$ vale che $\pi = \pi_Ln\pi_R$, allora $B(\pi) = B(\pi_L)\pi_rn$.
 \begin{algorithm}[H]
    \caption{$B(\pi)$}
-\begin{algorithmic}
+\begin{algorithmic}[1]
    \For{$i=1$ {\bfseries to} $n-1$}
    \If{$\pi_i > \pi_{i+1}$} 
    \State Swap $\pi_i$ and $\pi_{i+1}$
@@ -37,7 +37,7 @@ Finiti gli elementi nell'input, se necessario, si svuota completamente la pila n
 Sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, vale che $S(\pi)=S(\pi_L)S(\pi_R)n$
 \begin{algorithm}[H]
    \caption{operatore S - stack sort, singola iterazione}
-\begin{algorithmic}
+\begin{algorithmic}[1]
 \State initialize an empty stack
    \For{$i=1$ {\bfseries to} $n-1$}
    \While{ stack is unempty \textbf{and} $\pi_i>$top of the stack}
@@ -53,7 +53,7 @@ Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota
 Si svuota la coda nell'output. 
 \begin{algorithm}[H]
    \caption{operatore Q - queue sort, singola iterazione}
-\begin{algorithmic}
+\begin{algorithmic}[1]
 \State initialize an empty queue
 \For{$i=1$ {\bfseries to} $n-1$}
 \If{empty queue \textbf{or} last in queue $<\pi_i$}
