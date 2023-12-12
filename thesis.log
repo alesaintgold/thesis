@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  12 DEC 2023 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  12 DEC 2023 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,18 +1313,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--78
  []
 
 [7]
-Overfull \hbox (1.87111pt too wide) in paragraph at lines 78--78
+Overfull \hbox (1.87111pt too wide) in paragraph at lines 81--81
 [] []\T1/pplj/m/sc/12 (-20) c l a s -s i d i p a t -t e r n[] \T1/pplj/m/n/12 (
 -20) La re-lazione di sot-top-er-mu-tazione é una re-lazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
 
-Overfull \hbox (28.1118pt too wide) in paragraph at lines 84--96
+Overfull \hbox (28.1118pt too wide) in paragraph at lines 87--99
  [] 
  []
 
@@ -1375,21 +1375,29 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 
 
 
-]) [10])
-Underfull \hbox (badness 10000) in paragraph at lines 9--118
+]) [10]
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
-[11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+
+ []
+
+
+LaTeX Font Warning: Font shape `T1/fvm/m/sc' undefined
+(Font)              using `T1/fvm/m/n' instead on input line 15.
+
+LaTeX Font Info:    Font shape `T1/fvm/m/sc' will be
+(Font)              scaled to size 10.20007pt on input line 16.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/fvm/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+(./python/pattfinder.py [11])) [12]
 \openout2 = `Chapters/opcomposition.aux'.
 
- (./Chapters/opcomposition.tex [12
-
-
-
-
-
-]
+ (./Chapters/opcomposition.tex
 chapter 4.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1402,7 +1410,13 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [13] (./thesis.bbl (./thesis.brf)
+) [13
+
+
+
+
+
+] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
@@ -1426,19 +1440,22 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 ) [15] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 685591EE91355F523D1EC7ED6583EB12;346.
+(rerunfilecheck)             Checksum: 9342BFFE173469BCC152EC6FA6A7E6B8;399.
  ) 
 Here is how much of TeX's memory you used:
- 29566 strings out of 477985
- 567217 string characters out of 5840058
- 1915388 words of memory out of 5000000
- 48851 multiletter control sequences out of 15000+600000
- 586064 words of font info for 353 fonts, out of 8000000 for 9000
+ 29732 strings out of 477985
+ 569388 string characters out of 5840058
+ 1921388 words of memory out of 5000000
+ 48946 multiletter control sequences out of 15000+600000
+ 586912 words of font info for 365 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,22n,138p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,141p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1
@@ -1449,10 +1466,10 @@ ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (17 pages, 214425 bytes).
+Output written on thesis.pdf (17 pages, 219176 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 132 named destinations out of 1000 (max. 500000)
  85030 words of extra memory for PDF output out of 89155 (max. 10000000)
 

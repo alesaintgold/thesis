@@ -6,4 +6,13 @@ Dopo essere stata instanziata la classe viene usata come riferimento per i dati 
 \\\lstinputlisting{./python/permutasort.py}
 \pagebreak
 \section*{Pattfinder}
-Questo programma ha lo scopo di selezionare tra tutte le permutazioni di una data dimensione quali contengono un dato pattern quali no.\\
+Questo programma ha lo scopo di selezionare tra tutte le permutazioni di una data dimensione quali contengono un dato pattern classico quali no.\\\\
+Il programma viene lanciato da linea di comando prendendo come argomenti un intero e una sequenza di interi consecutivi eventualemente non ordinati.\\
+L'intero rappresenta la lunghezza delle permutazioni da scorrere e la sequenza rappresenta il pattern da ricercare.\\
+Gli argomenti vengono passati al costruttore della classe \texttt{PatternAvoid}, l'intero $n$ viene utilizzato per generare le $n$-permutazioni grazie alla funzione \texttt{permutations}. Per ogni permutazione viene controllato se contiene o no il pattern e viene inserita nella rispettiva lista: \texttt{containing} o \texttt{notcontaining}.\\\\
+La classe presenta i getter per le liste prodotte e due ulteriori metodi: 
+\begin{description}
+\item[\texttt{patternize}] serve a \textit{standardizzare} una sequenza, si ottiene la versione ordinata della sequenza, e si sostituisce ogni valore con la posizione che occupa una volta oridnato;  
+\item[\texttt{contains}] verifica che una sequenza contenga un pattern o meno, grazie alla funzione \texttt{itertools.combinations} si ottengono tutte le sottosequenze (anche non consecutive), le si standardizzano e le si confrontano con il pattern da ricercare.
+\end{description}
+\lstinputlisting{./python/pattfinder.py}
