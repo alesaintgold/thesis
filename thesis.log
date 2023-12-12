@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  11 DEC 2023 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  12 DEC 2023 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1308,23 +1308,23 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
 
  []
 
 [7]
-Overfull \hbox (1.87111pt too wide) in paragraph at lines 79--79
+Overfull \hbox (1.87111pt too wide) in paragraph at lines 78--78
 [] []\T1/pplj/m/sc/12 (-20) c l a s -s i d i p a t -t e r n[] \T1/pplj/m/n/12 (
 -20) La re-lazione di sot-top-er-mu-tazione é una re-lazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
 
-Overfull \hbox (28.1118pt too wide) in paragraph at lines 85--97
+Overfull \hbox (28.1118pt too wide) in paragraph at lines 84--96
  [] 
  []
 
@@ -1344,32 +1344,41 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 2.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 4.
 
 (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 2.
+(Font)              scaled to size 10.20007pt on input line 4.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) [9
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 6.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 6.
+(./python/permutasort.py [9
 
 
 
 
 
-]
+]) [10]) [11]
 \openout2 = `Chapters/opcomposition.aux'.
 
- (./Chapters/opcomposition.tex [10
+ (./Chapters/opcomposition.tex [12
 
 
 
@@ -1388,11 +1397,11 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [11] (./thesis.bbl (./thesis.brf)
+) [13] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
- [12
+ [14
 
 
 
@@ -1409,22 +1418,28 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [13] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [15] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: D2F8A6B58B208DC4DDC82101FFBABC56;250.
+
+
+Package rerunfilecheck Warning: File `thesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `thesis.brf':
+(rerunfilecheck)             Before: E8811261A83BF419C3402E1078886011;250
+(rerunfilecheck)             After:  685591EE91355F523D1EC7ED6583EB12;346.
  ) 
 Here is how much of TeX's memory you used:
- 28534 strings out of 477985
- 556232 string characters out of 5840058
- 1867388 words of memory out of 5000000
- 47875 multiletter control sequences out of 15000+600000
- 585444 words of font info for 351 fonts, out of 8000000 for 9000
+ 29549 strings out of 477985
+ 566912 string characters out of 5840058
+ 1906388 words of memory out of 5000000
+ 48838 multiletter control sequences out of 15000+600000
+ 586064 words of font info for 353 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,22n,138p,10694b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,138p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1
@@ -1435,10 +1450,10 @@ ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (15 pages, 208662 bytes).
+Output written on thesis.pdf (17 pages, 213881 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 84518 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 85030 words of extra memory for PDF output out of 89155 (max. 10000000)
 

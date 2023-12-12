@@ -33,7 +33,7 @@ Il risultato di una singola iterazione di bubble-sort su una permutazione $\pi=\
 L'operatore $S(\pi)$ rappresenta il risultato ottenuto applicando un'iterazione di stack sort su una permutazione $\pi$.\\
 Il primo passo consiste nell'inserire $\pi_1$ nella pila. Poi lo si confronta con l'elemento $\pi_2$. Se $\pi_1>\pi_2$ allora il secondo viene messo nella pila sopra $\pi_1$, altrimenti $\pi_1$ viene estratto dalla pila e inserito nell'output e $\pi_2$ viene inserito nella pila.\\
 Gli stessi passi vengono eseguiti per tutti gli altri elementi presenti nell'input, se viene trovato un elemento nell'input maggiore dell'elemento in cima alla pila, la pila viene svuotata finch\'e questa condizione non diviene falsa, poi l'elemento viene spinto nella pila.\\
-Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.\\
+Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.\cite{limbrief}\\
 Sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, vale che $S(\pi)=S(\pi_L)S(\pi_R)n$
 \begin{algorithm}[H]
    \caption{operatore S - stack sort, singola iterazione}
@@ -49,8 +49,7 @@ Sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, vale che $S(\pi)=S(\pi
 \end{algorithmic}
 \end{algorithm}
 \section*{Queue sort}
-Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output.
-Si svuota la coda nell'output. 
+Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output. Si svuota la coda nell'output\cite{magnusson2013sorting}. 
 \begin{algorithm}[H]
    \caption{operatore Q - queue sort, singola iterazione}
 \begin{algorithmic}[1]
