@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  16 DEC 2023 01:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  16 DEC 2023 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1394,10 +1394,16 @@ LaTeX Font Info:    Font shape `T1/fvm/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/fvm/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-(./python/pattfinder.py [11])) [12]
+(./python/pattfinder.py [11] [12])) [13]
 \openout2 = `Chapters/opcomposition.aux'.
 
- (./Chapters/opcomposition.tex
+ (./Chapters/opcomposition.tex [14
+
+
+
+
+
+]
 chapter 4.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1420,22 +1426,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-[13
 
+Overfull \hbox (7.0185pt too wide) in paragraph at lines 8--10
+[] []\T1/pplj/m/sc/12 (-20) a l -g o -r i t -m i p e r i l c a l -c o -l o d i 
+p r e i m -m a g -i -n i[] \T1/pplj/m/n/12 (-20) Sono giá stati prodot-
+ []
 
-
-
-
-]
-
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 10.
-
+[15]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 10.
 
-) [14] (./thesis.bbl (./thesis.brf)
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 10.
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/7'.
+(microtype)             Ignoring protrusion settings for this character.
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 28.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 29.
+
+[17]) [18] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
@@ -1451,7 +1512,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [15
+) [19
 
 
 
@@ -1465,16 +1526,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 3DEC4D3F55DBFD246482A76675EE58D7;604.
+(rerunfilecheck)             Checksum: A3FCD78D3A8C0F5E581758A6666C2A56;714.
  ) 
 Here is how much of TeX's memory you used:
- 29757 strings out of 477985
- 569601 string characters out of 5840058
- 1921388 words of memory out of 5000000
- 48946 multiletter control sequences out of 15000+600000
- 588336 words of font info for 385 fonts, out of 8000000 for 9000
+ 29831 strings out of 477985
+ 570606 string characters out of 5840058
+ 1935388 words of memory out of 5000000
+ 48973 multiletter control sequences out of 15000+600000
+ 598084 words of font info for 413 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,22n,141p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,23n,141p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1
@@ -1485,10 +1546,10 @@ ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (17 pages, 223933 bytes).
+Output written on thesis.pdf (21 pages, 231390 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 132 named destinations out of 1000 (max. 500000)
- 85030 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 93222 words of extra memory for PDF output out of 106986 (max. 10000000)
 

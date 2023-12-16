@@ -11,45 +11,45 @@ Database file #1: Chapters/bibliografia.bib
 Warning--there's a number but no volume in claesson2012sorting
 Warning--empty journal in limbrief
 Warning--empty year in limbrief
-You've used 5 entries,
+You've used 6 entries,
             2118 wiz_defined-function locations,
-            527 strings with 4788 characters,
-and the built_in function-call counts, 1278 in all, are:
-= -- 115
-> -- 73
-< -- 0
-+ -- 29
-- -- 24
-* -- 80
-:= -- 244
-add.period$ -- 14
-call.type$ -- 5
-change.case$ -- 27
+            534 strings with 5038 characters,
+and the built_in function-call counts, 1743 in all, are:
+= -- 167
+> -- 86
+< -- 1
++ -- 34
+- -- 28
+* -- 105
+:= -- 308
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 50
-empty$ -- 87
-format.name$ -- 24
-if$ -- 246
+cite$ -- 9
+duplicate$ -- 73
+empty$ -- 128
+format.name$ -- 28
+if$ -- 357
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 27
-num.names$ -- 10
-pop$ -- 30
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 32
+num.names$ -- 12
+pop$ -- 38
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 26
 quote$ -- 0
-skip$ -- 34
+skip$ -- 53
 stack$ -- 0
-substring$ -- 25
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 62
+swap$ -- 15
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 24
 warning$ -- 3
-while$ -- 10
-width$ -- 6
-write$ -- 50
+while$ -- 15
+width$ -- 7
+write$ -- 62
 (There were 3 warnings)

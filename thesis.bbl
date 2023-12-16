@@ -11,6 +11,14 @@ Mathilde Bouvel, Lapo Cioni, and Luca Ferrari.
 \newblock Preimages under the bubblesort operator.
 \newblock {\em arXiv preprint arXiv:2204.12936}, 2022.
 
+\bibitem{cioni2021characterization}
+Lapo Cioni and Luca Ferrari.
+\newblock Characterization and enumeration of preimages under the queuesort
+  algorithm.
+\newblock In {\em Extended Abstracts EuroComb 2021: European Conference on
+  Combinatorics, Graph Theory and Applications}, pages 234--240. Springer,
+  2021.
+
 \bibitem{claesson2012sorting}
 Anders Claesson and Henning Ulfarsson.
 \newblock Sorting and preimages of pattern classes.
