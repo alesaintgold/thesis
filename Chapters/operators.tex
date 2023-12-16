@@ -80,9 +80,9 @@ Una \textbf{standardizzazione}\cite{claesson2012sorting} di una sequenza di nume
 Ad esempio, la standardizzazione di 5371 \'e 3241.
 \paragraph*{Classi di pattern} La relazione di sottopermutazione \'e una relazione di ordine parziale che viene studiata con dei sottoinsiemi chiamati \textbf{pattern di classi}. Ogni classe di pattern $D$ pu\'o essere caratterizzata dall'insieme minimo $M$ che evita:$$ D = Av(M) = \{\beta:\mu\not\preceq\beta\forall\mu\in M\}$$
 \section*{Algoritmi e pattern-avoidance}
-\'E noto in letteratura \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.
-\paragraph*{pattern 231}Si dice che una permutazione $\pi$ contiene un pattern 231 se $231\preceq\pi$, ovvero se $\exists a<b<c: \pi =\dots{b}\dots{c}\dots{a}\dots$.\\\\
-Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatoro descritti precedentemente.
+\paragraph*{pattern 231}Una permutazione $\pi$ contiene un pattern 231 se $231\preceq\pi$, ovvero se $\exists a<b<c: \pi =\dots{b}\dots{c}\dots{a}\dots$.\\\\
+\'E noto in letteratura \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\\\
+Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatori descritti precedentemente.
 \begin{center}
 \begin{tabular}{ |c|c| } 
 \hline
@@ -92,8 +92,7 @@ Stack sort & Av(231)\\
 Queue sort & Av(321)\\ 
 Bubble sort & Av(231,321)\\ 
 Pop-stack sort & Av(231,312)\\ 
-Pop-queue sort& Av(321,2413)\\ 
-Pop-stack sort con bypass &Av(231,4213)\\ 
+Pop-queue sort& Av(132,321)\\ 
 \hline
 \end{tabular}
 \end{center}

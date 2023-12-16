@@ -1,2 +1,20 @@
 \chapter{Composizione di operatori}
 [Partire dalla combinazione di S e B \cite{albert2010inverse}, poi spiegare l'algoritmo per S e B \cite{claesson2012sorting} e mostarne l'applicazione per BS, QS, QB, infine mostrare i passaggi per queuesort e mostrare BQ e SQ, facendo riferimento alla ricerca di preimmagini di pattern generici secondo Q \cite{magnusson2013sorting}]
+\'E un caso molto interessante studiare la combinazione dei vari operatori e le relazioni tra determinati pattern e le loro preimmagini.\\
+\paragraph*{Preimmagini} Sia $X$ un operatore di ordinamento, la preimmagine di un certo pattern $p$, secondo $X$, indicata con $X^{-1}(p)$ rappresenta l'insieme di tutte le permutazioni la cui immagine secondo l'operatore $X$ contiene il pattern $p$.$$X^{-1}(p) = \{\beta : p\preceq X(\beta)\}$$\\
+Dato che $Av(21)$ \'e l'insieme formato dalle sole permutazioni identit\'a, dato che contiene tutte le permutazioni in cui nessun elemento sia disordinato rispetto ad un altro, ovvero solo le permutazioni incrementali, si indica con $X^{-1}(Av(21))$ l'insieme di tutte le permutazioni ordinabili da $X$.\\\\
+Ad esempio, dato che \'e noto che l'operatore \textit{bubblesort} ordina solo le permutazioni che non contengono pattern 231 e 321, vale che:$$B^{-1}(Av(21)) = Av(231,321)$$
+\paragraph*{Composizione di operatori} Siano due operatori di ordinamento $X$ e $Y$, la loro composizione \'e indicata con $( XY ) = ( X \circ Y )$, qundi, ad esempio, la composizione di \textit{Stacksort} e \textit{Bubblesort} (in questo ordine) si indica con $SB(\pi) = (S \circ B)(\pi) = S(B(\pi))$.
+\paragraph*{Preimmagini} Sono già stati prodotti alcuni algoritmi per calcolare le preimmagini di pattern secondo gli operaratori \textit{bubblesort}\cite{albert2010inverse}, \textit{stacksort}\cite{claesson2012sorting} e \textit{queuesort}\cite{magnusson2013sorting}.\\
+Questo ci permette, quando si combinano due operatori di ordinamento, di cercare per quali pattern l'operatore che viene applicato per primo produce permutazioni che siano ordinabili dal secondo.
+\paragraph*{Combinazione di \textit{Stacksort} e \textit{Bubblesort}} Si considera dunque la composione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da esso.$$(SB)^{-1}=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
+Dunque ricercando per quali permutazioni \textit{bubblesort} evita il pattern 231 si trovano le condizioni per cui una permutazione risulta ordinabile da \textit{SB}.\\
+Utilizzando i suddetti algoritmi\cite{albert2010inverse} si ottiene che:$$(SB)^{-1}(Av(21))=Av(3241, 2341, 4231, 2431)$$
+Si pu\'o notare che bubble sort, applicato a tutte le combinazioni trovate prima, produce sempre un pattern 231:
+\begin{description}
+\item[2341] viene scambiato il 4 con l'1, ottenndo 2314
+\item[2431] viene scambiato il 4 con il 3, poi con l'1, ottenndo 2314
+\item[3241] vengono scambiati il 2 con il 3 e il 4 con l'1, ottenendo 2341
+\item[4231] viene scambiato il 4 con tutti gli elementi fino ad essere alla fine della sequenza.
+\end{description}
+Si nota da questo esempio un'approccio (senz'altro meno rigoroso degli algoritmi gi\'a formalizzati) che permette in generale di cercare preimmagini secondo bubblesort: dal pattern che si vuole ottenere si cercano le coppie di valori non ordinate (che quindi dovranno essere disordinate anche prima della passata) e si cercano le sequenze che le contengono; nel caso specifico del bubblesort, posizionando prima di una coppia disordinata nel pattern originale un valore maggiore, si evita che questa venga ordinata e questo ci permette di trovare le possibili preimmaigini.
