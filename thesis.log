@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  16 DEC 2023 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  17 DEC 2023 02:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,19 +1319,25 @@ Overfull \hbox (1.87111pt too wide) in paragraph at lines 81--81
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
-) [8]
+[8]) [9]
 \openout2 = `Chapters/software.aux'.
 
- (./Chapters/software.tex
+ (./Chapters/software.tex [10
+
+
+
+
+
+]
 chapter 3.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1369,13 +1375,7 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 6.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 9.30756pt on input line 6.
-(./python/permutasort.py [9
-
-
-
-
-
-]) [10]
+(./python/permutasort.py [11]) [12]
 Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
@@ -1394,10 +1394,10 @@ LaTeX Font Info:    Font shape `T1/fvm/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/fvm/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-(./python/pattfinder.py [11] [12])) [13]
+(./python/pattfinder.py [13] [14])) [15]
 \openout2 = `Chapters/opcomposition.aux'.
 
- (./Chapters/opcomposition.tex [14
+ (./Chapters/opcomposition.tex [16
 
 
 
@@ -1417,38 +1417,38 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
 
-Overfull \hbox (7.0185pt too wide) in paragraph at lines 8--10
+Overfull \hbox (7.0185pt too wide) in paragraph at lines 7--9
 [] []\T1/pplj/m/sc/12 (-20) a l -g o -r i t -m i p e r i l c a l -c o -l o d i 
 p r e i m -m a g -i -n i[] \T1/pplj/m/n/12 (-20) Sono giá stati prodot-
  []
 
-[15]
+[17]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 10.
+(Font)              using `T1/pplj/m/it' instead on input line 9.
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 10.
+(Font)              using `T1/pplj/m/it' instead on input line 9.
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+(Font)              using `T1/pplj/m/it' instead on input line 27.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/9'.
@@ -1458,49 +1458,96 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
+
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 27.
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 28.
 
-
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
-
-
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+[19]
+Overfull \hbox (4.17546pt too wide) in paragraph at lines 36--42
+\T1/pplj/m/n/12 (-20) Dunque le preim-mag-i-ni che cer-chi-amo de-vono es-sere 
+nel-la for-ma $\U/zeur/m/n/12 33[]22[]1$\T1/pplj/m/n/12 (-20) . 
+ []
 
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+Overfull \hbox (17.74092pt too wide) in paragraph at lines 47--53
+\T1/pplj/m/n/12 (-20) Giá dal-l'anal-isi del-la com-bi-nazione prece-dente é ri
+sul-ta-to che $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/1
+2 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
+ []
 
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
+
+ []
 
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
+
+ []
 
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
+
+ []
 
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 28.
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
 
+ []
 
-LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 29.
+[20]
+Overfull \hbox (2.51671pt too wide) detected at line 53
+\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/
+12 231\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 2341;
+ 3[]241\U/zeus/m/n/12 ©\U/zeur/m/n/12 ; S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/
+zeus/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n
+/12 ¨\U/zeur/m/n/12 34251; 35241; 45231\U/zeus/m/n/12 ©
+ []
 
-[17]) [18] (./thesis.bbl (./thesis.brf)
+) [21] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
+ [22
 
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1512,12 +1559,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [19
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [23] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1526,14 +1568,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: A3FCD78D3A8C0F5E581758A6666C2A56;714.
+(rerunfilecheck)             Checksum: 2CD7D7CDDDA96D8471EAB7CF2A546B12;611.
  ) 
 Here is how much of TeX's memory you used:
- 29831 strings out of 477985
- 570606 string characters out of 5840058
+ 29850 strings out of 477985
+ 570796 string characters out of 5840058
  1935388 words of memory out of 5000000
- 48973 multiletter control sequences out of 15000+600000
- 598084 words of font info for 413 fonts, out of 8000000 for 9000
+ 48978 multiletter control sequences out of 15000+600000
+ 598656 words of font info for 421 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,141p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
@@ -1546,10 +1588,10 @@ ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (21 pages, 231390 bytes).
+Output written on thesis.pdf (25 pages, 236844 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 143 named destinations out of 1000 (max. 500000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 147 named destinations out of 1000 (max. 500000)
  93222 words of extra memory for PDF output out of 106986 (max. 10000000)
 
