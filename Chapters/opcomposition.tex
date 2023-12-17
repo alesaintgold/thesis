@@ -25,7 +25,7 @@ Si nota da questo esempio un'approccio (senz'altro meno rigoroso degli algoritmi
 Da queste considerazioni si pu\'o verificare il risultato ottenuto prima per $SB$.\\\\
 Lo stesso metodo pu\'o essere applicato alla combinazione di \textit{queuesort} e \textit{bubblesort}:
 \section*{$\textit{Q}\circ\textit{B}$:}$$(QB)^{-1}(Av(21))=B^{-1}Q^{-1}(Av(21))=B^{-1}(Av(321))$$Si osserva che le coppie non invertite in $321$ sono $(3,2),(3,1),(2,1)$ e l'unico pattern minimo che le contiene tutte \'e appunto $321$.\\Per fare in modo che \textit{bubblesort} produca un $321$ bisogna dunque che sia presente un valore $4$ prima di $2$: sia che sia posizionato prima di $3$ o tra $3$ e $2$, esso \'e l'unico elemento (tra quelli che compongono il pattern) che viene spostato e il pattern $321$ presente nell'input \'e ancora presente nell'output.\\Cos\'i si ottengono le preimmagini $4231,3421$.$$QB^{-1}(Av(21))=Av(4321,3421)$$
-\section*{Composizioni con \textit{stacksort}}
+\section*{Composizioni che terminano con \textit{stacksort}}
 L'algoritmo per le preimmagini di \textit{stacksort} \'e abbstanza simile a quello per \textit{bubblesort}.\\
 Anche in questo caso si osservano tutte le coppie disordinate contenute nell'immagine in esame e se ne tre una lista di pattern minimi candidati ad essere preimmagini e li si esaminano ad uno ad uno.\\
 Per ogni coppia disordinata $(b,a)$ presente nel candidato: 
@@ -53,3 +53,16 @@ Si uniscono adesso i due insiemi ottenuti:
 $$S^{-1}(Av(231))=Av(2341,3\overline{5}241), S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
 Si osserva che $2341\preceq 34251$, quindi $34251$ non \'e minimo.\\
 Inoltre i pattern $35241, 3\overline{5}241$, possono essere rappresentati dal pattern minimo $3241$ che rende non minimo anche $34251$.\\Il risultato che si ottiene \'e:$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
+\section*{Combinazioni che terminano con \textit{queuesort}}
+Nonostante anche per \textit{queuesort} sia stato trovato un algoritmo per le preimmagini\cite{magnusson2013sorting}, approcciare il problema "manualmente" analizzando i possibili comportamenti di \textit{queuesort} rispetto alle diverse possibili permutazioni risulta essere pi\'u semplice e pi\'u comprensibile.
+\paragraph*{left-to-right-maxima}Nel valutare il comportamento di \textit{queuesort} \'e importante considerare la nozione di \textit{left-to-right maxima}, ovvero i valori in una sequenza che risultano maggiori di tutti i valori precedenti ad essi.\\Applicando \textit{queuesort} ad una sequenza tutti i \textit{left-to-rigth-maxima} vengono inseriti nella coda.
+\subsection*{$S\circ{Q}$}$$(SQ)^{-1}(Av(21))=Q^{-1}S^{-1}(Av(21))=Q^{-1}(Av(231))$$Ancora una volta si considerano come candidati i pattern minimi che contengano almeno le coppie disordinate $(2,1),(3,1)$ ovvero $231,321$.\\\\
+Se la preimmagine ha un pattern $321$ \'e necessario che l'elemento $3$ entri nella coda per generare un pattern $231$, questo si verifica se esso \'e un \textit{left-to-right-maxima}.\\$2$ viene sicuramente aggiunto all'output prima che $3$ esca dalla coda, poi un valore maggiore di $3$ deve essere presente prima di $1$, per aggiungere $3$ all'output prima che $1$ effettui il bypass.\\
+L'unico pattern che rispetta tutte queste condizioni \'e $\overline{5}3241$.\\\\
+Per ottenere un'immagine che contenga un pattern $231$ da una preimmagine che lo contiene a sua volta \'e necessario che $2$ effettui un bypass o che venga estratto dalla coda prima che $3$ vi entri. Il che implica la presenza di un valore $2^+>2$ prima di $2$ o tra $2$ e $3$.\\Similmente $3$ deve essere aggiunto all'output prima di $1$, qundi deve bypassare o essere estratto prima che $1$ bypassi. Il che implica l'esistenza di un elemento $4$ in posizione precdente a $1$; si noti che se $4$ compare prima di $2$ il pattern minimo \'e dato da $2^+=4$.\\
+Gli unici pattern minimi che soddisfano queste condizioni sono $2431,4231$. Anche i pattern $42351,52341,25341,24351$ possono essere ottenuti dalle stesse condizioni, ma contengono tutti almeno uno dei due pattern elencati prima.
+\\\\Si nota inoltre che, il pattern calcolato prima $\overline{5}3241\in Q^{-1}(Av(321))$ risulta adesso superfluo in quanto $4231\preceq\overline{5}3241$
+$$(SQ)^{-1}(Av(21))=Av(2431,4231)$$
+\subsection*{$B\circ{Q}$}$$(BQ)^{-1}(Av(21))=Q^{-1}B^{-1}(Av(21))=Q^{-1}(Av(231,321))$$
+Ancora una volta, si osserva che $Q^{-1}(Av(231))$ \'e gi\'a stato calcolato nel caso precedente, e resta dunque da unire i risultati gi\'a ottenuti con $Q^{-1}(Av(321))$.\\
+L'unico candidato per la preimmagine del pattern $321$ \'e se stesso.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  17 DEC 2023 02:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  17 DEC 2023 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1362,6 +1362,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -1538,16 +1541,30 @@ zeus/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n
 /12 ¨\U/zeur/m/n/12 34251; 35241; 45231\U/zeus/m/n/12 ©
  []
 
-) [21] (./thesis.bbl (./thesis.brf)
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 56.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--65
+
+ []
+
+[21]) [22] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write4
 \openout4 = `thesis.brf'.
 
- [22
 
-
-
-
-]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1559,7 +1576,12 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [23] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [23
+
+
+
+
+] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1568,16 +1590,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 2CD7D7CDDDA96D8471EAB7CF2A546B12;611.
+(rerunfilecheck)             Checksum: 89FBD6A4B8622481DC9E2092A0EB8B71;664.
  ) 
 Here is how much of TeX's memory you used:
- 29850 strings out of 477985
- 570796 string characters out of 5840058
- 1935388 words of memory out of 5000000
- 48978 multiletter control sequences out of 15000+600000
- 598656 words of font info for 421 fonts, out of 8000000 for 9000
+ 29318 strings out of 477985
+ 564685 string characters out of 5840058
+ 1936388 words of memory out of 5000000
+ 48428 multiletter control sequences out of 15000+600000
+ 599789 words of font info for 437 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,23n,141p,10694b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,23n,141p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1
@@ -1588,10 +1610,10 @@ ist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (25 pages, 236844 bytes).
+Output written on thesis.pdf (25 pages, 241509 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 147 named destinations out of 1000 (max. 500000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
+ 143 named destinations out of 1000 (max. 500000)
  93222 words of extra memory for PDF output out of 106986 (max. 10000000)
 
