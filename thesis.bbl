@@ -1,5 +1,8 @@
 \begin{thebibliography}{1}
 
+\bibitem{patternmacros}
+
+
 \bibitem{albert2010inverse}
 Michael~H Albert, Mike~D Atkinson, Mathilde Bouvel, Anders Claesson, and Mark
   Dukes.
@@ -10,6 +13,12 @@ Michael~H Albert, Mike~D Atkinson, Mathilde Bouvel, Anders Claesson, and Mark
 Mathilde Bouvel, Lapo Cioni, and Luca Ferrari.
 \newblock Preimages under the bubblesort operator.
 \newblock {\em arXiv preprint arXiv:2204.12936}, 2022.
+
+\bibitem{branden2011mesh}
+Petter Br{\"a}nd{\'e}n and Anders Claesson.
+\newblock Mesh patterns and the expansion of permutation statistics as sums of
+  permutation patterns.
+\newblock {\em arXiv preprint arXiv:1102.4226}, 2011.
 
 \bibitem{cioni2021characterization}
 Lapo Cioni and Luca Ferrari.

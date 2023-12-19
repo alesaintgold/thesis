@@ -16,26 +16,45 @@ Si pu\'o notare che bubble sort, applicato a tutte le combinazioni trovate, prod
 \item[3241:] vengono scambiati il 2 con il 3 e il 4 con l'1, ottenendo 2341
 \item[4231:] viene scambiato il 4 con tutti gli elementi fino ad essere alla fine della sequenza.
 \end{description}
-Si nota da questo esempio un'approccio (senz'altro meno rigoroso degli algoritmi gi\'a formalizzati) che permette in generale di cercare preimmagini secondo bubblesort: dal pattern che si vuole ottenere si cercano le coppie di valori non ordinate (che quindi dovranno essere disordinate anche prima della passata) e si cercano le sequenze che le contengono; nel caso specifico del bubblesort, posizionando prima di una coppia disordinata nel pattern originale un valore maggiore, si evita che questa venga ordinata e questo ci permette di trovare le possibili preimmaigini valutando le possibili posizioni e i possibili valori che questo pu\'o assumere.
+Si nota da questo esempio un'approccio (senz'altro meno rigoroso degli algoritmi gi\'a formalizzati) che permette in generale di cercare preimmagini secondo bubblesort: dal pattern che si vuole ottenere si cercano le coppie di valori non ordinate (che quindi dovranno essere disordinate anche prima della passata) e si cercano le sequenze che le contengono, queste sequenze verranno dette \textbf{candidati} e ogni preimmagine del pattern deve contenere almeno uno di questi.\\Nel caso specifico del bubblesort, posizionando prima di una coppia disordinata nel pattern originale un valore maggiore, si evita che questa venga ordinata e questo ci permette di trovare le possibili preimmaigini valutando le possibili posizioni e i possibili valori che questo pu\'o assumere.
 \paragraph*{Esempio di calcolo di una preimmagine}Volendo ricercare le preimmagini di $231$ secondo \textit{bubblesort} si osserva che le coppie disordinate in $231$ sono $(2,1),(3,1)$, da questo si ricavano una lista di candidati, ovvero di pattern contenuti nelle preimmagini, che dovranno comprendere almeno le stesse coppie disordinate: ovvero $231$ e $321$.
 \begin{description}
 \item[231:] \textit{bubblesort} lascia invariata la coppia $(2,3)$, ma per produrre un pattern $231$ \'e necessario che non venga scambiata la coppia $(3,1)$, per fare questo si posiziona il valore $4$ prima dell'$1$, in qualunque posizione, ottenendo $4231$, $2431$, $2341$;
+\begin{center}
+\mmpattern{scale=1.4}{3}{1/2,2/3,3/1}{}{0/3/3/4/1}
+\end{center}
 \item[321:] per ottenere un $231$ \'e necessario che venga scambiata la coppia $(3,2)$ ma non $(3,1)$, dunque \'e necessario che un valore maggiore di $3$ sia posizionato dopo $2$ ma prima di $1$, cos\'i si ottiene $3241$.
+\begin{center}
+\mmpattern{scale=1.4}{3}{1/3,2/2,3/1}{}{2/3/3/4/1}
+\end{center}
 \end{description}
 Da queste considerazioni si pu\'o verificare il risultato ottenuto prima per $SB$.\\\\
 Lo stesso metodo pu\'o essere applicato alla combinazione di \textit{queuesort} e \textit{bubblesort}:
-\section*{$\textit{Q}\circ\textit{B}$:}$$(QB)^{-1}(Av(21))=B^{-1}Q^{-1}(Av(21))=B^{-1}(Av(321))$$Si osserva che le coppie non invertite in $321$ sono $(3,2),(3,1),(2,1)$ e l'unico pattern minimo che le contiene tutte \'e appunto $321$.\\Per fare in modo che \textit{bubblesort} produca un $321$ bisogna dunque che sia presente un valore $4$ prima di $2$: sia che sia posizionato prima di $3$ o tra $3$ e $2$, esso \'e l'unico elemento (tra quelli che compongono il pattern) che viene spostato e il pattern $321$ presente nell'input \'e ancora presente nell'output.\\Cos\'i si ottengono le preimmagini $4231,3421$.$$QB^{-1}(Av(21))=Av(4321,3421)$$
+\section*{$\textit{Q}\circ\textit{B}$:}$$(QB)^{-1}(Av(21))=B^{-1}Q^{-1}(Av(21))=B^{-1}(Av(321))$$Si osserva che le coppie non invertite in $321$ sono $(3,2),(3,1),(2,1)$ e l'unico pattern minimo che le contiene tutte \'e appunto $321$.\\Per fare in modo che \textit{bubblesort} produca un $321$ bisogna dunque che sia presente un valore $4$ prima di $2$: sia che sia posizionato prima di $3$ o tra $3$ e $2$, esso \'e l'unico elemento (tra quelli che compongono il pattern) che viene spostato e il pattern $321$ presente nell'input \'e ancora presente nell'output.\\
+\begin{center}
+\mmpattern{scale=1.4}{3}{1/3,2/2,3/1}{}{0/3/2/4/1}
+\end{center}
+Cos\'i si ottengono le preimmagini $4321,3421$.$$QB^{-1}(Av(21))=Av(4321,3421)$$
 \section*{Composizioni che terminano con \textit{stacksort}}
 L'algoritmo per le preimmagini di \textit{stacksort} \'e abbstanza simile a quello per \textit{bubblesort}.\\
 Anche in questo caso si osservano tutte le coppie disordinate contenute nell'immagine in esame e se ne tre una lista di pattern minimi candidati ad essere preimmagini e li si esaminano ad uno ad uno.\\
 Per ogni coppia disordinata $(b,a)$ presente nel candidato: 
 \begin{description}
 \item se $(b,a)$ \'e presente anche nell'immagine allora deve essere presente un elemento $c>b$ tra $b$ e $a$ che fa uscire $b$ dalla pila prima che $a$ vi entri
-\item se invece $(b,a)$ non \'e presente allora si pu\'o escludere la presenza di tale elemento (pu\'o eventualmente essere necessario specificare nel pattern che questo elemento deve essere assente, il che pu\'o richiedere pattern non classici o meta-pattern\cite{claesson2012sorting})
+\begin{center}
+\mmpattern{scale=1}{2}{1/2,2/1}{}{} $\Longrightarrow$\mmpattern{scale=1}{2}{1/2,2/1}{}{1/2/2/3/1} 
+\end{center}
+\item se invece $(b,a)$ non \'e presente allora si pu\'o escludere la presenza di tale elemento
+\begin{center}
+\mmpattern{scale=1}{2}{1/2,2/1}{}{} $\Longrightarrow$\mmpattern{scale=1}{2}{1/2,2/1}{1/2}{} 
+\end{center}
 \end{description}
 \subsection*{$\textit{Q}\circ\textit{S}$}$$(QS)^{-1}(Av(21))=S^{-1}Q^{-1}(Av(21))=S^{-1}(Av(321))$$
 Si ricerca dunque le preimmagini di $321$ secondo \textit{stacksort}.\\$321$ \'e l'unico candidato, quindi sappiamo che tutte le preimmagini devono contenere il pattern $321$.\\
 L'elemento $3$ deve entrare nella pila ed uscirne prima del $2$, per fare ci\'o deve esserci un elemento $3^+$ maggiore di $3$ tra $3$ e $2$. Similmente \'e necessario un elemento $2^+>2$ tra $2$ e $1$ per assicurare che $2$ esca dalla pila prima che $1$ vi entri.\\
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/2,3/1}{}{1/3/2/4/1,2/2/3/4/1}
+\end{center}
 Dunque le preimmagini che cerchiamo devono essere nella forma $33^+22^+1$.\\
 Se $2^+<3$ allora la preimmagine assume la forma del pattern $45231$.\\
 Altrimenti se $2^+>3$, si possono ottenere due diverse preimmagini:
@@ -65,4 +84,13 @@ Gli unici pattern minimi che soddisfano queste condizioni sono $2431,4231$. Anch
 $$(SQ)^{-1}(Av(21))=Av(2431,4231)$$
 \subsection*{$B\circ{Q}$}$$(BQ)^{-1}(Av(21))=Q^{-1}B^{-1}(Av(21))=Q^{-1}(Av(231,321))$$
 Ancora una volta, si osserva che $Q^{-1}(Av(231))$ \'e gi\'a stato calcolato nel caso precedente, e resta dunque da unire i risultati gi\'a ottenuti con $Q^{-1}(Av(321))$.\\
-L'unico candidato per la preimmagine del pattern $321$ \'e se stesso.
+Si osserva che ogni candidato per la preimmagine del pattern $321$ deve a sua volta contenere un pattern $321$.\\
+In particolare \'e necessario che tutti gli elemenri che compongono il pattern $321$ effettuino un bypass. L'unico pattern minimo che soddisfa queste condizioni \'e $4321$.\\Si combina quest'ultimo risultato e con quelli del caso precedente e si ottiene:$$(BQ)^{-1}(Av(21))=Av(2431,4231,4321)$$
+\section*{Contenitori POP}
+Lo studio di combinazioni di operatori che utilizzano contenitori POP si rivela pi\'u difficile, in quando si tratta di casi non approfonditi in letteratura.\\
+Sono noti i pattern che rendono una permutazione non ordinabile, come presentato nel capitolo 2, ovvero:$$S_{POP}^{-1}(Av(21)) = Av(231,312)$$$$P_{POP}^{-1}(Av(21))=Av(132,321)$$
+Si considerano due distinti casi: quello in cui l'operatore della combinazione applicato per primo alla permutazione \'e un algoritmo regolare e quello in cui \'e un algoritmo POP. Il primo caso \'e di pi\'u facile soluzione: infatti si tratta di cercare le preimmagini dell'algoritmo regolare dei pattern che rendono la permutazione non ordinabile dall'algoritmo POP, seguendo le metodologie applicate finora (diversi risultati gi\'a ottenuti per i casi regolari possono essere riutilizzati in questa circostanza).
+\subsection*{$S_{POP}\circ{S}$}$$(S_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(231,312))$$
+Si \'e gi\'a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi manca da calcolare le preimmagini di $312$.\\
+I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
+Perch\'e un pattern $321$ generi un $312$ tramite \textit{stacksort} \'e necessario che $3$ entri in pila, ne esca prima che $2$ vi entri, e che quando $2$ vi entri non venga estratto prima di $1$. Deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provovhi l'uscita di $3$, e bisogna assicurare che non vi sia un valore $2^+>2$ tra $2$ e $1$. Queste condizioni sono realizzate da i pattern nella forma $342\overline{2^+}1$, in cui bisogna valutare le condizioni di ordine di $2^+$ rispetto agli elementi $3$ e $4$, differenziando tra i seguenti casi $(2^+<3), (3<2^+<4), (2^+>4)$ ed ottenendo i pattern $452\overline{3}1, 352\overline{4}2, 342\overline{5}1$.\\

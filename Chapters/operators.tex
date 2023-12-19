@@ -85,7 +85,7 @@ Un pattern barrato \'e un pattern in cui ogni numero pu\'o essere barrato.
 \section*{Algoritmi e pattern-avoidance}
 \paragraph*{pattern 231}Una permutazione $\pi$ contiene un pattern $231$ se $231\preceq\pi$, ovvero se $\exists a<b<c: \pi =\dots{b}\dots{c}\dots{a}\dots$.\\\\
 \'E noto in letteratura \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\\\
-Allo stesso modo, sono note simile condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatori descritti precedentemente.
+Allo stesso modo, sono note simili condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatori descritti precedentemente.\\
 \begin{center}
 \begin{tabular}{ |c|c| } 
 \hline
@@ -99,3 +99,16 @@ Pop-queue sort& Av(132,321)\\
 \hline
 \end{tabular}
 \end{center}
+\section*{Mesh-pattern, pattern barrati e pattern decorati}
+In questa sezione verranno brevemente introdotti i mesh-pattern\cite{branden2011mesh}, attraverso degli esempi, le macro per la realizzazione delle griglie sono state prodotte dalla \textit{Reykjavik University}\cite{patternmacros}.
+\begin{center}
+\mpattern{scale=1.4}{3}{1/1,2/3,3/2}{0/2,1/2,2/2}
+\end{center}
+Il pattern mostrato nella griglia soprastante appare in una permutazione se si pu\'o individuare un pattern $132$ posizionato in modo tale che le zone oscurate non sono occupate da altri elementi della permutazione.\\\\
+La sequenza $1243$ contiene un'istanza del pattern, dato che gli elementi $1,4,3$ formano un pattern $132$ e l'elemento $2$ si trova in una zona non oscurata.\\
+La sequenza $3142$ invece non contiene lo stesso pattern, dato che nonostante $1,4,2$ formano un pattern $132$, l'elemento 3 si trova nella zona oscurata $(0,2)$ (le zone oscurate si individuano indicando la posizione del loro angolo in basso a sinistra, numerandoli da $0$).\\\\
+Nel seguente pattern l'area bianca indicata con $1$ indica che per avere un'istanza di questo pattern in una permutazione, all'interno dell'area deve essere presente almeno un altro elemento della permutazione: 
+\begin{center}
+\mmpattern{scale=1.4}{3}{1/1,2/3,3/2}{3/0,3/1,3/2}{2/3/3/4/1}
+\end{center}
+Questo pattern \'e contenuto, ad esempio, nelle sequenze $1342$, $12453$ o $13524$.
