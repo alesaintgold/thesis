@@ -66,31 +66,123 @@ $$(QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
 \subsection*{$\textit{B}\circ\textit{S}$}$$(BS)^{-1}(Av(21))=S^{-1}B^{-1}(Av(21))=S^{-1}(Av(231,321))$$
 Gi\'a dall'analisi della combinazione precedente \'e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ qundi \'e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \'e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \'e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\\\
 Seguendo l'algoritmo applicato finora si osserva che i pattern candidati per le preimmagini sono $231,321$.\\\\
-Per ottenere con \textit{stacksort} un pattern $231$ da un pattern $321$ \'e necessario che il $3$ entri pila e che vi rimanga fino all'ingresso di $2$, il che esclude la presenza di valori maggiori di $3$ tra $3$ e $2$, tuttavia dato che entrambi devono uscire dalla pila prima di $1$ deve esserci almeno un valore maggiore di $3$ tra $2$ e $1$: i pattern che implicano queste condizioni sono $3\overline{4}251$ e $3\overline{5}241$; si osserva che se i valori maggiori di $3$ sono ordinati tra loro quando si arriva al secondo il primo viene estratto, contraddicendo le condizioni, dunque l'unico pattern minimo che contiene un pattern $321$ e che genera un pattern $231$ \'e $3\overline{5}241$ \\
-\\Se invece la preimmagine deve contenere e generare un pattern $231$ si deve avere la presenza di un valore maggiore di $3$ tra $3$ e $1$, che faccia uscire $3$ dalla pila, ovvero il pattern $2341$.\\\\
-Si uniscono adesso i due insiemi ottenuti:
+Si uniscono dunque i due risultati:
 $$S^{-1}(Av(231))=Av(2341,3\overline{5}241), S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
 Si osserva che $2341\preceq 34251$, quindi $34251$ non \'e minimo.\\
 Inoltre i pattern $35241, 3\overline{5}241$, possono essere rappresentati dal pattern minimo $3241$ che rende non minimo anche $34251$.\\Il risultato che si ottiene \'e:$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
 \section*{Combinazioni che terminano con \textit{queuesort}}
 Nonostante anche per \textit{queuesort} sia stato trovato un algoritmo per le preimmagini\cite{magnusson2013sorting}, approcciare il problema "manualmente" analizzando i possibili comportamenti di \textit{queuesort} rispetto alle diverse possibili permutazioni risulta essere pi\'u semplice e pi\'u comprensibile.
-\paragraph*{left-to-right-maxima}Nel valutare il comportamento di \textit{queuesort} \'e importante considerare la nozione di \textit{left-to-right maxima}, ovvero i valori in una sequenza che risultano maggiori di tutti i valori precedenti ad essi.\\Applicando \textit{queuesort} ad una sequenza tutti i \textit{left-to-rigth-maxima} vengono inseriti nella coda.
+\paragraph*{left-to-right-maxima}Nel valutare il comportamento di \textit{queuesort} \'e importante considerare la nozione di \textit{left-to-right maxima}, ovvero i valori in una sequenza che risultano maggiori di tutti i valori precedenti ad essi.\\\\
+I \textit{left-to-rigth-maxima} di una sequenza sono esattamente tutti gli elementi che vengono inseriti nella coda durante l'applicazione dell'operatore \textit{queuesort}, quindi, se nel valutare il comportamento di \textit{queuesort} rispetto ad una preimmagine se ci si vuole assicurare che un elemento entri nella coda si applicher \'a il seguente mesh-pattern all'elemento in considerazione:
+\begin{center}
+\mmpattern{scale=1.5}{1}{1/1}{0/1}{}
+\end{center}
+Al contrario, se si ha a che fare con un elemento che risulta essere un right-to-lrft-maxima ma lo si vuole forzare a svuotare la coda, si avr\'a il seguente risultato:
+\begin{center}
+\mmpattern{scale=1.5}{1}{1/1}{}{0/1/1/2/1}
+\end{center}
+Per forzare un elemento a effettuare un bypass \'e necessario che esso sia minore del primo elemento della coda, per questa condizione \'e pi\'u difficile formalizzare una startegia, ma si vedranno in seguito esempi di come pu\'o essere fatto. 
 \subsection*{$S\circ{Q}$}$$(SQ)^{-1}(Av(21))=Q^{-1}S^{-1}(Av(21))=Q^{-1}(Av(231))$$Ancora una volta si considerano come candidati i pattern minimi che contengano almeno le coppie disordinate $(2,1),(3,1)$ ovvero $231,321$.\\\\
-Se la preimmagine ha un pattern $321$ \'e necessario che l'elemento $3$ entri nella coda per generare un pattern $231$, questo si verifica se esso \'e un \textit{left-to-right-maxima}.\\$2$ viene sicuramente aggiunto all'output prima che $3$ esca dalla coda, poi un valore maggiore di $3$ deve essere presente prima di $1$, per aggiungere $3$ all'output prima che $1$ effettui il bypass.\\
-L'unico pattern che rispetta tutte queste condizioni \'e $\overline{5}3241$.\\\\
-Per ottenere un'immagine che contenga un pattern $231$ da una preimmagine che lo contiene a sua volta \'e necessario che $2$ effettui un bypass o che venga estratto dalla coda prima che $3$ vi entri. Il che implica la presenza di un valore $2^+>2$ prima di $2$ o tra $2$ e $3$.\\Similmente $3$ deve essere aggiunto all'output prima di $1$, qundi deve bypassare o essere estratto prima che $1$ bypassi. Il che implica l'esistenza di un elemento $4$ in posizione precdente a $1$; si noti che se $4$ compare prima di $2$ il pattern minimo \'e dato da $2^+=4$.\\
-Gli unici pattern minimi che soddisfano queste condizioni sono $2431,4231$. Anche i pattern $42351,52341,25341,24351$ possono essere ottenuti dalle stesse condizioni, ma contengono tutti almeno uno dei due pattern elencati prima.
-\\\\Si nota inoltre che, il pattern calcolato prima $\overline{5}3241\in Q^{-1}(Av(321))$ risulta adesso superfluo in quanto $4231\preceq\overline{5}3241$
+Se gli elementi del pattern $231$ nell'immagine formano un pattern $321$ nella preimmagine allora il valore $3$ deve entrare nella coda. Sia che $2$ effettui un bypass sia che provochi l'estrazione di alcuni elementi della coda comunque esso viene aggiunto all'output prima che $3$ venga estratto. Si rende necessario un elemento $3^+>3$ posto tra $2$ e $1$ per estarre il $3$ dalla coda e inserirlo nell'input prima dell'$1$, tuttavia $3^+$ non deve essere maggiore dell'elemento in fondo alla coda, altrimenti viene accodato. Si teorizza l'esistenza di un elemento $4>3^+$ posto tra $3$ e $2$, che rappresenta il massimo della coda quando si raggiunge $3^+$.\\
+Il pattern che si ottiene deve essere nella forma $3423^+1$, ovvero $35241$\\\\
+se invece gli elementi del pattern $231$ nell'immagine formano un pattern $231$ anche nella preimmagine che lo contiene a sua volta \'e necessario che $2$ effettui un bypass o che venga estratto dalla coda prima che $3$ vi entri. Il che implica la presenza di un valore $2^+>2$ prima di $2$ o tra $2$ e $3$.\\Similmente $3$ deve essere aggiunto all'output prima di $1$, qundi deve bypassare o essere estratto prima che $1$ bypassi. Il che implica l'esistenza di un elemento $4$ in posizione precdente a $1$; in particolare i pattern minimi che rispettano queste condizoni sono quelli in cui $4$ compare prima di $2$ e si ha che $2^+=4$.\\
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/2,2/3,3/1}{}{0/3/2/4/1}
+\end{center}
+Gli unici pattern minimi che soddisfano queste condizioni sono $2431,4231$.
+\\\\Si nota inoltre che, il pattern calcolato prima $35241\in Q^{-1}(Av(321))$ risulta adesso superfluo in quanto $4231\preceq35241$
 $$(SQ)^{-1}(Av(21))=Av(2431,4231)$$
 \subsection*{$B\circ{Q}$}$$(BQ)^{-1}(Av(21))=Q^{-1}B^{-1}(Av(21))=Q^{-1}(Av(231,321))$$
 Ancora una volta, si osserva che $Q^{-1}(Av(231))$ \'e gi\'a stato calcolato nel caso precedente, e resta dunque da unire i risultati gi\'a ottenuti con $Q^{-1}(Av(321))$.\\
-Si osserva che ogni candidato per la preimmagine del pattern $321$ deve a sua volta contenere un pattern $321$.\\
-In particolare \'e necessario che tutti gli elemenri che compongono il pattern $321$ effettuino un bypass. L'unico pattern minimo che soddisfa queste condizioni \'e $4321$.\\Si combina quest'ultimo risultato e con quelli del caso precedente e si ottiene:$$(BQ)^{-1}(Av(21))=Av(2431,4231,4321)$$
+Gli elementi del pattern $321$ nell'immagine devono essere a sua volta nello stesso odrine nell'immagine.\\
+In particolare gli elementi $3,2$ devono effettuare un bypass o essere inseriti nella coda ed estratti prima dell'elemento successivo.\\\\
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/2,3/1}{}{0/3/2/4/1}
+\end{center}
+Il pattern $4321$ sicuramente soddisfa queste condizioni: se $4$ bypassa allora tutti gli elementi del pattern, essendo minori bypassano a loro volta, se viene inserito in coda ed estratto allora bypassano comunque, se viene inserito in coda e non estratto allora tutti gli elementi successivi evitano la coda e vengono aggiunti all'output, eventualmente dopo aver provocato l'estrazione di alcuni elementi dalla coda.\\
+Se $3$ viene aggiunto in coda ed estratto allora si ha una situazione $3421$, dove $2$ bypassa.\\
+$$(SQ)^{-1}(Av(21))=Av(2431,3421,4231,4321)$$
 \section*{Contenitori POP}
 Lo studio di combinazioni di operatori che utilizzano contenitori POP si rivela pi\'u difficile, in quando si tratta di casi non approfonditi in letteratura.\\
-Sono noti i pattern che rendono una permutazione non ordinabile, come presentato nel capitolo 2, ovvero:$$S_{POP}^{-1}(Av(21)) = Av(231,312)$$$$P_{POP}^{-1}(Av(21))=Av(132,321)$$
-Si considerano due distinti casi: quello in cui l'operatore della combinazione applicato per primo alla permutazione \'e un algoritmo regolare e quello in cui \'e un algoritmo POP. Il primo caso \'e di pi\'u facile soluzione: infatti si tratta di cercare le preimmagini dell'algoritmo regolare dei pattern che rendono la permutazione non ordinabile dall'algoritmo POP, seguendo le metodologie applicate finora (diversi risultati gi\'a ottenuti per i casi regolari possono essere riutilizzati in questa circostanza).
+Sono tuttavia noti i pattern che rendono una permutazione non ordinabile, come presentato nel capitolo 2, ovvero:
+$$S_{POP}^{-1}(Av(21)) = Av(231,312)$$$$Q_{POP}^{-1}(Av(21))=Av(132,321)$$
+Grazie a questi dati, \'e possibile individuare un caso di facile risoluzione: ovvero quello in cui un algoritmo che usa contenitori POP \'e concatenato ad un operatore regolare.
+$$(X_{POP}\circ{Y})(\pi)= X_{POP}(Y(\pi)))\Rightarrow(X_{POP}\circ{Y})^{-1}(\pi) = Y^{-1}X_{POP}^{-1}(\pi)=Y^{-1}(Av(m))$$
+Sapendo l'insieme di pattern $m$ che rendono la permutazione non ordinabile dall'operatore POP baster\'a cercare le loro preimmagini secondo l'operatore regolare con i metodi usati finora, come verr\'a mostrato nelle sezioni seguenti.
 \subsection*{$S_{POP}\circ{S}$}$$(S_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(231,312))$$
 Si \'e gi\'a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi manca da calcolare le preimmagini di $312$.\\
 I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
-Perch\'e un pattern $321$ generi un $312$ tramite \textit{stacksort} \'e necessario che $3$ entri in pila, ne esca prima che $2$ vi entri, e che quando $2$ vi entri non venga estratto prima di $1$. Deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provovhi l'uscita di $3$, e bisogna assicurare che non vi sia un valore $2^+>2$ tra $2$ e $1$. Queste condizioni sono realizzate da i pattern nella forma $342\overline{2^+}1$, in cui bisogna valutare le condizioni di ordine di $2^+$ rispetto agli elementi $3$ e $4$, differenziando tra i seguenti casi $(2^+<3), (3<2^+<4), (2^+>4)$ ed ottenendo i pattern $452\overline{3}1, 352\overline{4}2, 342\overline{5}1$.\\
+Perch\'e gli elementi di un pattern $321$ nella preimmagine generino un pattern $312$ tramite \textit{stacksort} \'e necessario che $3$ entri in pila e ne esca prima che $2$ vi entri, deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provochi l'uscita di $3$, ovvero il pattern $3421$.\\
+Se gli elementi del pattern $312$ nell'immagine formano lo stesso pattern anche nella preimmagine allora anche in questo caso bisogna assicurarsi che $3$ venga estratto dalla pila prima di $1$, si ha quindi il pattern $3412$.\\Si uniscono tutti i risultati:
+$$(S_{POP}\circ{S})^{-1}(Av(21))=Av(2341, 3\overline{5}241, 3412, 3421)$$
+\subsection*{$S_{POP}\circ{B}$}$$(S_{POP}\circ{B})^{-1}(Av(21))=B^{-1}(Av(231,312))$$
+Anche in questo caso la preimmagine di $231$ \'e stata calcolata: $B^{-1}(Av(231))= Av(2341, 2431, 3241, 4231)$.\\
+Gli elementi del pattern $312$ nell'immagine possono solo formare un pattern $312$ o $321$ nella preimmagine.\\
+Si pu\'o osservare come gli stessi elementi di un pattern $321$ non possono divenire un $312$. La presenza dell'elemento maggiore del pattern all'inizio di essa evita l'ordinamento degli elementi successivi.\\
+Perch\'e un pattern $312$ rimanga invariato \'e sufficiente la presenza di un elemento maggiore di tutto il pattern in posizione tale da evitare l'ordinamento di $3$ con qualsiasi elemento, applicando le regole descritte prima per \textit{bubblesort}: 
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{0/3/2/4/1}$=4312,3412$
+\end{center}
+$$(S_{POP}\circ{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
+\subsection*{$S_{POP}\circ{Q}$}$$(S_{POP}\circ{Q})^{-1}(Av(21))=Q^{-1}(Av(231,312))$$$$Q^{-1}(Av(231)=Av(4231,2431)$$
+Possibili preimmagini di $312: 312, 321$.\\
+Se la preimmagine contiene $312$ bisogna far si che $3$ effettui un bypass o che esca prima di $1$, in ogni caso queste condizioni sono soddisfatte dal seguente mesh-pattern, $4312$:
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{1/2/2/3/1}
+\end{center}
+$$(S_{POP}\circ{Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
+\subsection*{$Q_{POP}\circ{S}$}$$(Q_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(132,321))$$$$S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
+Si ricercano dunque i pattern che compongono $S^{-1}(Av(132))$. I candidati per le preimmagini sono $132,312,321$.\\
+Se la preimagine contiene $132$ allora $1$ entra nella pila, $3$ lo fa uscire (se \'e ancora dentro) ma bisogna assicurarsi che $3$ esca prima di $2$, avendo il pattern $1342$.\\
+Se la preimmagine invece contiene $312$ per ottenere $132$ bisogna lasciare che $(3,1)$ vengano ordinati ed aggiunti all'output prima di $2$: si ottiene il pattern $3142$.\\
+Se la preimmagine infine contiene $321$ non c'\'e modo di ottenere un $132$ con gli stessi elementi.
+$$(Q_{POP}\circ{S})^{-1}(Av(21))=Av(1342, 34251, 35241, 3142, 45231)$$
+\subsection*{$Q_{POP}\circ{B}$}$$(Q_{POP}\circ{B})^{-1}(Av(21))=B^{-1}(Av(132,321))$$$$B^{-1}(Av(321))=Av(4321, 3421)$$
+Si cerca l'insieme di pattern corrispondente a $B^{-1}(Av(132))$. Le preimmagini devono contenere uno di questi pattern $132,312,321$.\\
+Se la preimmagine contiene gli stessi elementi del pattern $132$ nello stesso ordine deve essere presente un elemento maggiore di tutti gli altri prima che venga effettuato il primo scambio, ovvero si deve avere uno dei seguenti pattern: $1432,4132$.\\
+Se gli stessi tre elementi formano un pattern $312$ e un pattern $132$ nell'immagine nella preimmagine deve essere possibile scambiare le prime 2 cifre ma non l'ultima, ovvero si deve avere un pattern $3142$, in questo caso, poich\'e la coppia $(1,3)$ si trova prima del $4$ essa verr\'a ordinata comunque, quindi anche il pattern $1342$ \'e ammissibile.\\
+Non \'e possibile spostare gli elementi di un pattern $321$ in un pattern $132$.
+$$(Q_{POP}\circ{B})^{-1}(Av(21))=Av(1342, 1432, 3142, 3421, 4132, 4321)$$
+\subsection*{$Q_{POP}\circ{Q}$}$$(Q_{POP}\circ{Q})^{-1}(Av(21))=Q^{-1}(Av(132,321))$$
+Si calcola $Q^{-1}(Av(321))$, l'unico candidato \'e $321$, quindi la preimmaigine \'e il pattern $4321$.\\\\
+I candidati come preimmagini di $132$ sono i pattern $132,312,321$.\\\\
+Per avere i tre elementi che formano il pattern $132$ nell'immagine nello stesso ordine anche nella preimmaigne deve essere presente un elemento maggiore prima di tutti, ottenendo il pattern $4132$: se $4$ bypassa allora anche tutti gli elementi usccessivi bypassano mantenendo lo stesso ordine, se entra in coda tutti gli altri fanno eventualmente uscire alcuni oggetti dalla coda e poi vengono aggiunti all'output nello stesso ordine.\\\\
+Per avere un pattern $132$ da un $312$ tramite \textit{queuesort} \'e necessario che $3$ entri in coda, $1$ bypassi, e che la coda venga svuotata. Per assicurarsi che $3$ entri in coda \'e sufficiente imporre che sia un left-to-right-maxima. Per forzare un bypass su $1$ si rende necessario che esso sia minore di tutti gli elementi presenti in pila: questo fatto viene rappresentato da un valore $1^+>1$ (left-to-right-maxima) che verr\'a considerato come il valore massimo quando si arriva ad 1. Infine per forzare l'estrazione di $3$ serve un valore $4$ tra 1 e 2. Da queste condizioni si ottiene il seguente pattern:
+\begin{center}
+\mmpattern{scale=1.6}{3}{1/3,2/1,3/2}{0/3}{0/0/1/1/1,2/3/3/4/1}$\Rightarrow$
+\mmpattern{scale=1.4}{4}{1/1,2/4,3/2,4/3}{0/1,0/2,0/3,0/4,1/4}{3/4/4/5/1}$\Rightarrow$
+\mmpattern{scale=1.2}{5}{1/1,2/4,3/1,4/5,5/3}{0/1,0/2,0/3,0/4,0/5,1/4,1/5}{}
+\end{center}
+$$(Q_{POP}\circ{Q})^{-1}(Av(21))=Av(4132,4321,\mmpattern{scale=0.8}{5}{1/1,2/4,3/1,4/5,5/3}{0/1,0/2,0/3,0/4,0/5,1/4,1/5}{})$$
+\section*{Idee per la ricerca di preimmagini secondo l'operatore POPstacksort}
+Si ricercano i candidati come si fa per gli operatori regoalari.\\
+Per ogni candidato si esaminano tutte le coppie non ordinate:
+\begin{description}
+\item se una coppia non ordinata $(b,a)$ \'e presente sia nel candidato che nell'immagine allora l'elemento $b$ viene inserito nella pila ed estratto prima che vi venga inserito $a$, quindi \'e presente un elemento maggiore di $b$ tra i due che provoca il POP
+\begin{center}
+\mpattern{scale=1.5}{2}{1/2,2/1}{} $\Rightarrow$ \mmpattern{scale=1.5}{2}{1/2,2/1}{}{1/2/2/3/1}
+\end{center} \item se una coppia non ordinata $(b,a)$ \'e presente nel candidato ma non nell'immagine allora l'elemento $b$ viene inserito nella pila e non si verifica nessun POP prima che $a$ vi venga inserito sopra
+\begin{center}
+\mpattern{scale=1.5}{2}{1/2,2/1}{} $\Rightarrow$ \mmpattern{scale=1.5}{2}{1/2,2/1}{1/2}{}
+\end{center} 
+\end{description}
+\section*{Idee per la ricerca di preimmagini secondo l'operatore POPqueuesort}
+Si ricercano i candidati come si fa per gli operatori regoalari.\\
+Per ogni candidato si esaminano tutte le coppie non ordinate:
+\begin{description}
+\item se una coppia non ordinata $(b,a)$ \'e presente sia nel candidato che nell'immagine allora l'elemento $b$ effettua un bypass della coda, e quindi non \'e un left-to-right-maxima, oppure entra nella coda (quindi \'e un left-to-right-maxima) e viene estratto prima $a$ possa bypassare, quindi l'area superiore a $b$ contenuta tra $b$ e $a$ deve contenere almeno due elemnti non ordinati.
+\begin{center}
+\mpattern{scale=1.5}{2}{1/2,2/1}{} $\Rightarrow$
+\mmpattern{scale=1.5}{2}{1/2,2/1}{1/2}{0/2/1/3/1},
+\mmpattern{scale=1.2}{4}{1/2,2/4,3/3,4/1}{0/2,0/3,0/4}{}
+\end{center} 
+\item se una coppia non ordinata $(b,a)$ \'e presente nel candidato ma non nell'immagine allora l'elemento $b$ viene inserito nella pila e non si verifica nessun POP prima che $a$ possa bypassare, quindi $b$ \'e un left-to-right-maxima e tra $b$ e $a$ tutti gli elementi bypassano o vengono accodati, quest'ultima condizione in particolare si verifica se tutte le coppie $c,d: b<c<d$ in posizione tra $b$ e $a$ sono ordinate
+\begin{center}
+\mpattern{scale=1.5}{2}{1/2,2/1}{} $\Rightarrow$
+\mmpattern{scale=1.5}{3}{1/2,2/3,3/1}{0/2,2/2}{}
+\end{center} 
+\end{description}
+\subsection*{$S\circ{S_{POP}}$}
+$$(S\circ{S_{POP}})^{-1}(Av(21))=S_{POP}^{-1}S^{-1}(Av(21))=S_{POP}^{-1}(Av(231))$$
+$231$ ha come preimmagini $231,321$.\\
+Per trovare le preimmagini del pattern $231$ si parte dal candidato $231$, che deve essere lasciato invariato. Deve succedere che $2$ entra in pila, la sua estrazione pu\'o essere causata da $3$, che poi viene aggiunto in coda ed infine deve essere estratto prima che $1$ vi entri.

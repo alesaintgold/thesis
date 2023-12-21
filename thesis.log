@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  19 DEC 2023 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  22 DEC 2023 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1010,12 +1010,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-
-LaTeX Warning: \include should only be used after \begin{document} on input lin
-e 92.
-
-(./patternmacros.tex
+) (./patternmacros.tex
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1818,34 +1813,24 @@ nel-la for-ma $\U/zeur/m/n/12 33[]22[]1$\T1/pplj/m/n/12 (-20) .
  []
 
 
-Overfull \hbox (17.74092pt too wide) in paragraph at lines 66--72
+Overfull \hbox (17.74092pt too wide) in paragraph at lines 66--70
 \T1/pplj/m/n/12 (-20) Giá dal-l'anal-isi del-la com-bi-nazione prece-dente é ri
 sul-ta-to che $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/1
 2 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
-
- []
-
-
-Overfull \hbox (2.51671pt too wide) detected at line 72
+Overfull \hbox (2.51671pt too wide) detected at line 70
 \U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/
 12 231\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 2341;
  3[]241\U/zeus/m/n/12 ©\U/zeur/m/n/12 ; S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/
@@ -1853,36 +1838,111 @@ zeus/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n
 /12 ¨\U/zeur/m/n/12 34251; 35241; 45231\U/zeus/m/n/12 ©
  []
 
-[21]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 75.
+(Font)              using `T1/pplj/m/it' instead on input line 73.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
  []
 
-[22] [23])
-Underfull \hbox (badness 10000) in paragraph at lines 93--120
+[22]
+Overfull \hbox (2.13684pt too wide) in paragraph at lines 92--94
+\T1/pplj/m/n/12 (-20) Gli uni-ci pat-tern min-i-mi che sod-dis-fano queste con-
+dizioni sono $\U/zeur/m/n/12 2431; 4231$\T1/pplj/m/n/12 (-20) . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
-[24] (./thesis.bbl (./thesis.brf)
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+[23]
+Overfull \hbox (22.92041pt too wide) detected at line 110
+\U/zeus/m/n/12 ¨\U/zeur/m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m
+/n/12 ©¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 X[]\U/zeus/m/n/12 ¨
+\U/zeur/m/n/12 Y\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 ©©© ) ¨\U/zeur
+/m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m/n/12 ©[]¨\U/zeur/m/n/1
+2 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Y[]X[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y
+\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Y[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m
+/n/12 ¨\U/zeur/m/n/12 m\U/zeus/m/n/12 ©©
+ []
+
+[24]
+Overfull \hbox (15.43079pt too wide) in paragraph at lines 118--123
+\T1/pplj/m/n/12 (-20) Anche in questo ca-so la preim-mag-ine di $\U/zeur/m/n/12
+ 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeus/m
+/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©© ½
+ []
+
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+
+Overfull \hbox (13.72592pt too wide) in paragraph at lines 157--157
+|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i c e r -c a d i p r e i m -m a g -
+i -n i s e c -o n -d o l ' -o p -e r -a -t o r e p o p -
+ []
+
+[27]
+Overfull \hbox (51.54184pt too wide) in paragraph at lines 169--169
+|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i c e r -c a d i p r e i m -m a g -
+i -n i s e c -o n -d o l ' -o p -e r -a -t o r e p o p q u e u e -
+ []
+
+[28]) [29] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
+ [30
 
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1894,12 +1954,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [25
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [31] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1908,14 +1963,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 7B2CC99157EC6B2E6FC6FCF48D1D45B9;708.
+(rerunfilecheck)             Checksum: E11CFD6580B531B21EE5D115615B213A;708.
  ) 
 Here is how much of TeX's memory you used:
- 40534 strings out of 477985
- 812406 string characters out of 5840058
+ 40588 strings out of 477985
+ 813334 string characters out of 5840058
  1936388 words of memory out of 5000000
- 59386 multiletter control sequences out of 15000+600000
- 601988 words of font info for 453 fonts, out of 8000000 for 9000
+ 59419 multiletter control sequences out of 15000+600000
+ 602841 words of font info for 465 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,141p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
@@ -1929,10 +1984,10 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (27 pages, 260729 bytes).
+Output written on thesis.pdf (33 pages, 278268 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 147 named destinations out of 1000 (max. 500000)
+ 426 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 153 named destinations out of 1000 (max. 500000)
  93238 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -1,8 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{patternmacros}
-
-
 \bibitem{albert2010inverse}
 Michael~H Albert, Mike~D Atkinson, Mathilde Bouvel, Anders Claesson, and Mark
   Dukes.
@@ -42,5 +39,11 @@ CONG~HAN LIM.
 Hjalti Magn{\'u}sson.
 \newblock Sorting operators and their preimages.
 \newblock {\em Computer Science}, 2013.
+
+\bibitem{patternmacros}
+HENNING {\'U'}LFARSSON.
+\newblock Ultra-quick tutorial for generalized pattern macros.
+\newblock {\em
+  http://staff.ru.is/henningu/notes/patternmacros/patternmacros.tex}.
 
 \end{thebibliography}
