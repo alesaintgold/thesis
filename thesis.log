@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  30 DEC 2023 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  30 DEC 2023 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1817,53 +1817,53 @@ LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 73.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 [22]
-Overfull \hbox (2.13684pt too wide) in paragraph at lines 92--94
+Overfull \hbox (2.13684pt too wide) in paragraph at lines 91--93
 \T1/pplj/m/n/12 (-20) Gli uni-ci pat-tern mi-ni-mi che sod-di-sfa-no que-ste co
 n-di-zio-ni so-no $\U/zeur/m/n/12 2431; 4231$\T1/pplj/m/n/12 (-20) . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+Underfull \hbox (badness 10000) in paragraph at lines 94--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+Underfull \hbox (badness 10000) in paragraph at lines 94--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 [23]
-Overfull \hbox (22.92041pt too wide) detected at line 110
+Overfull \hbox (22.92041pt too wide) detected at line 109
 \U/zeus/m/n/12 ¨\U/zeur/m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m
 /n/12 ©¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 X[]\U/zeus/m/n/12 ¨
 \U/zeur/m/n/12 Y\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 ©©© ) ¨\U/zeur
@@ -1875,14 +1875,13 @@ Overfull \hbox (22.92041pt too wide) detected at line 110
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 115.
+(Font)              using `T1/pplj/m/it' instead on input line 114.
 
-[24]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 116.
+(Font)              using `T1/pplj/m/it' instead on input line 115.
 
-[25]
+[24] [25]
 Overfull \hbox (15.43079pt too wide) in paragraph at lines 143--148
 \T1/pplj/m/n/12 (-20) Anche in que-sto ca-so la pre-im-ma-gi-ne di $\U/zeur/m/n
 /12 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeu
@@ -1891,37 +1890,27 @@ s/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©©
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 171--176
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--176
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--176
-
- []
-
-[27]
-Overfull \hbox (13.72592pt too wide) in paragraph at lines 182--182
+Overfull \hbox (13.72592pt too wide) in paragraph at lines 162--162
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o p -
  []
 
-[28]
-Overfull \hbox (6.94595pt too wide) in paragraph at lines 194--194
+
+Overfull \hbox (6.94595pt too wide) in paragraph at lines 163--163
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
  []
 
-[29]) [30] (./thesis.bbl (./thesis.brf)
+) [27] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
+ [28
 
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1933,12 +1922,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [31
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [29] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1947,14 +1931,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 65C2C8F9E394F08F7B05AEFACA3E5E7B;757.
+(rerunfilecheck)             Checksum: 1070EE0F3357953FA2B16B0080F2E604;808.
  ) 
 Here is how much of TeX's memory you used:
- 40618 strings out of 477974
- 813735 string characters out of 5839629
+ 40584 strings out of 477974
+ 813116 string characters out of 5839629
  1934388 words of memory out of 5000000
- 59431 multiletter control sequences out of 15000+600000
- 603799 words of font info for 477 fonts, out of 8000000 for 9000
+ 59409 multiletter control sequences out of 15000+600000
+ 603228 words of font info for 469 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,139p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
@@ -1968,10 +1952,10 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (33 pages, 282473 bytes).
+Output written on thesis.pdf (31 pages, 271534 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 159 named destinations out of 1000 (max. 500000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 157 named destinations out of 1000 (max. 500000)
  93238 words of extra memory for PDF output out of 106986 (max. 10000000)
 
