@@ -17,6 +17,10 @@ Petter Br{\"a}nd{\'e}n and Anders Claesson.
   permutation patterns.
 \newblock {\em arXiv preprint arXiv:1102.4226}, 2011.
 
+\bibitem{cioni2021sorting}
+Lapo Cioni et~al.
+\newblock Sorting with a popqueue.
+
 \bibitem{cioni2021characterization}
 Lapo Cioni and Luca Ferrari.
 \newblock Characterization and enumeration of preimages under the queuesort

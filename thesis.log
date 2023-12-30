@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.3)  22 DEC 2023 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  30 DEC 2023 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -173,7 +173,7 @@ Class scrbook Info: Redefining `\numberline' on input line 7330.
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count195
 \U@D=\dimen141
-\l@unhyphenated=\language3
+\l@unhyphenated=\language4
 
 (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -181,20 +181,11 @@ Package: babel 2023/02/13 3.86 The Babel package
 
 (/usr/share/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2022/03/27 v.1.4.07 Italian support for the babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Italian' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 21.
-
-Package babel Info: Hyphen rules for 'italian' set to \l@english
-(babel)             (\language0). Reported on input line 22.
 \it@lettering=\count197
 \it@doublequoteactive=\count198
 \it@ISOcompliance=\count199
-)) (/usr/share/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
+))
+(/usr/share/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
 Package babel Info: Importing font and identification data for italian
 (babel)             from babel-it.ini. Reported on input line 11.
 )
@@ -1321,16 +1312,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
 LaTeX Font Info:    ... okay on input line 94.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
 LaTeX Font Info:    ... okay on input line 94.
-Package scrbase Info: activating italian \partname on input line 94.
-Package scrbase Info: activating italian \chaptername on input line 94.
-Package scrbase Info: activating italian \appendixname on input line 94.
-Package scrbase Info: activating italian \figurename on input line 94.
-Package scrbase Info: activating italian \tablename on input line 94.
-Package scrbase Info: activating italian \contentsname on input line 94.
-Package scrbase Info: activating italian \listfigurename on input line 94.
-Package scrbase Info: activating italian \listtablename on input line 94.
-Package scrbase Info: activating italian \bibname on input line 94.
-Package scrbase Info: activating italian \indexname on input line 94.
 LaTeX Info: Redefining \it@ocap on input line 94.
 LaTeX Info: Redefining \it@ccap on input line 94.
 LaTeX Info: Redefining \dots on input line 94.
@@ -1589,38 +1570,37 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 [7]
-Overfull \hbox (1.87111pt too wide) in paragraph at lines 81--81
-[] []\T1/pplj/m/sc/12 (-20) c l a s -s i d i p a t -t e r n[] \T1/pplj/m/n/12 (
--20) La re-lazione di sot-top-er-mu-tazione é una re-lazione
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
@@ -1725,12 +1705,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-
-Overfull \hbox (7.0185pt too wide) in paragraph at lines 7--9
-[] []\T1/pplj/m/sc/12 (-20) a l -g o -r i t -m i p e r i l c a l -c o -l o d i 
-p r e i m -m a g -i -n i[] \T1/pplj/m/n/12 (-20) Sono giá stati prodot-
- []
-
 [17]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
@@ -1808,15 +1782,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
 [20]
 Overfull \hbox (4.17546pt too wide) in paragraph at lines 58--61
-\T1/pplj/m/n/12 (-20) Dunque le preim-mag-i-ni che cer-chi-amo de-vono es-sere 
-nel-la for-ma $\U/zeur/m/n/12 33[]22[]1$\T1/pplj/m/n/12 (-20) . 
+\T1/pplj/m/n/12 (-20) Dunque le pre-im-ma-gi-ni che cer-chia-mo de-vo-no es-se-
+re nel-la for-ma $\U/zeur/m/n/12 33[]22[]1$\T1/pplj/m/n/12 (-20) . 
  []
 
 
 Overfull \hbox (17.74092pt too wide) in paragraph at lines 66--70
-\T1/pplj/m/n/12 (-20) Giá dal-l'anal-isi del-la com-bi-nazione prece-dente é ri
-sul-ta-to che $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/1
-2 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
+\T1/pplj/m/n/12 (-20) Giá dal-l'a-na-li-si del-la com-bi-na-zio-ne pre-ce-den-t
+e é ri-sul-ta-to che $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeu
+s/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
  []
 
 
@@ -1864,8 +1838,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
 [22]
 Overfull \hbox (2.13684pt too wide) in paragraph at lines 92--94
-\T1/pplj/m/n/12 (-20) Gli uni-ci pat-tern min-i-mi che sod-dis-fano queste con-
-dizioni sono $\U/zeur/m/n/12 2431; 4231$\T1/pplj/m/n/12 (-20) . 
+\T1/pplj/m/n/12 (-20) Gli uni-ci pat-tern mi-ni-mi che sod-di-sfa-no que-ste co
+n-di-zio-ni so-no $\U/zeur/m/n/12 2431; 4231$\T1/pplj/m/n/12 (-20) . 
  []
 
 
@@ -1899,50 +1873,55 @@ Overfull \hbox (22.92041pt too wide) detected at line 110
 /n/12 ¨\U/zeur/m/n/12 m\U/zeus/m/n/12 ©©
  []
 
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 115.
+
 [24]
-Overfull \hbox (15.43079pt too wide) in paragraph at lines 118--123
-\T1/pplj/m/n/12 (-20) Anche in questo ca-so la preim-mag-ine di $\U/zeur/m/n/12
- 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeus/m
-/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©© ½
+
+LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
+(Font)              using `T1/pplj/m/it' instead on input line 116.
+
+[25]
+Overfull \hbox (15.43079pt too wide) in paragraph at lines 143--148
+\T1/pplj/m/n/12 (-20) Anche in que-sto ca-so la pre-im-ma-gi-ne di $\U/zeur/m/n
+/12 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeu
+s/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©© 
+½
  []
 
-[25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 146--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--151
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
 
-Overfull \hbox (13.72592pt too wide) in paragraph at lines 157--157
-|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i c e r -c a d i p r e i m -m a g -
-i -n i s e c -o n -d o l ' -o p -e r -a -t o r e p o p -
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
+
  []
 
 [27]
-Overfull \hbox (51.54184pt too wide) in paragraph at lines 169--169
-|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i c e r -c a d i p r e i m -m a g -
-i -n i s e c -o n -d o l ' -o p -e r -a -t o r e p o p q u e u e -
+Overfull \hbox (13.72592pt too wide) in paragraph at lines 182--182
+|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
+g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o p -
  []
 
-[28]) [29] (./thesis.bbl (./thesis.brf)
+[28]
+Overfull \hbox (6.94595pt too wide) in paragraph at lines 194--194
+|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
+g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
+ []
+
+[29]) [30] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
- [30
 
-
-
-
-]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1954,7 +1933,12 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [31] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [31
+
+
+
+
+] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1963,16 +1947,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: E11CFD6580B531B21EE5D115615B213A;708.
+(rerunfilecheck)             Checksum: 65C2C8F9E394F08F7B05AEFACA3E5E7B;757.
  ) 
 Here is how much of TeX's memory you used:
- 40588 strings out of 477985
- 813334 string characters out of 5840058
- 1936388 words of memory out of 5000000
- 59419 multiletter control sequences out of 15000+600000
- 602841 words of font info for 465 fonts, out of 8000000 for 9000
+ 40618 strings out of 477974
+ 813735 string characters out of 5839629
+ 1934388 words of memory out of 5000000
+ 59431 multiletter control sequences out of 15000+600000
+ 603799 words of font info for 477 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,23n,141p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,23n,139p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -1984,10 +1968,10 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (33 pages, 278268 bytes).
+Output written on thesis.pdf (33 pages, 282473 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 435 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 159 named destinations out of 1000 (max. 500000)
  93238 words of extra memory for PDF output out of 106986 (max. 10000000)
 

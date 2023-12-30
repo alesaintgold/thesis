@@ -39,7 +39,7 @@ Sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, vale che $S(\pi)=S(\pi
    \caption{operatore S - stack sort, singola iterazione}
 \begin{algorithmic}[1]
 \State initialize an empty stack
-   \For{$i=1$ {\bfseries to} $n-1$}
+   \For{$i=1$ {\bfseries to} $n$}
    \While{ stack is unempty \textbf{and} $\pi_i>$top of the stack}
    \State pop from the stack to the output
    \EndWhile
@@ -54,7 +54,7 @@ Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota
    \caption{operatore Q - queue sort, singola iterazione}
 \begin{algorithmic}[1]
 \State initialize an empty queue
-\For{$i=1$ {\bfseries to} $n-1$}
+\For{$i=1$ {\bfseries to} $n$}
 \If{empty queue \textbf{or} last in queue $<\pi_i$}
 \State enqueue($\pi_i$)
 \Else
@@ -70,7 +70,9 @@ Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota
 \paragraph*{Bypass} L'operazione che pone un elemento nell'output senza passare dal contenitore si dice \textbf{bypass}. Questa viene svolta normalmente nel queuesort, ma talvolta pu\'o essere introdotta in altri algoritmi.
 \paragraph*{Osservazione}\textit{Bubble sort} \'e un caso particolare sia di \textit{queue sort} che di \textit{stack sort}.\\
 Se infatti si fissa a 1 la dimensione della pila o della coda dei rispettivi operatori il comportamento che questi assumono \'e quello di una cella che, scorrendo l'input, contiene sempre il massimo valore trovato, mentre gli altri vengono messi nell'output.
-\paragraph*{Contenitori POP}Un caso di studio interessante \'e quello in cui i contenitori di stack sort e queue sort vengano sostituiti dalla loro versione POP, ovvero un contenitore con politiche d estrazione e inserimento analoghe ma che quando viene eseguita un estrazione il contenitore viene svuotato completamente. Si definiscono con questa variante, gli algoritmi \textbf{pop-stacksort} e \textbf{pop-queuesort} 
+\paragraph*{left-to-right maxima} In una sequenza i \textit{LTR maxima} sono gli elementi che risultano essere maggiori di ogni altro elemento che li precede. Ad esempio nella sequenza 142387596 i \textit{LTR maxima} sono 1,4,8,9.\\\\
+La nozione di \textit{LTR maxima} risulta molto importante per lo studio di alcuni degli algoritmi di ordinamento presentati. In particolare durante l'esecuzione di \textit{queuesort} i LTR maxima sono tutti e soli gli elementi che entrano nella coda, mentre durante l'esecuzione di \textit{bubblesort} sono gli unici che vengono scambiati; in entrambi gli algoritmi l'ordine relativo degli altri elementi non viene alterato.
+\paragraph*{Contenitori POP}Un caso di studio interessante \'e quello in cui i contenitori di stack sort e queue sort vengano sostituiti dalla loro versione POP, ovvero un contenitore con politiche di estrazione e inserimento analoghe ma quando viene eseguita un estrazione il contenitore viene svuotato completamente. Si definiscono con questa variante, gli algoritmi \textbf{pop-stacksort} e \textbf{pop-queuesort} 
 \section*{Classi di pattern di permtuazioni}
 \cite{bouvel2022preimages}
 Siano $\alpha,\beta$ due sequenze di interi, si indica con $\alpha \subseteq \beta$ che $\alpha$ \'e una sottosequenza di $\beta$, anche se non necessariamente una sottosequenza consecutiva.\\\\
@@ -95,12 +97,12 @@ Stack sort & Av(231)\\
 Queue sort & Av(321)\\ 
 Bubble sort & Av(231,321)\\ 
 Pop-stack sort & Av(231,312)\\ 
-Pop-queue sort& Av(132,321)\\ 
+Pop-queue sort& Av(321,2413)\\ 
 \hline
 \end{tabular}
 \end{center}
 \section*{Mesh-pattern, pattern barrati e pattern decorati}
-In questa sezione verranno brevemente introdotti i mesh-pattern\cite{branden2011mesh}, attraverso degli esempi, le macro per la realizzazione delle griglie sono state prodotte dalla \textit{Reykjavik University}\cite{patternmacros}.
+In questa sezione verranno brevemente introdotti i mesh-pattern\cite{branden2011mesh} attraverso degli esempi; le macro per la realizzazione delle griglie sono state prodotte dalla \textit{Reykjavik University}\cite{patternmacros}.
 \begin{center}
 \mpattern{scale=1.4}{3}{1/1,2/3,3/2}{0/2,1/2,2/2}
 \end{center}

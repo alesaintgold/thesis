@@ -109,6 +109,31 @@ $$S_{POP}^{-1}(Av(21)) = Av(231,312)$$$$Q_{POP}^{-1}(Av(21))=Av(132,321)$$
 Grazie a questi dati, \'e possibile individuare un caso di facile risoluzione: ovvero quello in cui un algoritmo che usa contenitori POP \'e concatenato ad un operatore regolare.
 $$(X_{POP}\circ{Y})(\pi)= X_{POP}(Y(\pi)))\Rightarrow(X_{POP}\circ{Y})^{-1}(\pi) = Y^{-1}X_{POP}^{-1}(\pi)=Y^{-1}(Av(m))$$
 Sapendo l'insieme di pattern $m$ che rendono la permutazione non ordinabile dall'operatore POP baster\'a cercare le loro preimmagini secondo l'operatore regolare con i metodi usati finora, come verr\'a mostrato nelle sezioni seguenti.
+\subsection*{POP Queuesort}L'algoritmo POP queuesort richiede una diversa analisi da POP stacksort.\\
+Esistono diverse versioni di \textit{POP queuesort} ed in particolare ne esistono due ottimali\cite{cioni2021sorting}: \textit{Min} e \textit{Cons}.
+\begin{description}
+	\item[\textit{Min}] in questa versione l'operazione di POP viene eseguita solo se il primo elemento della coda \'e il successivo dell'ultimo elemento aggiunto all'output; se l'elemento in input \'e maggiore dell'ultimo elemento della coda (o se la coda \'e vuota) allora viene accodato mentre negli altri casi, se l'elemento dell'input \'e minore della testa della coda allora bypassa altrimenti so esegue un POP.
+	\item[\textit{Cons}] questa versione si basa sull'idea di avere sempre elementi consecutivi nella pila; \'e la versione che verr\'a adottata in questa tesi; da qui in avanti ogni riferimento a \textit{POP-queuesort} sar\'a riferito a \textit{Cons}
+\end{description}
+\begin{algorithm}[H]
+   \caption{Cons - POP Queuesort}
+\begin{algorithmic}[1]
+\State $Q\leftarrow$ empty POP-queue
+\For{$i=1$ {\bfseries to} $n-1$}
+	\If{empty queue \textbf{or} $\pi_i=Back(Q)+1$}
+		\State enqueue($\pi_i$)
+	\Else
+		\If{ $Front(Q)>\pi_i$}
+			\State append $\pi_i$ to the output
+		\Else
+			\State POP the queue and append the result to the output
+			\State enqueue($\pi_i$)
+		\EndIf
+	\EndIf
+\EndFor
+\State emtpy the queue in the output
+\end{algorithmic}
+\end{algorithm}
 \subsection*{$S_{POP}\circ{S}$}$$(S_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(231,312))$$
 Si \'e gi\'a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi manca da calcolare le preimmagini di $312$.\\
 I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
