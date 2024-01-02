@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  31 DEC 2023 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  2 JAN 2024 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1895,35 +1895,38 @@ LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 123.
 
 [25]
-Overfull \hbox (15.43079pt too wide) in paragraph at lines 151--156
+Overfull \hbox (15.43079pt too wide) in paragraph at lines 151--157
 \T1/pplj/m/n/12 (-20) Anche in que-sto ca-so la pre-im-ma-gi-ne di $\U/zeur/m/n
 /12 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeu
 s/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©© 
 ½
  []
 
-[26]
-Overfull \hbox (13.72592pt too wide) in paragraph at lines 170--170
+[26] [27]
+Overfull \hbox (9.74437pt too wide) detected at line 179
+\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Q[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 S\U/zeus/m
+/n/12 ©[]¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½
+ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 24513; 24531; 34251; 35241; 42
+513; 42531; 45231\U/zeus/m/n/12 ©
+ []
+
+
+Overfull \hbox (13.72592pt too wide) in paragraph at lines 182--182
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o p -
  []
 
 
-Overfull \hbox (6.94595pt too wide) in paragraph at lines 171--171
+Overfull \hbox (6.94595pt too wide) in paragraph at lines 183--183
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
  []
 
-) [27] (./thesis.bbl (./thesis.brf)
+) [28] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
- [28
 
-
-
-
-]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1935,7 +1938,12 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [29] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [29
+
+
+
+
+] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1947,11 +1955,11 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 4B0F7CC91F5B49D23623554C36A14771;808.
  ) 
 Here is how much of TeX's memory you used:
- 40576 strings out of 477974
- 813123 string characters out of 5839629
+ 40598 strings out of 477974
+ 813494 string characters out of 5839629
  1934388 words of memory out of 5000000
- 59414 multiletter control sequences out of 15000+600000
- 602557 words of font info for 458 fonts, out of 8000000 for 9000
+ 59426 multiletter control sequences out of 15000+600000
+ 603123 words of font info for 466 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,139p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
@@ -1965,7 +1973,7 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (31 pages, 273359 bytes).
+Output written on thesis.pdf (31 pages, 276901 bytes).
 PDF statistics:
  428 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams
