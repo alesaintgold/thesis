@@ -177,8 +177,25 @@ La preimmagine di 2413 che contiene 2431 \'e quindi 24531.
 \paragraph*{4213}\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{1/4}{2/4/3/5/1}\\La preimmagine di 2413 che contiene 4213 \'e 42513.\end{center}
 \paragraph*{4231}\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{1/4,3/3,3/4}{2/4/3/5/1}\\La preimmagine di 4213 \'e 42531.\end{center}
 Unendo tutti i risultati si ottiene:$$(Q_{POP}\circ{S})^{-1}(Av(21)) = Av(24513, 24531, 34251, 35241, 42513, 42531, 45231)$$
-\subsection*{$Q_{POP}\circ{Q}$}
 \subsection*{$Q_{POP}\circ{B}$}
+$$(Q_{POP}\circ{B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
+Come in tutti gli altri casi POP, una delle condizioni \'e gi\'a stata calcolata: $B^{-1}(Av(321))=(Q\circ{B})^{-1}(Av(21))=Av(3421,4321)$. Si ricerca adesso le preimmagini di 2413 (secondo bubblesort).\\
+I candidati per le preimmagini sono: 2413, 2431, 4213, 4231, 4321.\\
+Si osserva subito che 2431, 4231, e 4321, pur essendo nell'elenco dei candidati non possono in realt\'a generare un pattern 2413 con gli stessi elementi: in ognuno di questi infatti la coppia $(3,1)$ dovrebbe essere ordinata ma nessuno dei due \'e un LTR maxima, dunque il loro ordine relativo non viene cambiato da bubblesort.\\
+Si applicano le condizioni per la ricerca di preimmagini di bubblesort agli altri due candidati:
+\begin{description}
+	\item[2413:]\begin{center}\mmpattern{scale=1}{4}{1/2,2/4,3/1,4/3}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/2,2/4,3/1,4/3}{}{0/4/3/5/1}\end{center}
+	Dunque i pattern che contengono un pattern 2413 che resta invariato dopo una passata di bubblesort sono 24513, 25413, 52413.
+	\item[4213]\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{0/4}{2/4/3/5/1}\end{center}
+	Il pattern minimo che corrisponde al mesh pattern rappresentato \'e 42513.\\
+	Si noti che l'area oscurata dovrebbe generare i pattern $\overline{6}42513$ e $\overline{5}42613$, tuttavia si nota che entrambi i pattern, se inclusa la parte barrat, sono contenuti in quello precedente e generano pattern 2413 dopo una passata di bubblesort: $B(642513) = B(542613) =425136$, dove la sottosequenza 2513 rappresenta un'istanza del pattern 2413.
+\end{description}
+\subsection*{$Q_{POP}\circ{Q}$}
+$$(Q_{POP}\circ{Q})^{-1}(Av(21)) = Q^{-1}(321, 2413)$$
+La preimmagine $Q^{-1}(Av(321))$ \'e gi\'a stata trovato nel caso $B\circ{Q}$, e vale che $Q^{-1}(Av(321)) = Av(4321)$.\\
+Se si applica le regole per la ricerca di preimamgini di queuesort a 2413 si ottiene:
+\begin{center}\mmpattern{scale=1.5}{4}{1/2,2/4,3/1,4/3}{}{0/4/2/5/1}\end{center}
+Quindi si ottiene che $(Q_{POP}\circ{Q})^{-1}(Av(21)) = Av(4231, 25413, 52413)$.
 \section*{Idee per la ricerca di preimmagini secondo l'operatore POPstacksort}
 \section*{Idee per la ricerca di preimmagini secondo l'operatore POPqueuesort}
 \subsection*{$S\circ{S_{POP}}$}

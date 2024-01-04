@@ -1,0 +1,49 @@
+$ python verify_patterns.py SB 5 2341 2431 3241
+
+Generating permutations:                                                                                                                                                                      
+        found 50 unsortable permutations                                                                                                                                                      
+                                                                                                                                                                                              
+Verifying 3 patterns:                                                                                                                                                                         
+
+Verifying pattern 2341:
+        found 17 matches
+
+Verifying pattern 2431:
+        found 17 matches
+
+Verifying pattern 3241:
+        found 17 matches
+
+These 10 permutations are not sorted by SB but not contain any specified pattern:
+(5, 2, 4, 1, 3)
+(5, 3, 1, 4, 2)
+(5, 2, 3, 1, 4)
+(5, 3, 4, 2, 1)
+(1, 5, 3, 4, 2)
+(5, 1, 3, 4, 2)
+(4, 5, 2, 3, 1)
+(4, 2, 3, 1, 5)
+(5, 4, 2, 3, 1)
+(5, 3, 4, 1, 2)
+
+$ python verify_patterns.py SB 5 2341 2431 3241 4231
+
+Generating permutations: 
+        found 50 unsortable permutations
+
+Verifying 4 patterns:
+
+Verifying pattern 2341:
+        found 17 matches
+
+Verifying pattern 2431:
+        found 17 matches
+
+Verifying pattern 3241:
+        found 17 matches
+
+Verifying pattern 4231:
+        found 17 matches
+
+All unsortable permutations contains some of the specified patterns
+

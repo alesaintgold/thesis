@@ -86,7 +86,7 @@ Un pattern barrato \'e un pattern in cui ogni numero pu\'o essere barrato.
 \\La barra che viene posta sopra ad un elemento di un pattern indica che se una sequenza contiene un elemento in quella posizone allora essa non contiene il pattern.\\Ad esempio $1\overline{4}23\not\preceq 162534$, dato che $1423 \preceq 2534$, mentre $1\overline{4}23\preceq146235$ dato che $123\preceq146,235$
 \section*{Algoritmi e pattern-avoidance}
 \paragraph*{pattern 231}Una permutazione $\pi$ contiene un pattern $231$ se $231\preceq\pi$, ovvero se $\exists a<b<c: \pi =\dots{b}\dots{c}\dots{a}\dots$.\\\\
-\'E noto in letteratura \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\\\
+\'E noto \cite{limbrief} che una permutazione pu\'o essere ordinata da una sola passata di stack sort se e solo se non contiene pattern 231.\\\\
 Allo stesso modo, sono note simili condizioni perch\'e una permutazione possa essere ordinata da una sola passata degli altri operatori descritti precedentemente.\\
 \begin{center}
 \begin{tabular}{ |c|c| } 

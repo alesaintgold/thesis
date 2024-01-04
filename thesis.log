@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  2 JAN 2024 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  4 JAN 2024 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1654,7 +1654,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 
 
 
-]) [12]
+])
 Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
@@ -1664,6 +1664,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
+[12]
 
 LaTeX Font Warning: Font shape `T1/fvm/m/sc' undefined
 (Font)              using `T1/fvm/m/n' instead on input line 15.
@@ -1673,10 +1674,37 @@ LaTeX Font Info:    Font shape `T1/fvm/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/fvm/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-(./python/pattfinder.py [13] [14])) [15]
+(./python/pattfinder.py [13] [14])
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+(./python/result_verify.txt [15]) (./python/test.py [16])) [17]
 \openout2 = `Chapters/opcomposition.aux'.
 
- (./Chapters/opcomposition.tex [16
+
+(./Chapters/opcomposition.tex [18
 
 
 
@@ -1700,7 +1728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[17]
+[19]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 9.
@@ -1730,7 +1758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 
  []
 
-[18]
+[20]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 41.
@@ -1777,7 +1805,7 @@ LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 41.
 
-[19]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
@@ -1786,7 +1814,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 46.
 
-[20]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
  []
@@ -1823,7 +1851,7 @@ zeus/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n
 /12 ¨\U/zeur/m/n/12 34251; 35241; 45231\U/zeus/m/n/12 ©
  []
 
-[21]
+[23]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 81.
@@ -1848,7 +1876,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--96
 
  []
 
-[22]
+[24]
 Overfull \hbox (2.13684pt too wide) in paragraph at lines 99--101
 \T1/pplj/m/n/12 (-20) Gli uni-ci pat-tern mi-ni-mi che sod-di-sfa-no que-ste co
 n-di-zio-ni so-no $\U/zeur/m/n/12 2431; 4231$\T1/pplj/m/n/12 (-20) . 
@@ -1869,7 +1897,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--106
 
  []
 
-[23]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
@@ -1885,7 +1913,7 @@ Overfull \hbox (22.92041pt too wide) detected at line 117
 /n/12 ¨\U/zeur/m/n/12 m\U/zeus/m/n/12 ©©
  []
 
-[24]
+[26]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 122.
@@ -1894,7 +1922,7 @@ LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 123.
 
-[25]
+[27]
 Overfull \hbox (15.43079pt too wide) in paragraph at lines 151--157
 \T1/pplj/m/n/12 (-20) Anche in que-sto ca-so la pre-im-ma-gi-ne di $\U/zeur/m/n
 /12 231$ \T1/pplj/m/n/12 (-20) é sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U/zeu
@@ -1902,7 +1930,7 @@ s/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12 ©©
 ½
  []
 
-[26] [27]
+[28] [29]
 Overfull \hbox (9.74437pt too wide) detected at line 179
 \U/zeus/m/n/12 ¨\U/zeur/m/n/12 Q[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 S\U/zeus/m
 /n/12 ©[]¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½
@@ -1910,19 +1938,19 @@ Overfull \hbox (9.74437pt too wide) detected at line 179
 513; 42531; 45231\U/zeus/m/n/12 ©
  []
 
-
-Overfull \hbox (13.72592pt too wide) in paragraph at lines 182--182
+[30]
+Overfull \hbox (13.72592pt too wide) in paragraph at lines 199--199
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o p -
  []
 
 
-Overfull \hbox (6.94595pt too wide) in paragraph at lines 183--183
+Overfull \hbox (6.94595pt too wide) in paragraph at lines 200--200
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
  []
 
-) [28] (./thesis.bbl (./thesis.brf)
+) [31] [32] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
@@ -1938,7 +1966,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [29
+) [33
 
 
 
@@ -1952,16 +1980,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 4B0F7CC91F5B49D23623554C36A14771;808.
+(rerunfilecheck)             Checksum: 7FD1D5042B39BFC54820BDCDFA37B5E3;808.
  ) 
 Here is how much of TeX's memory you used:
- 40598 strings out of 477974
- 813494 string characters out of 5839629
- 1934388 words of memory out of 5000000
- 59426 multiletter control sequences out of 15000+600000
- 603123 words of font info for 466 fonts, out of 8000000 for 9000
+ 40857 strings out of 477974
+ 817003 string characters out of 5839629
+ 1935388 words of memory out of 5000000
+ 59579 multiletter control sequences out of 15000+600000
+ 603409 words of font info for 470 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,23n,139p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,23n,141p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -1973,10 +2001,10 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (31 pages, 276901 bytes).
+Output written on thesis.pdf (35 pages, 287911 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 248 named destinations out of 1000 (max. 500000)
  93238 words of extra memory for PDF output out of 106986 (max. 10000000)
 
