@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  4 JAN 2024 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  7 JAN 2024 01:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1944,17 +1944,42 @@ Overfull \hbox (13.72592pt too wide) in paragraph at lines 199--199
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o p -
  []
 
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
 
-Overfull \hbox (6.94595pt too wide) in paragraph at lines 200--200
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
+
+ []
+
+[33] [34]
+Overfull \hbox (6.94595pt too wide) in paragraph at lines 279--279
 |\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
 g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
  []
 
-) [31] [32] (./thesis.bbl (./thesis.brf)
+) [35] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
+ [36
 
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1966,12 +1991,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [33
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
+) [37] (./thesis.aux (./titlePage.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
 (./Chapters/opcomposition.aux))
 
@@ -1983,10 +2003,10 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 7FD1D5042B39BFC54820BDCDFA37B5E3;808.
  ) 
 Here is how much of TeX's memory you used:
- 40857 strings out of 477974
- 817003 string characters out of 5839629
+ 40905 strings out of 477974
+ 818207 string characters out of 5839629
  1935388 words of memory out of 5000000
- 59579 multiletter control sequences out of 15000+600000
+ 59623 multiletter control sequences out of 15000+600000
  603409 words of font info for 470 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,141p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2001,10 +2021,10 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (35 pages, 287911 bytes).
+Output written on thesis.pdf (39 pages, 301897 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 248 named destinations out of 1000 (max. 500000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 252 named destinations out of 1000 (max. 500000)
  93238 words of extra memory for PDF output out of 106986 (max. 10000000)
 
