@@ -5,8 +5,8 @@ $Av(21)$ \'e l'insieme formato dalle sole permutazioni identit\'a, dato che cont
 Ad esempio, dato che \'e noto che l'operatore \textit{bubblesort} ordina solo le permutazioni che non contengono pattern 231 e 321, vale che:$$B^{-1}(Av(21)) = Av(231,321)$$
 \paragraph*{Composizione di operatori} Siano due operatori di ordinamento $X$ e $Y$, la loro composizione \'e indicata con $( XY ) = ( X \circ Y )$, qundi, ad esempio, la composizione di \textit{Stacksort} e \textit{Bubblesort} (in questo ordine) si indica con $SB(\pi) = (S \circ B)(\pi) = S(B(\pi))$.
 \paragraph*{Algoritmi per il calcolo di preimmagini} Sono gi\'a stati prodotti alcuni algoritmi per calcolare le preimmagini di pattern secondo gli operaratori \textit{bubblesort}\cite{albert2010inverse}, \textit{stacksort}\cite{claesson2012sorting} e \textit{queuesort}\cite{magnusson2013sorting}\cite{cioni2021characterization}.\\
-Questo ci permette, quando si combinano due operatori di ordinamento di cui del primo siano noti le classi di pattern da evitare per l'ordinabilit\'a, di cercare per quali pattern l'operatore che viene applicato per primo produce permutazioni che siano ordinabili dal secondo.
-\paragraph*{Combinazione di \textit{Stacksort} e \textit{Bubblesort}} Si considera dunque la composione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da esso.$$(SB)^{-1}=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
+Questo ci permette, quando si combinano due operatori di ordinamento (di cui di quello applicato per secondo siano noti le classi di pattern da evitare per l'ordinabilit\'a) di cercare per quali pattern l'operatore che viene applicato per primo produce permutazioni che siano ordinabili dal secondo.
+\paragraph*{Un caso gi\'a noto: Combinazione di \textit{Stacksort} e \textit{Bubblesort}} Si considera dunque la composione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da esso.$$(SB)^{-1}=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
 Dunque ricercando per quali permutazioni \textit{bubblesort} evita il pattern 231 si trovano le condizioni per cui una permutazione risulta ordinabile da \textit{SB}.\\
 Utilizzando l'algoritmo per le preimmagini di bubblesort\cite{albert2010inverse} si ottiene che:$$(SB)^{-1}(Av(21))=Av(3241, 2341, 4231, 2431)$$
 Per ottenere una preimmagine di bubblesort di un pattern classico, si applicano le seguenti regole:
@@ -19,13 +19,13 @@ Per ottenere una preimmagine di bubblesort di un pattern classico, si applicano 
 		\mmpattern{scale=1.4}{2}{1/2,2/1}{}{}$\Rightarrow$\mmpattern{scale=1.4}{2}{1/2,2/1}{}{0/2/2/3/1}
 	\end{center}
 \end{description}
-\subsection*{Applicazione pratica per il calcolo di una preimmagine}
+\subsection*{Esempio pratico di calcolo di una preimmagine}
 A titolo d'esempio verr\'a mostrato come si pu\'o arrivare al risultato (gi\'a noto) riguardo alla combinazione $(S\circ B)$:
 $$(SB)^{-1}(Av(21)) = Av(2341, 2431, 3241, 4231)$$
 Si osservi che il software \texttt{permutasort}, presentato nel capitolo 3, pu\'o aiutare ad arrivare alle stesse conclusioni. Infatti lanciando il programma sull'operatore SB e con $n=4$ si ottengono i seguenti risultati:\\\\
 \texttt{\$ python permutasort.py 4 SB }\\\dots\\\texttt{The following 4 4-permutations are not sortable with the operator SB:}\\\texttt{(2, 3, 4, 1)}\\\texttt{(2, 4, 3, 1)}\\\texttt{(3, 2, 4, 1)}\\\texttt{(4, 2, 3, 1)}\\\dots\\\\
-Questi risultati tuttavia sono utili come indicazione, ma non sono sufficienti per essere sicuri del risutlato: infatti non escludono la presenza di pattern classici pi\'u lunghi n\'e la presenza di pattern barrati.\\
-Per quanto quindi questo strumento si sia rivelato molto utile per avere un idea di quali pattern ricercare, soprattutto durante le combinazioni pi\'u complesse che presenteremo dopo, non pu\'o sostituire del tutto un approccio pi\'u formale e teorico, come l'applicazione dell'algoritmo presentato prima, che viene mostrato di seguito:\\\\ 
+Questi risultati tuttavia sono utili come indicazione, ma non sono sufficienti per essere sicuri del risultato: infatti non escludono la presenza di pattern classici pi\'u lunghi n\'e la presenza di pattern barrati.\\
+Per quanto quindi questo strumento si sia rivelato molto utile per avere un idea di quali pattern ricercare, soprattutto durante le combinazioni pi\'u complesse che presenteremo dopo, non pu\'o sostituire del tutto un approccio pi\'u formale e teorico, come l'applicazione di uno degli algoritmi presentati prima, che viene mostrata di seguito:\\\\ 
 Prima di tutto si cerca con quale operatore e di quale classe di pattern si deve ricercare la preimmagine:
 $$(SB)^{-1}(Av(21)) = B^{-1}(S^{-1}(Av(21)))=B^{-1}(Av(231))$$
 Dato che, come noto $S^{-1}(Av(21))=Av(231)$.\\I pattern candidati ad essere preimmagini di 231 sono i pattern che contengono le coppie $(2,1),(3,1)$, ovvero i pattern 231,321. Si applicano le regole descritte prima:
@@ -147,7 +147,7 @@ Si \'e gi\'a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi 
 I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
 Perch\'e gli elementi di un pattern $321$ nella preimmagine generino un pattern $312$ tramite \textit{stacksort} \'e necessario che $3$ entri in pila e ne esca prima che $2$ vi entri, deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provochi l'uscita di $3$, ovvero il pattern $3421$.\\
 Se gli elementi del pattern $312$ nell'immagine formano lo stesso pattern anche nella preimmagine allora anche in questo caso bisogna assicurarsi che $3$ venga estratto dalla pila prima di $1$, si ha quindi il pattern $3412$.\\Si uniscono tutti i risultati:
-$$(S_{POP}\circ{S})^{-1}(Av(21))=Av(2341, 3412, 3421, 3\overline{5}241)$$
+$$(S_{POP}S)^{-1}(Av(21))=Av(2341, 3412, 3421, 3\overline{5}241)$$
 \subsection*{$S_{POP}\circ{B}$}$$(S_{POP}\circ{B})^{-1}(Av(21))=B^{-1}(Av(231,312))$$
 Anche in questo caso la preimmagine di $231$ \'e stata calcolata: $B^{-1}(Av(231)) = (S\circ{B})^{-1}(Av(21)) = Av(2341, 2431, 3241, 4231)$.\\
 Si ricerca dunque le preimmaigini di 312 secondo bubblesort. \\
@@ -157,16 +157,16 @@ Perch\'e un pattern $312$ rimanga invariato \'e sufficiente la presenza di un el
 \begin{center}
 \mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{0/3/2/4/1}$=4312,3412$
 \end{center}
-$$(S_{POP}\circ{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
+$$(S_{POP}{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
 \subsection*{$S_{POP}\circ{Q}$}$$(S_{POP}\circ{Q})^{-1}(Av(21))=Q^{-1}(Av(231,312))$$$$Q^{-1}(Av(231)=Av(4231,2431)$$
 Possibili preimmagini di $312: 312, 321$.\\
 Se la preimmagine contiene $312$ bisogna far si che $3$ effettui un bypass o che esca prima di $1$, in ogni caso queste condizioni sono soddisfatte dal seguente mesh-pattern, $4312$:
 \begin{center}
 \mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{1/2/2/3/1}
 \end{center}
-$$(S_{POP}\circ{Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
+$$(S_{POP}{Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
 \subsection*{$Q_{POP}\circ{S}$}
-$$(Q_{POP}\circ{S})^{-1}(Av(21)) = S^{-1}(Q_{POP}^{-1}(Av(21))) = S^{-1}(Av(321, 2413))$$
+$$(Q_{POP}{S})^{-1}(Av(21)) = S^{-1}(Q_{POP}^{-1}(Av(21))) = S^{-1}(Av(321, 2413))$$
 Come in molti altri casi la preimmagine di 321 \'e stata calcolata:$$S^{-1}(Av(321)) = (QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
 Si ricerca dunque le preimmagini di 2413 secondo stacksort, applicando lo stesso algoritmo dei casi precedenti.\\
 Le coppie non ordinate di 2413 sono $(2,1),(4,1),(4,3)$, che definiscono l'insieme di candidati 2413, 2431, 4213, 4231.
@@ -178,7 +178,7 @@ La preimmagine di 2413 che contiene 2431 \'e quindi 24531.
 \paragraph*{4231}\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{1/4,3/3,3/4}{2/4/3/5/1}\\La preimmagine di 4213 \'e 42531.\end{center}
 Unendo tutti i risultati si ottiene:$$(Q_{POP}\circ{S})^{-1}(Av(21)) = Av(24513, 24531, 34251, 35241, 42513, 42531, 45231)$$
 \subsection*{$Q_{POP}\circ{B}$}
-$$(Q_{POP}\circ{B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
+$$(Q_{POP}{B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
 Come in tutti gli altri casi POP, una delle condizioni \'e gi\'a stata calcolata: $B^{-1}(Av(321))=(Q\circ{B})^{-1}(Av(21))=Av(3421,4321)$. Si ricerca adesso le preimmagini di 2413 (secondo bubblesort).\\
 I candidati per le preimmagini sono: 2413, 2431, 4213, 4231, 4321.\\
 Si osserva subito che 2431, 4231, e 4321, pur essendo nell'elenco dei candidati non possono in realt\'a generare un pattern 2413 con gli stessi elementi: in ognuno di questi infatti la coppia $(3,1)$ dovrebbe essere ordinata ma nessuno dei due \'e un LTR maxima, dunque il loro ordine relativo non viene cambiato da bubblesort.\\
@@ -191,7 +191,7 @@ Si applicano le condizioni per la ricerca di preimmagini di bubblesort agli altr
 	Si noti che l'area oscurata dovrebbe generare i pattern $\overline{6}42513$ e $\overline{5}42613$, tuttavia si nota che entrambi i pattern, se inclusa la parte barrat, sono contenuti in quello precedente e generano pattern 2413 dopo una passata di bubblesort: $B(642513) = B(542613) =425136$, dove la sottosequenza 2513 rappresenta un'istanza del pattern 2413.
 \end{description}
 \subsection*{$Q_{POP}\circ{Q}$}
-$$(Q_{POP}\circ{Q})^{-1}(Av(21)) = Q^{-1}(321, 2413)$$
+$$(Q_{POP}{Q})^{-1}(Av(21)) = Q^{-1}(321, 2413)$$
 La preimmagine $Q^{-1}(Av(321))$ \'e gi\'a stata trovato nel caso $B\circ{Q}$, e vale che $Q^{-1}(Av(321)) = Av(4321)$.\\
 Se si applica le regole per la ricerca di preimamgini di queuesort a 2413 si ottiene:
 \begin{center}\mmpattern{scale=1.5}{4}{1/2,2/4,3/1,4/3}{}{0/4/2/5/1}\end{center}
@@ -216,7 +216,7 @@ Se invece ci si vuole assicurare che una coppia disordinata venga ordinata, la d
 \decpatternww{scale=1.7}{2}{1/2,2/1}{}{}{1/0,1/2}{}{1/1/2/2/{\mpattern{scale=0.4}{2}{1/1,2/2}{}}}
 \end{center}
 \subsection*{$S\circ{S_{POP}}$}
-$$(S\circ{S_{POP}})^{-1}(Av(21)) = S_{POP}^{-1}(S^{-1}(Av(21))) = S_{POP}^{-1}(Av(231))$$
+$$(S{S_{POP}})^{-1}(Av(21)) = S_{POP}^{-1}(S^{-1}(Av(21))) = S_{POP}^{-1}(Av(231))$$
 \\Si applicano le condizioni per le preimmagini ai due candidati: 231 e 321.\\\\
 Nel caso di 231, le coppie disordinate sono $(2,1),(3,1)$. Si osserva che 3 gi\'a soddisdfa la condzione A per la coppia $(2,1)$, quindi resta da applicare le condizioni alla coppia $(3,1)$:
 \begin{center}
@@ -237,9 +237,9 @@ Si applicano adesso le condizioni per la coppia $(3,1)$ che ci si aspetta resti 
 \end{center}
 Si osservi come applicando le condzioni A e B per la coppia $(3,1)$ queste siano gi\'a soddisfatte per la coppia $(2,1)$. Applicando la condizione C la coppia pu\'o essere costruita utilizzando l'elemento 2 come membro minore all'interno della coppia, e questo soddisfa anche la condizione A per la coppia $(2,1)$. Si ottengono dunque i pattern 3241, 4312, 4231.\\\\
 Si osserva che, tra i risultati ottenuti prima, alcuni risultano non necessari: $2341\preceq25341, 3241\preceq35241, 4231\preceq45231$. Si semplificano e si ottiene il seguente risultato:
-$$(S\circ{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
+$$(S{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
 \subsection*{$Q\circ{S_{POP}}$}
-$$Q\circ{S_{POP}}(Av(21)) = S_{POP}^{-1}(Q^{-1}(Av(21))) = S_{POP}^{-1}(Av(321))$$
+$$Q{S_{POP}}^{-1}(Av(21)) = S_{POP}^{-1}(Q^{-1}(Av(21))) = S_{POP}^{-1}(Av(321))$$
 \\Si applicano anche stavolta le condizioni per la ricerca di preimmagini al pattern 321. Essendo 321 una sequenza decrementale, non ci sono altri candidati; le sue coppie disordinate sono $(3,2),(3,1),(2,1)$ ed \'e necessario applicare tutte le combinazioni possibili di condizioni A,B,C a queste coppie.\\\\
 Una volta applicate le diverse condizioni alla coppia $(3,2)$ \'e evidente che queste soddisfano anche le condizioni per la coppia $(3,1)$:
 \begin{description}
@@ -267,7 +267,7 @@ Una volta applicate le condizioni anche alla coppia $(2,1)$ si ottengono i segue
 \end{center}
 Scrivendo come pattern classici quelli che si ottengono da questi meta-patterns ed eliminando quelli ridondanti, si ottiene il seguente risultato:
 \begin{eqnarray*}
-&Q\circ{S_{POP}}(Av(21)) = Av(34251, 35241, 41352, 42351, 45231, \\
+&Q{S_{POP}}(Av(21)) = Av(34251, 35241, 41352, 42351, 45231, \\
 & 45312, 51342, 51423, 52341, 52413, 53412)
 \end{eqnarray*}
 \subsection*{$B\circ{S_{POP}}$}
@@ -275,7 +275,7 @@ $$(B\circ{S}_{POP})^{-1}(Av(21)) = S_{POP}^{-1}(B^{-1}(Av(21))) = S_{POP}^{-1}(A
 Il l'insieme minimo di pattern per l'ordinabilit\'a di permutazione con la composzione bubblesort, POPstacksort \'e l'unione degli insiemi dei due risultati precedenti, stacksort e queuesort.\\
 Si nota, tuttavia che ogni pattern contenuto nell'insieme ottenuto dalla combinazione con queuesort contiene \textbf{almeno} un pattern tra quelli ottenuti da stacksort. Nello specifico, a titolo esemplificativo:$$3241\preceq34251, 35241, 41352, 42351$$$$3412\preceq53412$$$$4231\preceq45231, 51342, 52341, 52413$$$$4312\preceq45312, 51423$$ 
 Dunque l'insieme minimo di pattern che caratterizza le permutazioni ordinabili da $B\circ{S}_{POP}$ \'e lo stesso di $S\circ{S}_{POP}$.
-$$(B\circ{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
+$$(B{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
 \section*{Idee per la ricerca di preimmagini secondo l'operatore POPqueuesort}
 \subsection*{$S\circ{Q_{POP}}$}
 \subsection*{$Q\circ{Q_{POP}}$}

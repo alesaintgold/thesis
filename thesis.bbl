@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{albert2010inverse}
 Michael~H Albert, Mike~D Atkinson, Mathilde Bouvel, Anders Claesson, and Mark
@@ -28,6 +28,11 @@ Lapo Cioni and Luca Ferrari.
 \newblock In {\em Extended Abstracts EuroComb 2021: European Conference on
   Combinatorics, Graph Theory and Applications}, pages 234--240. Springer,
   2021.
+
+\bibitem{cioni2021preimages}
+Lapo Cioni and Luca Ferrari.
+\newblock Preimages under the queuesort algorithm.
+\newblock {\em Discrete Mathematics}, 344(11):112561, 2021.
 
 \bibitem{claesson2012sorting}
 Anders Claesson and Henning Ulfarsson.

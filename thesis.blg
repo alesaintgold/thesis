@@ -15,45 +15,45 @@ Warning--there's a number but no volume in claesson2012sorting
 Warning--empty journal in limbrief
 Warning--empty year in limbrief
 Warning--empty year in patternmacros
-You've used 9 entries,
+You've used 10 entries,
             2118 wiz_defined-function locations,
-            546 strings with 5432 characters,
-and the built_in function-call counts, 2453 in all, are:
-= -- 230
-> -- 119
+            553 strings with 5528 characters,
+and the built_in function-call counts, 2766 in all, are:
+= -- 260
+> -- 132
 < -- 1
-+ -- 47
-- -- 38
-* -- 144
-:= -- 434
-add.period$ -- 26
-call.type$ -- 9
-change.case$ -- 45
++ -- 52
+- -- 42
+* -- 168
+:= -- 489
+add.period$ -- 29
+call.type$ -- 10
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 107
-empty$ -- 188
-format.name$ -- 38
-if$ -- 500
+cite$ -- 17
+duplicate$ -- 118
+empty$ -- 214
+format.name$ -- 42
+if$ -- 564
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 9
-newline$ -- 46
-num.names$ -- 18
-pop$ -- 61
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 51
+num.names$ -- 20
+pop$ -- 64
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 40
 quote$ -- 0
-skip$ -- 74
+skip$ -- 81
 stack$ -- 0
-substring$ -- 77
-swap$ -- 17
+substring$ -- 100
+swap$ -- 18
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 40
 warning$ -- 7
-while$ -- 21
-width$ -- 10
-write$ -- 88
+while$ -- 24
+width$ -- 12
+write$ -- 99
 (There were 7 warnings)

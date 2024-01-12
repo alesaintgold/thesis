@@ -1,4 +1,5 @@
-	\chapter{Programmi realizzati}
+\chapter{Programmi realizzati}
+In questo capitolo presenter\'o il funzionamento di alcuni programmi che ho realizzato come supporto allo studio degli argomenti di questa tesi. 
 \section*{PermutaSort}
 Il primo programma che ho realizzato viene lanciato da linea di comando specificando come argomenti un intero $n$ e un operatore di ordinamento $X$. Il suo scopo \'e quello di enumerare tutte le $n$-permutazioni ordinabili e non ordinabili con una sola passata di $X$, stampa anche i possibili risultati di $X$ su $n$-permutazioni.\\\\
 La classe \texttt{SelectorPermutations} \'e il core del programma, viene inizializzata passando un intero e un operatore al costruttore. Grazie alla funzione \texttt{itertools.permutations} vengono generate le $n$-permutazioni e , scorrendole tutte, vi si applica l'operatore $X$. Il risultato viene aggiunto alla lista \texttt{outcomes} e viene valutato: se \'e ordinato la permutazione da cui si \'e ottenuto viene aggiunta alla lista \texttt{sortable}, altrimenti a \texttt{unsortable}.\\La classe fornisce dei \textit{getters} per le liste e non ha altri metodi computativi, oltre al costruttore.\\
