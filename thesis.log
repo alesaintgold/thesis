@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.23)  12 JAN 2024 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  14 JAN 2024 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,13 +1956,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--245
 
  []
 
-[35] [36]
-Overfull \hbox (6.94595pt too wide) in paragraph at lines 279--279
-|\T1/pplj/m/sc/12 (-20) i d e e p e r l a r i -c e r -c a d i p r e -i m -m a -
-g i -n i s e -c o n -d o l ' o -p e -r a -t o -r e p o -
- []
-
-) [37] (./thesis.bbl (./thesis.brf)
+[35] [36]) [37] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
@@ -2012,7 +2006,7 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  40932 strings out of 477974
- 818678 string characters out of 5839629
+ 818678 string characters out of 5839630
  1935388 words of memory out of 5000000
  59637 multiletter control sequences out of 15000+600000
  603980 words of font info for 478 fonts, out of 8000000 for 9000
@@ -2029,7 +2023,7 @@ exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (41 pages, 311149 bytes).
+Output written on thesis.pdf (41 pages, 311202 bytes).
 PDF statistics:
  590 PDF objects out of 1000 (max. 8388607)
  512 compressed objects within 6 object streams

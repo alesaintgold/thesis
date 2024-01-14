@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\author{Alessio Santoro}
+\title{Congettura preimmagine di 231}
+\date{}
+\input{patternmacros}
+\begin{document}
+\maketitle
+L'idea che si vuole dimostrare è:
+$$Cons^{-1}Av(231) = Av(2431, 4231, 23514, \overline{5}3\overline{5}2614)$$
+\paragraph*{Importante (nota metodologica):}$\overline{5}3\overline{5}2614$ si può scrivere così o va separato in $3\overline{5}2614, \overline{5}32614$?\\\\
+Per dimostrare la congettura occorre dimostrare la doppia inclusione:
+\begin{description}
+\item[(A)]$Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \overline{5}3\overline{5}2614)$
+\item[(B)]$Av(2431, 4231, 23514, \overline{5}3\overline{5}2614) \subseteq Cons^{-1}Av(231)$
+\end{description}
+\paragraph*{Nota:}Per tutta la dimostrazione i valori che formano i pattern saranno indicati da $a,b,c,d$ ed $e$ (quando presente), $n$ indicherà la lunghezza della permutazione $\pi$ e si intende $1\leq{a}<b<c<d<e\leq{n}$.
+\paragraph*{Acluni risutltati utili:} Sia $\pi=\pi_1\pi_2\dots\pi_n$ una permutazione, se durante l'esecuzione di $Cons$ un elemento l'elemento $\pi_i$ provoca un $pop$ tutti gli elementi successivi minori di $\pi_i$ effettuano un bypass.Similmente se $\pi_i$ effettua un bypass tutti gli elementi succesivi minori di $\pi_i$ effettuano un bypass.
+\section*{(A) $Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \overline{5}3\overline{5}2614)$}
+\begin{proof}
+Dobbiamo dimostrare che tutte le permutazioni la cui immagine evita il pattern 231 evitano i pattern $2431, 4231, 23514, 3\overline{5}2614, \overline{5}32614$. Ovvero si dimostrerà che ogni permutazione $\pi$ tale che $231\preceq{Cons}(\pi)$ contiene uno dei pattern elencati.\\
+Si osserva che se 3 elementi nell'immagine $Cons(\pi)$ formano un pattern 231, quegli stessi elementi devono formare un pattern 231 o 321 nella preimmagine, dato che \textit{Cons} non produce nuove inversioni. Si analizzano questi due casi separatamente.
+\paragraph*{$231\preceq\pi$:}$$\pi=\dots b\dots c\dots a\dots$$$$Cons(\pi)=\dots b\dots c\dots a\dots$$
+Se $b$ entra in coda deve uscire prima $c$ possa accodarsi a sua volta. Un elemento $d>c$ provoca un $pop$ e non è possibile che si accodi. $c,a$ effettuano un $bypass$, e nell'output troviamo $bca$. Questo è il pattern 2431.\\
+Se $b$ effettua un $bypass$ e $c$ si accoda si deve verificare un $pop$, perchè $c$ deve uscire prima che $a$ bypassi. È necessario un elemento $e>c$ posizionato tra $c$ e $a$.
+\begin{center}
+\mmpattern{scale=1}{3}{1/2,2/3,3/1}{}{2/3/3/4/1}$\Rightarrow$\mpattern{scale=1}{4}{1/2,2/3,3/4,4/1}{}
+\end{center}
+Tuttavia occorre assicurarsi che $e$ non si accodi dopo $c$, poichè la coda contiene solo elementi consecutivi, questa condizione è realizzata solo se un elemento $d$ si trova in una posizione successiva a $e$.
+\begin{center}
+\mpattern{scale=1}{4}{1/2,2/3,3/4,4/1}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/2,2/3,3/4,4/1}{}{3/3/5/4/1}
+\end{center}
+Queste condizioni sono soddisfatte dai pattern 23541 e 23514.\\
+Infine, se è presente un valore $d$ prima di $b$, il pattern 231 dato da $bca$ resta invariato (pattern 4231): se $d$ effettua un bypass o se se provoca un $pop$, tutti gli elementi dopo effettuano un bypass, se $d$ entra in coda $b,c$ può effettuare un $bypass$ o provocare un $pop$, in ogni caso $b$ viene inserito nell'output prima di $c$, e dopo $a$ effettua sicuramente un $bypass$.
+\paragraph*{$321\preceq\pi$:}$$\pi=\dots c\dots b\dots a\dots$$$$Cons(\pi)=\dots b\dots c\dots a\dots$$
+Deve avvenire che $c$ entri in coda. Quando questo avviene $b$ può solo bypassare, quindi deve avvenire un $pop$ tra $b$ e $a$ e non tra $c$ e $b$.
+\begin{center}
+\mmpattern{scale=1}{3}{1/3,2/2,3/1}{0/3,1/3}{2/3/3/4/1}$\Rightarrow$\mmpattern{scale=1}{4}{1/3,2/2,3/4,4/1}{0/3,1/3}{}
+\end{center}
+Si ottiene così un pattern classico 3241 con alcune aree oscurate.\\Come fatto precedentemente si dovrà essere sicuri che $d$ provochi un $pop$ e non si accodi, quindi si aggiungerà un nuovo elemento di valore compreso tra $c$ e $d$ posizionato dopo di $a$:
+\begin{center}
+\mmpattern{scale=1}{4}{1/3,2/2,3/4,4/1}{0/3,1/3}{3/3/5/4/1}$\Rightarrow$\mmpattern{scale=1}{5}{1/3,2/2,3/5,4/4,5/1}{0/4,1/4}{},\mmpattern{scale=1}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,1/4}{}
+\end{center}
+I pattern che si ottengono sono $\overline{5}3\overline{5}2614$,$\overline{5}3\overline{5}2641$.\\\\\\
+Alcuni risultati che si sono ottenuti possono essere semplificati, dato che l'insieme trovato non è minimo: $\overline{5}3\overline{5}2641$ e 23541 contengono entrambi il pattern 2431.\\
+I pattern trovati, una volta semplificati, provano che:
+\begin{eqnarray*}
+Cons^{-1}Av(231)\subseteq{Av(2431, 4231, 23514, 23541, \overline{5}3\overline{5}2614)}\\ = Av(2431, 4231, 23514, \overline{5}3\overline{5}2614)
+\end{eqnarray*}
+\end{proof}
+\section*{(B) $Av(2431, 4231, 23514, \overline{5}3\overline{5}2614) \subseteq Cons^{-1}Av(231)$}
+\begin{proof}
+Dobbiamo dimostrare che tutte le permutazioni che non contengono i pattern $2431, 4231, 23514, 3\overline{5}2614, \overline{5}32614$ sono contenute anche nell'insieme \\$Cons^{-1}Av(231)$, ovvero che l'immagine di ogni permutazione che contiene almeno uno di questi pattern contiene un pattern 231:
+\subsection*{2431}
+$$\pi = \dots{b}\dots{d}\dots{c}\dots{a}\dots$$
+Se $b$ provoca un $pop$ questo non influenza gli altri 3 elementi che ci interessano, quindi questa eventualità rientra nel caso in cui $b$ entri in coda.\\Se $b$ entra in coda un elemento l'elemento $d$ provoca un $pop$ (eventualmente altri valori possono provocare $pop$ tra $b$ e $c$), $c$ e $a$ effettuano un $byapss$ e nell'output si ha $231\preceq{bda}\subseteq{Cons(\pi)}$.\\
+Se $b$ effettua un $bypass$ lo effettua sempre anche $a$.\\
+Se poi $d$ effettua un $bypass$ si ha che $231\preceq{bda}\subseteq{Cons(\pi)}$ (lo stesso vale se anche $c$ effettua un $byapss$).\\
+Se $d$ entra in coda $c$ può solo bypassare (caso precedente) o provocare un $pop$, e allora $231\preceq{bda}\subseteq{Cons(\pi)}$ nell'output
+\subsection*{4231}
+$$\pi = \dots{d}\dots{b}\dots{c}\dots{a}\dots$$
+Se $d$ provoca un $pop$ questo non influenza gli altri 3 elementi che ci interessano, quindi questa eventualità rientra nel caso in cui $d$ entri in coda.\\
+Se $d$ effettua un $bypass$ tutti gli altri elementi del pattern effettuano un $bypass$ e il pattern 231 dato da $bca$ è presente nell'output.\\
+Se $d$ entra in coda tutti gli altri elementi del pattern non possono provocare un $pop$: perchè $c$ provochi un $pop$ deve essere che $Back(Q)=d<c<Front(Q)$ e questo è assurdo perchè la coda contiene elementi consecutivi e $c$ non è in coda (la stessa considerazione vale per $a,b$).Quindi se $d$ entra in coda gli altri elementi del pattern effettuano in $bypass$ e il pattern 231 dato da $bca$ è presente nell'output.
+\subsection*{23514}$$\pi = \dots{b}\dots{c}\dots{e}\dots{a}\dots{d}\dots$$Se $b$ provoca un $pop$ questo non influenza gli altri 3 elementi che ci interessano, quindi questa eventualità rientra nel caso in cui $b$ entri in coda.\\
+Se $b$ entra in coda $c$ può accodarsi a sua volta o provocare un $pop$. Se $c$ si accoda $e$ provoca un $pop$, $a$ effettua un $bypass$ e nell'immagine è presente il pattern 231 $bca$. Se $c$ provoca un $pop$ $b$ viene inserito nell'output, $e$ provoca un $pop$ ed il caso è analogo al precedente.\\
+Se $b, c$ effettuano un $bypass$ lo fa anche $a$, quindi si ha $bca$ nell'immagine.\\
+Se solo $b$ effettua un $bypass$ $c$ può accodarsi o provocare un $pop$; in entrambi i casi $e$ (o un altro elemento maggiore di $c$ tra $c$ e $e$) provoca un $pop$ aggiungendo $c$ all'output, $a$ effettua un $bypass$ e si ha $bca$ nell'output.
+\subsection*{$\overline{5}$3$\overline{5}$2614}
+Il pattern può anche essere rappresentato dal seguente mesh-pattern:
+\begin{center}
+\mpattern{scale=1}{5}{1/3,2/2,3/5,4/1,5/4}{0/4, 1/4}
+\end{center}
+Quindi una permutazione che contiene occorrenza di questo pattern ha la forma:
+$$\pi = \dots{c}\dots{b}\dots{e}\dots{a}\dots{d}\dots$$dove nessun valore precedente a $b$ è compreso tra $d$ e $e$.\\\\
+Se $c$ provoca un $pop$ il caso è analogo a quello in cui si accodi e basta.\\
+Se $c$ si accoda $b$ effettua un $bypass$ e $e$ (o eventualmente anche un altro elemento maggiore di $b$ tra $b$ e $e$) provoca un $pop$, in seguito $a$ effettua un $bypass$ e nell'immagine si trova la sequenza $bca$.\\
+Se $c$ effettua un $bypass$ lo fa anche $b$. Se anche $e$ effettua un $bypass$ si ha un pattern 231 nella sequenza $cea$ dopo il $bypass$ di $a$. Se invece $e$ provoca un $pop$ gli elementi estratti sono sicuramente maggiori di $c$: $c$ ha effettuato un $bypass$ quando doveva valere $c<Front(Q)=c^+$, in seguito $a$ effettua un $bypass$ e si ha che l'immagine contiene $cc^+a$.\\
+Se $e$ si accoda deve esserci stato almento un elemento $d^+:d<d^+<e$, tra $b$ e $e$ (a causa delle componenti barrate del pattern). Dal momento che la coda prima di incontrare $d^+$ contiene solo membri strettamente minori di $d$, $d^+$ provoca un $pop$ e si applicano a $d^+$ le stesse considerazioni di $e$ nel caso in cui effettui un $pop$.\\\\
+\end{proof}
+\end{document}
