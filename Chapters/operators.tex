@@ -1,10 +1,11 @@
-\chapter{Algoritmi di odrinamento e classi di pattern}
-In questo capitolo verranno introdotti i principali algoritmi di ordinamento che utilizzano \st{sorting devices}, in particolare stacksort,
-queuesort e bubblesort, e altri concetti necessari per l'analisi \st{della loro composizione}.\\\\
+\chapter{Algoritmi di ordinamento e classi di pattern}
+In questo capitolo verranno introdotti alcuni tra i algoritmi di ordinamento che utilizzano opportune strutture dati come contenitori intermedi per gli elementi della permutazione in input, in particolare stacksort,
+queuesort e bubblesort, e altri concetti necessari per l'analisi della composizione tra due o pi\'u esecuzioni di tali algoritmi.\\\\
 Durante la loro esecuzione questi algoritmi possono salvare gli elementi in un contenitore (la diversa struttura dati adottata definisce i diversi algoritmi) dalla quale poi vengono prelevati per essere aggiunti all'output.\\\\
 In questa tesi gli algoritmi prendono in input permutazioni di interi, sebbene sia possibile estendere la trattazione a parole arbitrarie su un insieme totalmente ordinato (anche se non sempre in modo immediato).\\
-Per rappresentare le permutazioni si usa la notazione lineare, quindi una permutazione $\pi$ di lunghezza $n$ \'e una parola sull'alfabeto $\{1, 2, \dots, n\}$ in cui ogni lettera compare una e una sola volta.\\\\
-Una \st{sola} iterazione non garantisce l'ordinamento della permutazione,
+Per rappresentare le permutazioni si usa la notazione lineare, quindi una permutazione $\pi$ di lunghezza $n$ \'e una parola sull'alfabeto $\{1, 2, \dots, n\}$ in cui ogni lettera compare una e una sola volta.
+\paragraph*{Inversioni} In un permutazione $\pi = \pi_1\pi_2\dots\pi_n$ un'inversione \'e una coppia di valori $(\pi_i,\pi_j)$, dove $i<j, \pi_i>\pi_j$. Una coppia di valori che non compone una inversione si dice una non inversione.\\
+\\Una singola iterazione degli algoritmi che prenderemo in considerazione non garantisce l'ordinamento della permutazione in input,
 dunque gli algoritmi devono essere iterati pi\'u volte, ogni volta sul risultato della iterazione precedente. In ogni caso alla fine della $i$-esima
 iterazione i maggiori $i$ elementi avranno raggiunto la loro posizione finale, 
 dunque sono necessarie al massimo $n-1$ iterazioni per ordinare la permutazione.\\\\
@@ -14,8 +15,8 @@ Ad esempio prendendo l'algoritmo bubblesort (certamente il pi\'u noto fra quelli
 interi, $B(\pi)$ rappresenta il risultato di una sola iterazione di bubblesort su di essa.
 \section*{Algoritmi}
 \subsection*{Bubblesort}
-L'algoritmo di ordinamento bubblesort prevede di scorrere dal primo al penultimo elemento e confrontarli ognuno con il proprio successivo per scambiarli se non sono ordinati.\\
-Si definsce l'operazione $Swap(i,j)$, che fissata una permutazione $\pi$ la resituisce con l'$i$-esimo e il $j$-esimo elementi scambiati di posizione. \\
+L'algoritmo di ordinamento bubblesort prevede di scorrere dal primo al penultimo elemento e confrontare ciascuno con il proprio successivo per scambiarli se non sono ordinati.\\
+Si definsce l'operazione $Swap(\pi_i,\pi_j)$, che fissata una permutazione $\pi$ la resituisce con l'$i$-esimo e il $j$-esimo elementi scambiati di posizione. \\
 Il risultato di una singola iterazione di bubblesort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \'e calcolato dall'operatore $B$ e si indica con $B(\pi)$.\\
 Si pu\'o scrivere permutazione $\pi$ come $\pi_Ln\pi_R$, dove $n$ \'e il massimo valore della permutazione, $\pi_L$ \'e il suo prefisso e $\pi_R$ il suo suffisso. Vale che $B(\pi) = B(\pi_L)\pi_rn$.\\
 \begin{algorithm}[H]
@@ -23,7 +24,7 @@ Si pu\'o scrivere permutazione $\pi$ come $\pi_Ln\pi_R$, dove $n$ \'e il massimo
 \begin{algorithmic}[1]
    \For{$i=1$ {\bfseries to} $n-1$}
    \If{$\pi_i > \pi_{i+1}$} 
-   \State $Swap(i,i+1)$
+   \State $Swap(\pi_i,\pi_{i+1})$
    \EndIf
    \EndFor
 \end{algorithmic}
@@ -65,7 +66,7 @@ Si definisce una coda come un insieme su cui si possono applicare le seguenti op
    \item[$Back(Q)$] permette di osservare l'ultimo valore inserito nella pila.
 \end{description}
 Per descrivere queuesort, \'e infine necessaria un ultima operazione che non prevede di utilizzare la coda:\begin{description}\item[$Bypass(\pi_i)$] il valore $\pi_i$ viene aggiunto all'output senza passare dalla coda\end{description}
-Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output. Si svuota la coda nell'output\cite{magnusson2013sorting}. 
+Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output. Si svuota la coda nell'output. 
 \begin{algorithm}[H]
    \caption{operatore Q - queue sort, singola iterazione}
 \begin{algorithmic}[1]
@@ -112,7 +113,7 @@ Ad esempio la permutazione $14523$ (mostrata sotto a sinistra) contiene un'istan
 \mmpatternwwo{scale=1.5}{5}{1/1,2/4,3/5,4/2,5/3}{}{1/1,2/4,4/2}{0/2,0/3,1/2,1/3,2/2,2/3,3/2,3/3}{}
 \mmpatternwwo{scale=1.7}{4}{1/3,2/1,3/4,4/2}{}{2/1,3/4,4/2}{0/2,0/3,1/2,1/3,2/2,2/3,3/2,3/3}{}
 \end{center}
-\paragraph*{Pattern decorati}Nel seguente pattern l'area bianca indicata con $1$ indica che per avere un'istanza di questo pattern in una permutazione, all'interno dell'area deve essere presente almeno un altro elemento della permutazione: 
+\paragraph*{Pattern decorati}Un pattern decorato \'e un mesh-pattern in cui vengono aggiunte informazioni relative alla presenza di elementi in determinate aree. Senza dare la definizione formale descriviamo un esempio di tale pattern grazie al quale introduciamo anche la notazione che verr\'a utilizzata. Nel seguente pattern l'area bianca indicata con $1$ indica che per avere un'istanza di questo pattern in una permutazione, all'interno dell'area deve essere presente almeno un altro elemento della permutazione: 
 \begin{center}
 \mmpattern{scale=1.4}{3}{1/1,2/3,3/2}{3/0,3/1,3/2}{2/3/3/4/1}
 \end{center}
