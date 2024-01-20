@@ -71,7 +71,7 @@ Per ogni coppia disordinata $(b,a)$ presente nel candidato:
 \mmpattern{scale=1}{2}{1/2,2/1}{}{} $\Longrightarrow$\mmpattern{scale=1}{2}{1/2,2/1}{1/2}{} 
 \end{center}
 \end{description}
-\subsection*{Combinazione di {queuesort} con {stacksort}}
+\subsection*{Composizione  di {queuesort} con {stacksort}}
 $$(QS)^{-1}(Av(21))=S^{-1}Q^{-1}(Av(21))=S^{-1}(Av(321))$$
 Si ricercano dunque le controimmagini di $321$ secondo \textit{stacksort}.\\$321$ \'e l'unico candidato, quindi sappiamo che tutte le controimmagini devono contenere il pattern $321$.\\
 L'elemento $3$ deve entrare nella pila ed uscirne prima del $2$, per fare ci\'o deve esserci un elemento $3^+$ maggiore di $3$ tra $3$ e $2$. Similmente \'e necessario un elemento $2^+>2$ tra $2$ e $1$ per assicurare che $2$ esca dalla pila prima che $1$ vi entri.\\
@@ -86,7 +86,7 @@ Altrimenti se $2^+>3$, si possono ottenere due diverse controimmagini:
 	\item[$2^+>3^+$] genera il pattern $34251$
 \end{description}
 $$(QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
-\subsection*{Combinazione di {bubblesort} con {stacksort}}
+\subsection*{Composizione di {bubblesort} con {stacksort}}
 $$(BS)^{-1}(Av(21))=S^{-1}B^{-1}(Av(21))=S^{-1}(Av(231,321))$$
 Gi\'a dall'analisi della combinazione precedente \'e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ qundi \'e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \'e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \'e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\\\
 Seguendo l'algoritmo applicato finora si osserva che i pattern candidati per le controimmagini sono $231,321$.\\\\
@@ -105,7 +105,7 @@ Al contrario, se si ha a che fare con un elemento che risulta essere un right-to
 \mmpattern{scale=1.5}{1}{1/1}{}{0/1/1/2/1}
 \end{center}
 Per forzare un elemento a effettuare un bypass \'e necessario che esso sia minore del primo elemento della coda, per questa condizione \'e pi\'u difficile formalizzare una startegia, ma si vedranno in seguito esempi di come pu\'o essere fatto. 
-\subsection*{Combinazione di {stacksort} con {queuesort}}
+\subsection*{Composizione di {stacksort} con {queuesort}}
 $$(SQ)^{-1}(Av(21))=Q^{-1}S^{-1}(Av(21))=Q^{-1}(Av(231))$$Ancora una volta si considerano come candidati i pattern minimali che contengano almeno le inversioni $(2,1),(3,1)$ ovvero $231,321$.\\\\
 Se gli elementi del pattern $231$ nell'immagine formano un pattern $321$ nella controimmagine allora il valore $3$ deve entrare nella coda. Sia che $2$ effettui un bypass sia che provochi l'estrazione di alcuni elementi della coda comunque esso viene aggiunto all'output prima che $3$ venga estratto. Si rende necessario un elemento $3^+>3$ posto tra $2$ e $1$ per estarre il $3$ dalla coda e inserirlo nell'input prima dell'$1$, tuttavia $3^+$ non deve essere maggiore dell'elemento in fondo alla coda, altrimenti viene accodato. Si teorizza l'esistenza di un elemento $4>3^+$ posto tra $3$ e $2$, che rappresenta il massimo della coda quando si raggiunge $3^+$.\\
 Il pattern che si ottiene deve essere nella forma $3423^+1$, ovvero $35241$\\\\
@@ -116,7 +116,7 @@ se invece gli elementi del pattern $231$ nell'immagine formano un pattern $231$ 
 Gli unici pattern minimali che soddisfano queste condizioni sono $2431,4231$.
 \\\\Si nota inoltre che, il pattern calcolato prima $35241\in Q^{-1}(Av(321))$ risulta adesso superfluo in quanto $4231\preceq35241$
 $$(SQ)^{-1}(Av(21))=Av(2431,4231)$$
-\subsection*{Combinazione di {bubblesort} con {queuesort}}
+\subsection*{Composizione di {bubblesort} con {queuesort}}
 $$(BQ)^{-1}(Av(21))=Q^{-1}B^{-1}(Av(21))=Q^{-1}(Av(231,321))$$
 Ancora una volta, si osserva che $Q^{-1}(Av(231))$ \'e gi\'a stato calcolato nel caso precedente, e resta dunque da unire i risultati gi\'a ottenuti con $Q^{-1}(Av(321))$.\\
 Gli elementi del pattern $321$ nell'immagine devono essere a sua volta nello stesso odrine nell'immagine.\\
@@ -160,14 +160,14 @@ Esistono diverse versioni di \textit{POP queuesort} ed in particolare ne esiston
 \end{algorithmic}
 \end{algorithm}
 La dimostrazione che \textit{Cons} (cos\'i come \textit{Min}) sia un algoritmo ottimale nella classe degli algoritmi \textit{POP-queueosrt} si ha dal fatto che esso ordina tutte e sole le sequenze dell'insieme Av(321, 2413), che sono esattamente tutte e sole le permutazioni ordinabili con una POP queue\cite{cioni2021sorting}.
-\subsection*{Combinazione di {POP-stacksort} con {stacksort}}
+\subsection*{Composizione di {POP-stacksort} con {stacksort}}
 $$(S_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(231,312))$$
 Si \'e gi\'a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi manca da calcolare le controimmagini di $312$.\\
 I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
 Perch\'e gli elementi di un pattern $321$ nella controimmagine generino un pattern $312$ tramite \textit{stacksort} \'e necessario che $3$ entri in pila e ne esca prima che $2$ vi entri, deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provochi l'uscita di $3$, ovvero il pattern $3421$.\\
 Se gli elementi del pattern $312$ nell'immagine formano lo stesso pattern anche nella controimmagine allora anche in questo caso bisogna assicurarsi che $3$ venga estratto dalla pila prima di $1$, si ha quindi il pattern $3412$.\\Si uniscono tutti i risultati:
 $$(S_{POP}S)^{-1}(Av(21))=Av(2341, 3412, 3421, 3\overline{5}241)$$
-\subsection*{Combinazione di {POP-stacksort} con {bubblesort}}
+\subsection*{Composizione di {POP-stacksort} con {bubblesort}}
 $$(S_{POP}\circ{B})^{-1}(Av(21))=B^{-1}(Av(231,312))$$
 Anche in questo caso la controimmagine di $231$ \'e stata calcolata: $B^{-1}(Av(231)) = (S\circ{B})^{-1}(Av(21)) = Av(2341, 2431, 3241, 4231)$.\\
 Si ricerca dunque le preimmaigini di 312 secondo bubblesort. \\
@@ -178,7 +178,7 @@ Perch\'e un pattern $312$ rimanga invariato \'e sufficiente la presenza di un el
 \mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{0/3/2/4/1}$=4312,3412$
 \end{center}
 $$(S_{POP}{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
-\subsection*{Combinazione di {POP-stacksort} con {queuesort}}
+\subsection*{Composizione di {POP-stacksort} con {queuesort}}
 $$(S_{POP}\circ{Q})^{-1}(Av(21))=Q^{-1}(Av(231,312))$$$$Q^{-1}(Av(231)=Av(4231,2431)$$
 Possibili controimmagini di $312: 312, 321$.\\
 Se la controimmagine contiene $312$ bisogna far si che $3$ effettui un bypass o che esca prima di $1$, in ogni caso queste condizioni sono soddisfatte dal seguente mesh-pattern, $4312$:
@@ -186,7 +186,7 @@ Se la controimmagine contiene $312$ bisogna far si che $3$ effettui un bypass o 
 \mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{1/2/2/3/1}
 \end{center}
 $$(S_{POP}{Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
-\subsection*{Combinazione di {POP-queuesort} con {stacksort}}
+\subsection*{Composizione di {POP-queuesort} con {stacksort}}
 $$(Q_{POP}{S})^{-1}(Av(21)) = S^{-1}(Q_{POP}^{-1}(Av(21))) = S^{-1}(Av(321, 2413))$$
 Come in molti altri casi la controimmagine di 321 \'e stata calcolata:$$S^{-1}(Av(321)) = (QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
 Si ricerca dunque le controimmagini di 2413 secondo stacksort, applicando lo stesso algoritmo dei casi precedenti.\\
@@ -198,7 +198,7 @@ La controimmagine di 2413 che contiene 2431 \'e quindi 24531.
 \paragraph*{4213}\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/1,4/3}{1/4}{2/4/3/5/1}\\La controimmagine di 2413 che contiene 4213 \'e 42513.\end{center}
 \paragraph*{4231}\begin{center}\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{}{}$\Rightarrow$\mmpattern{scale=1}{4}{1/4,2/2,3/3,4/1}{1/4,3/3,3/4}{2/4/3/5/1}\\La controimmagine di 4213 \'e 42531.\end{center}
 Unendo tutti i risultati si ottiene:$$(Q_{POP}\circ{S})^{-1}(Av(21)) = Av(24513, 24531, 34251, 35241, 42513, 42531, 45231)$$
-\subsection*{Combinazione di {POP-queuesort} con {bubblesort}}
+\subsection*{Composizione di {POP-queuesort} con {bubblesort}}
 $$(Q_{POP}{B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
 Come in tutti gli altri casi POP, una delle condizioni \'e gi\'a stata calcolata: $B^{-1}(Av(321))=(Q\circ{B})^{-1}(Av(21))=Av(3421,4321)$. Si ricerca adesso le controimmagini di 2413 (secondo bubblesort).\\
 I candidati per le controimmagini sono: 2413, 2431, 4213, 4231, 4321.\\
@@ -211,7 +211,7 @@ Si applicano le condizioni per la ricerca di controimmagini di bubblesort agli a
 	Il pattern minimo che corrisponde al mesh pattern rappresentato \'e 42513.\\
 	Si noti che l'area oscurata dovrebbe generare i pattern $\overline{6}42513$ e $\overline{5}42613$, tuttavia si nota che entrambi i pattern, se inclusa la parte barrat, sono contenuti in quello precedente e generano pattern 2413 dopo una passata di bubblesort: $B(642513) = B(542613) =425136$, dove la sottosequenza 2513 rappresenta un'istanza del pattern 2413.
 \end{description}
-\subsection*{Combinazione di {POP-queuesort} con {queuesort}}
+\subsection*{Composizione di {POP-queuesort} con {queuesort}}
 $$(Q_{POP}{Q})^{-1}(Av(21)) = Q^{-1}(321, 2413)$$
 La controimmagine $Q^{-1}(Av(321))$ \'e gi\'a stata trovato nel caso $B\circ{Q}$, e vale che $Q^{-1}(Av(321)) = Av(4321)$.\\
 Se si applica le regole per la ricerca di preimamgini di queuesort a 2413 si ottiene:
@@ -236,7 +236,7 @@ Se invece ci si vuole assicurare che una coppia disordinata venga ordinata, la d
 \mmpattern{scale=1.7}{2}{1/2,2/1}{}{}$\Rightarrow$
 \decpatternww{scale=1.7}{2}{1/2,2/1}{}{}{1/0,1/2}{}{1/1/2/2/{\mpattern{scale=0.4}{2}{1/1,2/2}{}}}
 \end{center}
-\subsection*{Combinazione di {stacksort} con {POP-stacksort}}
+\subsection*{Composizione di {stacksort} con {POP-stacksort}}
 $$(S{S_{POP}})^{-1}(Av(21)) = S_{POP}^{-1}(S^{-1}(Av(21))) = S_{POP}^{-1}(Av(231))$$
 \\Si applicano le condizioni per le controimmagini ai due candidati: 231 e 321.\\\\
 Nel caso di 231, le inversioni sono $(2,1),(3,1)$. Si osserva che 3 gi\'a soddisdfa la condzione A per la coppia $(2,1)$, quindi resta da applicare le condizioni alla coppia $(3,1)$:
@@ -259,7 +259,7 @@ Si applicano adesso le condizioni per la coppia $(3,1)$ che ci si aspetta resti 
 Si osservi come applicando le condzioni A e B per la coppia $(3,1)$ queste siano gi\'a soddisfatte per la coppia $(2,1)$. Applicando la condizione C la coppia pu\'o essere costruita utilizzando l'elemento 2 come membro minore all'interno della coppia, e questo soddisfa anche la condizione A per la coppia $(2,1)$. Si ottengono dunque i pattern 3241, 4312, 4231.\\\\
 Si osserva che, tra i risultati ottenuti prima, alcuni risultano non necessari: $2341\preceq25341, 3241\preceq35241, 4231\preceq45231$. Si semplificano e si ottiene il seguente risultato:
 $$(S{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
-\subsection*{Combinazione di {queuesort} con {POP-stacksort}}
+\subsection*{Composizione di {queuesort} con {POP-stacksort}}
 $$Q{S_{POP}}^{-1}(Av(21)) = S_{POP}^{-1}(Q^{-1}(Av(21))) = S_{POP}^{-1}(Av(321))$$
 \\Si applicano anche stavolta le condizioni per la ricerca di controimmagini al pattern 321. Essendo 321 una sequenza decrementale, non ci sono altri candidati; le sue inversioni sono $(3,2),(3,1),(2,1)$ ed \'e necessario applicare tutte le combinazioni possibili di condizioni A,B,C a queste coppie.\\\\
 Una volta applicate le diverse condizioni alla coppia $(3,2)$ \'e evidente che queste soddisfano anche le condizioni per la coppia $(3,1)$:
@@ -291,14 +291,41 @@ Scrivendo come pattern classici quelli che si ottengono da questi meta-patterns 
 &Q{S_{POP}}(Av(21)) = Av(34251, 35241, 41352, 42351, 45231, \\
 & 45312, 51342, 51423, 52341, 52413, 53412)
 \end{eqnarray*}
-\subsection*{Combinazione di {bubblesort} con {POP-stacksort}}
+\subsection*{Composizione di {bubblesort} con {POP-stacksort}}
 $$(B\circ{S}_{POP})^{-1}(Av(21)) = S_{POP}^{-1}(B^{-1}(Av(21))) = S_{POP}^{-1}(Av(231,321))$$
 Il l'insieme minimo di pattern per l'ordinabilit\'a di permutazione con la composzione bubblesort, POPstacksort \'e l'unione degli insiemi dei due risultati precedenti, stacksort e queuesort.\\
 Si nota, tuttavia che ogni pattern contenuto nell'insieme ottenuto dalla combinazione con queuesort contiene \textbf{almeno} un pattern tra quelli ottenuti da stacksort. Nello specifico, a titolo esemplificativo:$$3241\preceq34251, 35241, 41352, 42351$$$$3412\preceq53412$$$$4231\preceq45231, 51342, 52341, 52413$$$$4312\preceq45312, 51423$$ 
 Dunque l'insieme minimo di pattern che caratterizza le permutazioni ordinabili da $B\circ{S}_{POP}$ \'e lo stesso di $S\circ{S}_{POP}$.
 $$(B{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
-\subsection*{$S\circ{Q_{POP}}$}
-[Congettura per la controimmagine di 231 (vedere file cons231.pdf, poi copiare da tex)]
+\subsection*{Composizione di stacksort con POP-queuesort}
+[ancora da correggere]
+Grazie a vari risultati ottenuti applicando i software mostrati nel capitolo 3, \'e stato possibile formulare la seguente congettura:
+$$Cons^{-1}Av(231) = Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+Per dimostrare la congettura occorre dimostrare la doppia inclusione:
+\begin{description}
+\item[(A)]$Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$
+\item[(B)]$Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{}) \subseteq Cons^{-1}Av(231)$
+\end{description}
+\paragraph*{Nota:}Per tutta la dimostrazione i valori che formano i pattern saranno indicati da $a,b,c,d$ ed $e$ (quando presente), $n$ indicher\'a la lunghezza della permutazione $\pi$ e si intende $1\leq{a}<b<c<d<e\leq{n}$.
+\paragraph*{Osservazione:} Sia $\pi$ una permutazione in input all'algoritmo \textit{Cons}, tutti gli elementi di $\pi$ che non sono LTR massimi effettuano un bypass. Un LTR massimo pu\'o accodarsi se e solo se \'e il consecutivo dell'elemento in fondo alla coda e provoca un \textit{pop} in tutti gli altri casi.
+\begin{center}
+\textbf{(A)} $Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$
+\end{center}
+\begin{proof}
+Dobbiamo dimostrare che tutte le permutazioni la cui immagine evita il pattern 231 evitano i pattern $2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{}$, ovvero che l'immagine di ogni permutazione che contiene almeno uno di questi pattern contiene un pattern 231.
+\paragraph*{2431}
+$$\pi = \dots{b}\dots{d}\dots{c}\dots{a}\dots$$
+Le non inversioni $(b,d)$ e $(b,c)$ saranno presenti anche nell'immagine e inoltre $c,a$, non essendo LTR massimi, effettuano un bypass. Si osserva che se $b$ effettua un bypass si ha necessariamente un pattern 231 nella sottosequnze $bca$. Se $b$ entra in coda allora $d$ provoca necessariamentee un $pop$ (non pu\'o essere accodato alla stessa coda che contiene $b$, perch\'e la coda \'e consecutiva e $c$, che \'e un valore intermedio tra $b$ e $d$, \'e pi\'u avanti nell'input) e l'immagine contiene la sottoseqenza $bca$.
+\paragraph*{4231}
+$$\pi = \dots{d}\dots{b}\dots{c}\dots{a}\dots$$
+Nessuno degli elementi che formano la sottosequenza $bca$ contenuta in $\pi$ \'e un LTR massimo, quindi bypassano tutti e la sequanza \'e contenuta anche in $Cons(\pi)$.
+\paragraph*{23514}$$\pi = \dots{b}\dots{c}\dots{e}\dots{a}\dots{d}\dots$$
+Le non inversioni sono presenti anche nell'immagine, in particolare la non inversione $(b,c)$, inoltre $a$ non \'e un LTR massimo quindi effetua un bypass. Si vuole mostrare che la non inversione $(b,c)$ viene sempre inserita nell'output prima di $a$. Se $b,c$ effettuano un bypass si ha sicuramente $bca$ nell'immagine. Se entrambi entrano in coda almeno un pop viene provocato da $e$ prima che si arrivi ad $a$. Anche se $b$ effettua un bypass e $c$ entra in coda quest'ultimo viene sicuramente aggiunto all'output prima di $a$, eventualmente da $e$.   
+\subsection*{$\mmpattern{scale=1}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{}$}
+Una permutazione che contiene occorrenza di questo pattern ha la forma:
+$$\pi = \dots{c}\dots{b}\dots{e}\dots{a}\dots{d}\dots$$dove nessun valore precedente a $b$ \'e maggiore di $c$.\\\\
+Si osserva che $b,a$ effettuano un bypass. $c$ \'e un LTR massimo, quindi sia che provochi un pop o meno, verr\'a inserito in coda, dopodich\'e si verifica il bypass di $b$, e $c$ viene sicuramente estratto dalla coda prima di arrivare ad $a$ (eventualmente \'e $e$ a provocare il pop). Si pu\'o escludere che $c$ esca dalla coda prima che $b$ effettui un bypass perch\'e prima di $b$ nessun elemento \'e maggiore di $c$.\\Si forma cos\'i la sottosequenza $bca$.
+\end{proof}
 \subsection*{$Q\circ{Q_{POP}}$}
 [Congettura per la controimmagine di 321, per ora scritta solo su carta]
 \subsection*{$B\circ{Q_{POP}}$}
