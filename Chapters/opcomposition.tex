@@ -94,7 +94,7 @@ Si uniscono dunque i due risultati:
 $$S^{-1}(Av(231))=Av(2341,3\overline{5}241), S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
 Si osserva che $2341\preceq 34251$, quindi $34251$ non \'e minimo.\\
 Inoltre i pattern $35241, 3\overline{5}241$, possono essere rappresentati dal pattern minimo $3241$ che rende non minimo anche $34251$.\\Il risultato che si ottiene \'e:$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
-\section*{Combinazioni che terminano con \textit{queuesort}}
+\section*{Combinazioni di un operatore di ordinamento con \textit{queuesort}}
 Nonostante anche per \textit{queuesort} sia stato trovato un algoritmo per le controimmagini\cite{magnusson2013sorting}, approcciare il problema "manualmente" analizzando i possibili comportamenti di \textit{queuesort} rispetto alle diverse possibili permutazioni risulta essere pi\'u semplice e pi\'u comprensibile.\\\\
 Se nel valutare il comportamento di \textit{queuesort} rispetto ad una controimmagine se ci si vuole assicurare che un elemento entri nella coda allora lo si vuole "forzare" ad essere un LTR maxima, dunque si applicher\'a il seguente mesh-pattern all'elemento in considerazione:
 \begin{center}
@@ -140,23 +140,36 @@ Esistono diverse versioni di \textit{POP queuesort} ed in particolare ne esiston
 	\item[\textit{Min}] in questa versione l'operazione di POP viene eseguita solo se il primo elemento della coda \'e il successivo dell'ultimo elemento aggiunto all'output; se l'elemento in input \'e maggiore dell'ultimo elemento della coda (o se la coda \'e vuota) allora viene accodato mentre negli altri casi, se l'elemento dell'input \'e minore della testa della coda allora bypassa altrimenti si esegue un POP.
 	\item[\textit{Cons}] questa versione si basa sull'idea di avere sempre elementi consecutivi nella coda; \'e la versione che verr\'a adottata in questa tesi; da qui in avanti ogni riferimento a \textit{POP-queuesort} sar\'a riferito a \textit{Cons}
 \end{description}
+Nell'algoritmo \textit{Cons} si definisce una coda POP come un insieme $Q$, inizialmente vuoto, di interi su cui \'e possibile fare le seguenti operazioni:
+\begin{description}
+	\item[Enqueue($\pi_i$, $Q$):] inserisce l'$i$-esimo elemento della permutazione $\pi$ in $Q$, accodandolo alla coda;
+	\item[Pop($Q$):] estrae gli elementi contenuti in $Q$ e li aggiunge all'output nello stesso ordine a cui sono stati aggiunti a $Q$;
+	\item[Bypass($\pi_i$):] posiziona l'$i$-esimo elemento di $\pi$ nell'output.
+\end{description}
+Inoltre si utilizzano le seguenti funzioni:
+\begin{description}
+	\item[Back($Q$):] restituisce il valore dell'ultimo elemento aggiunto a $Q$
+	\item[Front($Q$):] restituisce il valore dell'elemento in $Q$ che vi \'e stato inserito per primo
+\end{description}
 \begin{algorithm}[H]
    \caption{Cons - POP Queuesort}
 \begin{algorithmic}[1]
-\State $Q\leftarrow$ empty POP-queue
-\For{$i=1$ {\bfseries to} $n-1$}
-	\If{empty queue \textbf{or} $\pi_i=Back(Q)+1$}
-		\State enqueue($\pi_i$)
+\State $Q\leftarrow\emptyset$ 
+\For{$i=1$ {\bfseries to} $n$}
+	\If{$Q=\emptyset$ \textbf{or} $\pi_i=Back(Q)+1$}
+		\State Enqueue($\pi_i$)
 	\Else
 		\If{ $Front(Q)>\pi_i$}
-			\State append $\pi_i$ to the output
+			\State $Bypass(\pi_i)$
 		\Else
-			\State POP the queue and append the result to the output
-			\State enqueue($\pi_i$)
+			\State $Pop(Q)$
+			\State $Enqueue(\pi_i)$
 		\EndIf
 	\EndIf
 \EndFor
-\State POP the queue and append the result to the output
+\If{$Q\neq\emptyset$}
+\State $Pop(Q)$
+\EndIf
 \end{algorithmic}
 \end{algorithm}
 La dimostrazione che \textit{Cons} (cos\'i come \textit{Min}) sia un algoritmo ottimale nella classe degli algoritmi \textit{POP-queueosrt} si ha dal fatto che esso ordina tutte e sole le sequenze dell'insieme Av(321, 2413), che sono esattamente tutte e sole le permutazioni ordinabili con una POP queue\cite{cioni2021sorting}.
@@ -297,10 +310,12 @@ Il l'insieme minimo di pattern per l'ordinabilit\'a di permutazione con la compo
 Si nota, tuttavia che ogni pattern contenuto nell'insieme ottenuto dalla combinazione con queuesort contiene \textbf{almeno} un pattern tra quelli ottenuti da stacksort. Nello specifico, a titolo esemplificativo:$$3241\preceq34251, 35241, 41352, 42351$$$$3412\preceq53412$$$$4231\preceq45231, 51342, 52341, 52413$$$$4312\preceq45312, 51423$$ 
 Dunque l'insieme minimo di pattern che caratterizza le permutazioni ordinabili da $B\circ{S}_{POP}$ \'e lo stesso di $S\circ{S}_{POP}$.
 $$(B{S_{POP}})^{-1}(Av(21)) = Av(2341, 3241, 3412, 4231, 4312)$$
+\paragraph*{Nota:} Non si ha a disposizione un algoritmo per la ricerca di controimmagini di pattern tramite \textit{Cons}. Per questo motivo le classi di pattern ordinabili dalle combinazioni mostrate di seguito, ovvero quelle in cui si compone POP-queuesort ad un altro algoritmo di ordinamento, verrano ricercate con un metodo diverso da quello adottato finora: si presenteranno delle congetture su quali classi di pattern che si ritengono possano rispondere alle nostre condizioni, e si verificher\'a che l'insieme di permutazioni ordinabili e l'insieme di permutazioni contenute nella classe di pattern coincidano.
 \subsection*{Composizione di stacksort con POP-queuesort}
-[ancora da correggere]
 Grazie a vari risultati ottenuti applicando i software mostrati nel capitolo 3, \'e stato possibile formulare la seguente congettura:
-$$Cons^{-1}Av(231) = Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+$$SQ_{POP}^{-1}Av(21) = Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+Questo equivale a cercare le controimmagini del pattern 231 secondo \textit{Cons}, dato che:
+$$SQ_{POP}^{-1}Av(21) = Q_{POP}^{-1}(S^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231))$$
 Per dimostrare la congettura occorre dimostrare la doppia inclusione:
 \begin{description}
 \item[(A)]$Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$
@@ -348,7 +363,51 @@ Per ordinare $(b,c)$, $c$ deve essere un LTR massimo, in modo che possa entrare 
 \end{center}
 Degli ultimi due mesh pattern mostrati, si ignora il secondo in quanto contiene un'occorrenza del pattern 2431, gi\'a trovato in precedenza, nella sottosequenza $beda$.
 \end{proof}
-\subsection*{$Q\circ{Q_{POP}}$}
-[Congettura per la controimmagine di 321, per ora scritta solo su carta]
-\subsection*{$B\circ{Q_{POP}}$}
-[Unire risultati dei due paragrafi precedenti]
+\subsection*{Composizione di stacksort con POP-queuesort}
+Similmente a come fatto per la sezione precedente, si vuole adesso dimostrare il seguente risultato:
+$$QQ_{POP}^{-1}Av(21) = Av(4321, 35214, 35241)$$
+Questo equivale a cercare le controimmagini del pattern 321 secondo \textit{Cons}, dato che:
+$$QQ_{POP}^{-1}Av(21) = Q_{POP}^{-1}(Q^{-1}(Av(21))) = Q_{POP}^{-1}(Av(321))$$
+Per dimostrare la congettura occorre dimostrare la doppia inclusione:
+\begin{description}
+\item[(A)]$Cons^{-1}Av(321) \subseteq Av(4321, 35214, 35241)$
+\item[(B)]$Av(4321, 35214, 35241) \subseteq Cons^{-1}Av(321)$
+\end{description}
+\paragraph*{Nota:} Si adotta la stessa dicitura, per gli elementi che formano i pattern, adottata nella precedente dimsotrazione
+\begin{center}
+\textbf{(A)} $Cons^{-1}Av(321) \subseteq Av(4321, 35214, 35241)$
+\end{center}
+\begin{proof}
+Dobbiamo dimostrare che tutte le permutazioni la cui immagine evita il pattern 321 evitano i pattern 4321, 35214, 35241.\\
+Si procede a dimostrare che l'immagine di ogni permutazione che contiene almeno uno di questi pattern contiene un pattern 321.
+\paragraph*{4321:} $$\pi=\dots{d}\dots{c}\dots{b}\dots{a}\dots$$
+Nessun memebro della sottosequenza $cba$ \'e un LTR massimo, quindi effettuano tutti un bypass e vengono inseriti nell'output nello stesso ordine, formando un pattern 321.
+\paragraph*{35214:}$$\pi=\dots{c}\dots{e}\dots{b}\dots{a}\dots{d}\dots$$
+Gli elementi $b,a$ non sono LTR massimi e quindi effettuano un bypass. 
+Si vuole dimostrare che l'elemento $c$ viene sempre inserito nell'output prima dell'inversione $(b,a)$. Questo \'e evidente quando $c$ effettua un bypass. 
+Se invece $c$ entra in coda, anche se in seguito ad un pop, la testa della coda \'e sicuramente minore di $e$, 
+che quindi deve necessariamente causare un $pop$ 
+(non pu\'o accodarsi dato che $c$ \'e in coda e $d$ \'e ancora nell'input), 
+ponendo $c$ nell'output prima di $b$.
+\paragraph*{35241:} In questo caso valgono le stesse osservazioni del caso precedente.
+\end{proof}
+\begin{center}
+\textbf{(A)} $Av(4321, 35214, 35241) \subseteq Cons^{-1}Av(321)$
+\end{center}
+\begin{proof}
+Dobbiamo dimostrare che se una permutazione evita i pattern 4321, 35214, 35241, la sua immagine evita il pattern 321. Si procede a dimostrare che per avere un pattern 321 nell'immagine $Cons(\pi)$ \'e necessario che $\pi$ contenga almeno uno tra i pattern 4321, 35214, 35241.\\\\
+Poich\'e \textit{Cons} non produce nuove inversioni gli elementi che $c,b,a$ che formano il pattern 321 nell'immagine devono essere nello stesso ordine relativo anche nella controimmagine.\\\\
+Se nessuno degli elementi della sottosequenza $cba$ \'e un LTR massimo allora tutti e 3 gli elementi effettuano un bypass e il pattern 321 \'e preservato. Questo si verifica quando $cba$ sono i 3 elementi minori di un'occorenza di un pattern 4321.\\\\
+Se $c$ invece entra in coda, anche se in seguito ad un pop, deve avvenire un pop prima che $b$ possa effettuare un bypass. Questo si verifica quando un elemento maggiore di $e$ \'e posto tra $c$ e $b$ ed un ulteriore elemento $d$ \'e successivo ad $e$ (come mostrato anche nel caso precedente).
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/2,3/1}{}{} $\Rightarrow$
+\mmpattern{scale=1.2}{4}{1/3,2/4,3/2,4/1}{}{2/3/5/4/1} 
+\end{center}
+Una permutazione contiene un'occorrenza del pattern decorato cos\'i ottenuto se contiene uno dei seguenti pattern classici: 35421, 35241, 35214. Di questi il primo viene escluso perch\'e contiene a sua volta un'occorrenza del pattern 4321, gi\'a trovato prima.
+\end{proof}
+\subsection*{Composizione di bubblesort con POP-queuesort}
+$$(BQ_{POP})^{-1}(Av(21)) = Q_{POP}^{-1}(B^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231, 321))$$
+La classe di pattern ordinabile dalla composizione di bubblesort con Cons \'e data dall'unione dei risultati ottenuti per stacksort e queuesort.\\\\
+$$(BQ_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, 35214, 35241, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+Si osserva che l'insieme non \'e minimo, in quanto alcuni pattern contengono istanze di altri: $2413\preceq35214, 4231\preceq35241$. Eliminati i pattern superflui, si ottiene:
+$$(BQ_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
