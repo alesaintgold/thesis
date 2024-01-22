@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  22 JAN 2024 01:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  22 JAN 2024 02:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2003,8 +2003,8 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 
 
 ]
-Overfull \hbox (117.77725pt too wide) in paragraph at lines 30--52
- [] 
+Overfull \hbox (117.77725pt too wide) in paragraph at lines 29--52
+[]
  []
 
 [48]) (./thesis.bbl (./thesis.brf)
@@ -2075,7 +2075,7 @@ pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
 /share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palati
 no/uplri8a.pfb>
-Output written on thesis.pdf (51 pages, 357172 bytes).
+Output written on thesis.pdf (51 pages, 357173 bytes).
 PDF statistics:
  647 PDF objects out of 1000 (max. 8388607)
  557 compressed objects within 6 object streams
