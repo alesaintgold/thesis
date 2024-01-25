@@ -3,7 +3,7 @@
 \paragraph*{controimmagini} Sia $X$ un operatore di ordinamento, la controimmagine di una certa permutazione $p$, secondo $X$, indicata con $X^{-1}(p)$ rappresenta l'insieme di tutte le permutazioni la cui immagine secondo l'operatore $X$ \'e uguale a $p$.$$X^{-1}(p) = \{\beta : p = X(\beta)\}$$\\
 $Av(21)$ \'e l'insieme formato dalle sole permutazioni identit\'a, dato che contiene tutte le permutazioni in cui nessun elemento sia disordinato rispetto ad un altro, ovvero solo le permutazioni crescenti. Si indica con $X^{-1}(Av(21))$ l'insieme di tutte le permutazioni ordinabili da $X$.\\\\
 Ad esempio, dato che \'e noto che l'operatore \textit{bubblesort} ordina solo le permutazioni che non contengono pattern 231 e 321\cite{claesson2012sorting}, vale che:$$B^{-1}(Av(21)) = Av(231,321)$$
-\paragraph*{Composizione di operatori} Siano due operatori di ordinamento $X$ e $Y$, la loro composizione \'e indicata con $ XY = X \circ Y$, qundi, ad esempio, la composizione di \textit{Stacksort} e \textit{Bubblesort} (in questo ordine) si indica con $SB(\pi) = (S \circ B)(\pi) = S(B(\pi))$.
+\paragraph*{Composizione di operatori} Dati due operatori di ordinamento $X$ e $Y$, la loro composizione \'e indicata con $ XY = X \circ Y$, quindi, ad esempio, la composizione di \textit{Stacksort} e \textit{Bubblesort} (in questo ordine) si indica con $SB(\pi) = (S \circ B)(\pi) = S(B(\pi))$.
 \paragraph*{Algoritmi per il calcolo di controimmagini} Sono gi\'a stati prodotti alcuni algoritmi per calcolare le controimmagini di pattern secondo gli operaratori \textit{bubblesort}\cite{albert2010inverse}, \textit{stacksort}\cite{claesson2012sorting} e \textit{queuesort}\cite{magnusson2013sorting}\cite{cioni2021characterization}.\\
 Questo ci permette, quando si combinano due operatori di ordinamento (di cui di quello applicato per secondo siano noti le classi di pattern da evitare per l'ordinabilit\'a) di cercare per quali pattern l'operatore che viene applicato per primo produce permutazioni che siano ordinabili dal secondo.
 \paragraph*{Un caso gi\'a noto: Combinazione di \textit{Stacksort} con \textit{Bubblesort}} Si considera dunque la composione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da esso.$$(SB)^{-1}Av(21)=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
@@ -88,28 +88,27 @@ Altrimenti se $2^+>3$, si possono ottenere due diverse controimmagini:
 $$(QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
 \subsection*{Composizione di {bubblesort} con {stacksort}}
 $$(BS)^{-1}(Av(21))=S^{-1}B^{-1}(Av(21))=S^{-1}(Av(231,321))$$
-Gi\'a dall'analisi della combinazione precedente \'e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ qundi \'e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \'e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \'e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\\\
-Seguendo l'algoritmo applicato finora si osserva che i pattern candidati per le controimmagini sono $231,321$.\\\\
+Gi\'a dall'analisi della combinazione precedente \'e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ quindi \'e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \'e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \'e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\
 Si uniscono dunque i due risultati:
 $$S^{-1}(Av(231))=Av(2341,3\overline{5}241), S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
 Si osserva che $2341\preceq 34251$, quindi $34251$ non \'e minimo.\\
-Inoltre i pattern $35241, 3\overline{5}241$, possono essere rappresentati dal pattern minimo $3241$ che rende non minimo anche $34251$.\\Il risultato che si ottiene \'e:$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
+Inoltre i pattern $35241, 3\overline{5}241$, possono essere rappresentati dal pattern minimo $3241$ che rende non minimo anche $35241$.\\Il risultato che si ottiene \'e:$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
 \section*{Combinazioni di un operatore di ordinamento con \textit{queuesort}}
 Nonostante anche per \textit{queuesort} sia stato trovato un algoritmo per le controimmagini\cite{magnusson2013sorting}, approcciare il problema "manualmente" analizzando i possibili comportamenti di \textit{queuesort} rispetto alle diverse possibili permutazioni risulta essere pi\'u semplice e pi\'u comprensibile.\\\\
-Se nel valutare il comportamento di \textit{queuesort} rispetto ad una controimmagine se ci si vuole assicurare che un elemento entri nella coda allora lo si vuole "forzare" ad essere un LTR maxima, dunque si applicher\'a il seguente mesh-pattern all'elemento in considerazione:
+Se nel valutare il comportamento di \textit{queuesort} rispetto ad una controimmagine ci si vuole assicurare che un elemento entri nella coda allora lo si vuole "forzare" ad essere un LTR massimo, dunque si applicher\'a il seguente mesh-pattern all'elemento in considerazione:
 \begin{center}
 \mmpattern{scale=1.5}{1}{1/1}{0/1}{}
 \end{center}
-Al contrario, se si ha a che fare con un elemento che risulta essere un right-to-lrft-maxima ma lo si vuole forzare a svuotare la coda, si avr\'a il seguente risultato:
+Al contrario, se si ha a che fare con un elemento che risulta essere un right-to-lrft-massimo ma lo si vuole forzare a svuotare la coda, si avr\'a il seguente risultato:
 \begin{center}
 \mmpattern{scale=1.5}{1}{1/1}{}{0/1/1/2/1}
 \end{center}
 Per forzare un elemento a effettuare un bypass \'e necessario che esso sia minore del primo elemento della coda, per questa condizione \'e pi\'u difficile formalizzare una startegia, ma si vedranno in seguito esempi di come pu\'o essere fatto. 
 \subsection*{Composizione di {stacksort} con {queuesort}}
 $$(SQ)^{-1}(Av(21))=Q^{-1}S^{-1}(Av(21))=Q^{-1}(Av(231))$$Ancora una volta si considerano come candidati i pattern minimali che contengano almeno le inversioni $(2,1),(3,1)$ ovvero $231,321$.\\\\
-Se gli elementi del pattern $231$ nell'immagine formano un pattern $321$ nella controimmagine allora il valore $3$ deve entrare nella coda. Sia che $2$ effettui un bypass sia che provochi l'estrazione di alcuni elementi della coda comunque esso viene aggiunto all'output prima che $3$ venga estratto. Si rende necessario un elemento $3^+>3$ posto tra $2$ e $1$ per estarre il $3$ dalla coda e inserirlo nell'input prima dell'$1$, tuttavia $3^+$ non deve essere maggiore dell'elemento in fondo alla coda, altrimenti viene accodato. Si teorizza l'esistenza di un elemento $4>3^+$ posto tra $3$ e $2$, che rappresenta il massimo della coda quando si raggiunge $3^+$.\\
-Il pattern che si ottiene deve essere nella forma $3423^+1$, ovvero $35241$\\\\
-se invece gli elementi del pattern $231$ nell'immagine formano un pattern $231$ anche nella controimmagine che lo contiene a sua volta \'e necessario che $2$ effettui un bypass o che venga estratto dalla coda prima che $3$ vi entri. Il che implica la presenza di un valore $2^+>2$ prima di $2$ o tra $2$ e $3$.\\Similmente $3$ deve essere aggiunto all'output prima di $1$, qundi deve bypassare o essere estratto prima che $1$ bypassi. Il che implica l'esistenza di un elemento $4$ in posizione precdente a $1$; in particolare i pattern minimali che rispettano queste condizoni sono quelli in cui $4$ compare prima di $2$ e si ha che $2^+=4$.\\
+Se gli elementi del pattern $231$ nell'immagine formano un pattern $321$ nella controimmagine allora il valore $3$ deve entrare nella coda. Sia che $2$ effettui un bypass sia che provochi l'estrazione di alcuni elementi della coda comunque esso viene aggiunto all'output prima che $3$ venga estratto. Si rende necessario un elemento $4>3$ posto tra $2$ e $1$ per estarre il $3$ dalla coda e inserirlo nell'input prima dell'$1$, tuttavia $4$ non deve essere maggiore dell'elemento in fondo alla coda, altrimenti viene accodato. Deve pertanto esistere un elemento $5>4$ posto tra $3$ e $2$, che rappresenta il massimo della coda quando si raggiunge $4$.\\
+Il pattern che si ottiene deve essere nella forma $35241$.\\\\
+Se invece gli elementi del pattern $231$ nell'immagine formano un pattern $231$ anche nella controimmagine che lo contiene a sua volta \'e necessario che $2$ effettui un bypass o che venga estratto dalla coda prima che $3$ vi entri. Il che implica la presenza di un valore $2^+>2$ prima di $2$ o tra $2$ e $3$.\\Similmente $3$ deve essere aggiunto all'output prima di $1$, quindi deve bypassare o essere estratto prima che $1$ bypassi. Il che implica l'esistenza di un elemento $4$ in posizione precdente a $1$; in particolare i pattern minimali che rispettano queste condizioni sono quelli in cui $4$ compare prima di $2$ e si ha che $2^+=4$.\\
 \begin{center}
 \mmpattern{scale=1.5}{3}{1/2,2/3,3/1}{}{0/3/2/4/1}
 \end{center}
@@ -119,14 +118,14 @@ $$(SQ)^{-1}(Av(21))=Av(2431,4231)$$
 \subsection*{Composizione di {bubblesort} con {queuesort}}
 $$(BQ)^{-1}(Av(21))=Q^{-1}B^{-1}(Av(21))=Q^{-1}(Av(231,321))$$
 Ancora una volta, si osserva che $Q^{-1}(Av(231))$ \'e gi\'a stato calcolato nel caso precedente, e resta dunque da unire i risultati gi\'a ottenuti con $Q^{-1}(Av(321))$.\\
-Gli elementi del pattern $321$ nell'immagine devono essere a sua volta nello stesso odrine nell'immagine.\\
+Gli elementi del pattern $321$ nell'immagine devono essere a sua volta nello stesso ordine nell'immagine.\\
 In particolare gli elementi $3,2$ devono effettuare un bypass o essere inseriti nella coda ed estratti prima dell'elemento successivo.\\\\
 \begin{center}
 \mmpattern{scale=1.5}{3}{1/3,2/2,3/1}{}{0/3/2/4/1}
 \end{center}
 Il pattern $4321$ sicuramente soddisfa queste condizioni: se $4$ bypassa allora tutti gli elementi del pattern, essendo minori bypassano a loro volta, se viene inserito in coda ed estratto allora bypassano comunque, se viene inserito in coda e non estratto allora tutti gli elementi successivi evitano la coda e vengono aggiunti all'output, eventualmente dopo aver provocato l'estrazione di alcuni elementi dalla coda.\\
 Se $3$ viene aggiunto in coda ed estratto allora si ha una situazione $3421$, dove $2$ bypassa.\\
-$$(SQ)^{-1}(Av(21))=Av(2431,3421,4231,4321)$$
+$$(BQ)^{-1}(Av(21))=Av(2431,4231,4321)$$
 \section*{Contenitori POP}
 Lo studio di combinazioni di operatori che utilizzano contenitori POP si rivela pi\'u difficile, in quando si tratta di casi non approfonditi in letteratura.\\
 Sono tuttavia noti i pattern che rendono una permutazione non ordinabile, come presentato nel capitolo 2, ovvero:
