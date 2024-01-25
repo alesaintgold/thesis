@@ -3,22 +3,22 @@ In questo capitolo verranno introdotti alcuni tra i algoritmi di ordinamento che
 queuesort e bubblesort, e altri concetti necessari per l'analisi della composizione tra due o pi\'u esecuzioni di tali algoritmi.\\\\
 Durante la loro esecuzione questi algoritmi possono salvare gli elementi in un contenitore (la diversa struttura dati adottata definisce i diversi algoritmi) dalla quale poi vengono prelevati per essere aggiunti all'output.\\\\
 In questa tesi gli algoritmi prendono in input permutazioni di interi, sebbene sia possibile estendere la trattazione a parole arbitrarie su un insieme totalmente ordinato (anche se non sempre in modo immediato).\\
-Per rappresentare le permutazioni si usa la notazione lineare, quindi una permutazione $\pi$ di lunghezza $n$ \'e una parola sull'alfabeto $\{1, 2, \dots, n\}$ in cui ogni lettera compare una e una sola volta.
-\paragraph*{Inversioni} In un permutazione $\pi = \pi_1\pi_2\dots\pi_n$ un'inversione \'e una coppia di valori $(\pi_i,\pi_j)$, dove $i<j, \pi_i>\pi_j$. Una coppia di valori che non compone una inversione si dice una non inversione.\\
+Per rappresentare le permutazioni si usa la notazione lineare, quindi una permutazione $\pi$ di lunghezza $n$ \`e una parola sull'alfabeto $\{1, 2, \dots, n\}$ in cui ogni lettera compare una e una sola volta.
+\paragraph*{Inversioni} In un permutazione $\pi = \pi_1\pi_2\dots\pi_n$ un'inversione \`e una coppia di valori $(\pi_i,\pi_j)$, dove $i<j, \pi_i>\pi_j$. Una coppia di valori che non compone una inversione si dice una non inversione.\\
 \\Una singola iterazione degli algoritmi che prenderemo in considerazione non garantisce l'ordinamento della permutazione in input,
 dunque gli algoritmi devono essere iterati pi\'u volte, ogni volta sul risultato della iterazione precedente. In ogni caso alla fine della $i$-esima
 iterazione i maggiori $i$ elementi avranno raggiunto la loro posizione finale, 
 dunque sono necessarie al massimo $n-1$ iterazioni per ordinare la permutazione.\\\\
 In questo capitolo si mostrer\'a il comportamento di una singola applicazione di questi algoritmi. Le propriet\'a trovate verranno poi sfruttate per lo studio di varie composizioni.\\
-Infatti gereralmente quando si parla di questi algoritmi essi vengono descritti in funzione di varie iterazioni che vengono applicate fino a che la permutazione non \'e ordinata, mentre qui esamineremo gli effetti di una singola iterazione.\\
-Ad esempio prendendo l'algoritmo bubblesort (certamente il pi\'u noto fra quelli che verranno presentati) si far\'a riferimento ad un operatore $B$ definito appositamente: dove $\pi$ \'e una permutazione di
+Infatti generalmente quando si parla di questi algoritmi essi vengono descritti in funzione di varie iterazioni che vengono applicate fino a che la permutazione non \`e ordinata, mentre qui esamineremo gli effetti di una singola iterazione.\\
+Ad esempio prendendo l'algoritmo bubblesort (certamente il pi\'u noto fra quelli che verranno presentati) si far\'a riferimento ad un operatore $B$ definito appositamente: dove $\pi$ \`e una permutazione di
 interi, $B(\pi)$ rappresenta il risultato di una sola iterazione di bubblesort su di essa.
 \section*{Algoritmi}
 \subsection*{Bubblesort}
 L'algoritmo di ordinamento bubblesort prevede di scorrere dal primo al penultimo elemento e confrontare ciascuno con il proprio successivo per scambiarli se non sono ordinati.\\
-Si definsce l'operazione $Swap(\pi_i,\pi_j)$, che fissata una permutazione $\pi$ la resituisce con l'$i$-esimo e il $j$-esimo elementi scambiati di posizione. \\
-Il risultato di una singola iterazione di bubblesort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \'e calcolato dall'operatore $B$ e si indica con $B(\pi)$.\\
-Si pu\'o scrivere permutazione $\pi$ come $\pi_Ln\pi_R$, dove $n$ \'e il massimo valore della permutazione, $\pi_L$ \'e il suo prefisso e $\pi_R$ il suo suffisso. Vale che $B(\pi) = B(\pi_L)\pi_rn$.\\
+Si definisce l'operazione $Swap(\pi_i,\pi_j)$, che fissata una permutazione $\pi$ la restituisce con l'$i$-esimo e il $j$-esimo elementi scambiati di posizione. \\
+Il risultato di una singola iterazione di bubblesort su una permutazione $\pi=\pi_1\pi_2\dots\pi_n$ \`e calcolato dall'operatore $B$ e si indica con $B(\pi)$.\\
+Si pu\'o scrivere permutazione $\pi$ come $\pi_Ln\pi_R$, dove $n$ \`e il massimo valore della permutazione, $\pi_L$ \`e il suo prefisso e $\pi_R$ il suo suffisso. Vale che $B(\pi) = B(\pi_L)\pi_rn$.\\
 \begin{algorithm}[H]
    \caption{$B - bubblesort$}
 \begin{algorithmic}[1]
@@ -30,17 +30,17 @@ Si pu\'o scrivere permutazione $\pi$ come $\pi_Ln\pi_R$, dove $n$ \'e il massimo
 \end{algorithmic}
 \end{algorithm}
 \subsection*{Stacksort}
-Stacksort \'e un algoritmo che utilizza una pila per ordinare una permutazione.\\ 
+Stacksort \`e un algoritmo che utilizza una pila per ordinare una permutazione.\\ 
 Si definisce una pila come un insieme di interi su cui si possono applicare le seguenti operazioni:
 \begin{description}
    \item[$Push(\pi_i, S)$] aggiunge l'elemento $\pi_i$ alla pila $S$
    \item[$Pop(S)$] estrae dalla pila $S$ l'ultimo intero inserito e lo aggiunge all'output
    \item[$Top(S)$] permette di osservare il valore dell'elemento che verrebbe estratto da $Pop(S)$ senza rimuoverlo.
 \end{description}
-Per ogni elemento $\pi_i$ presente nell'input se la pila \'e vuota viene eseguito un $push$ e si passa al prossimo. Se la pila non \'e vuota si esegue l'operazione $pop$ fino a che l'elemento in cima alla pila non \'e maggiore di $\pi_i$, poi si esegue un $push$.\\
+Per ogni elemento $\pi_i$ presente nell'input se la pila \`e vuota viene eseguito un $push$ e si passa al prossimo. Se la pila non \`e vuota si esegue l'operazione $pop$ fino a che l'elemento in cima alla pila non \`e maggiore di $\pi_i$, poi si esegue un $push$.\\
 Finiti gli elementi nell'input, se necessario, si svuota completamente la pila nell'output.\cite{limbrief}\\
 L'espressione $S(\pi)$ rappresenta il risultato ottenuto applicando un'iterazione di stacksort su una permutazione $\pi = \pi_1\pi_2\dots\pi_n$.\\
-In questo caso, sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, e $\pi_L, \pi_R$ rispettivamente suo prefisso e suffisso, vale che $S(\pi)=S(\pi_L)S(\pi_R)n$
+In questo caso, sia $\pi = \pi_Ln\pi_R$, con $n$ valore massimo in $\pi$, e $\pi_L, \pi_R$ rispettivamente suo prefisso e suffisso, vale che $S(\pi)=S(\pi_L)S(\pi_R)n$.
 \begin{algorithm}[H]
    \caption{S - stacksort}
 \begin{algorithmic}[1]
@@ -61,12 +61,12 @@ Queuesort utilizza una coda per ordinare una permutazione.\\
 Si definisce una coda come un insieme su cui si possono applicare le seguenti operazioni:
 \begin{description}
    \item[$Enqueue(\pi_i,Q)$] aggiunge l'elemento $\pi_i$ alla coda $Q$
-   \item[$Dequeue(Q)$] estrae da $Q$ l'elemento che \'e stato inserito per primo e lo aggiunge all'output
-   \item[$Front(Q)$] permette di osservare del prossimo valore da estarre senza rimuoverlo dalla pila
+   \item[$Dequeue(Q)$] estrae da $Q$ l'elemento che \`e stato inserito per primo e lo aggiunge all'output
+   \item[$Front(Q)$] permette di osservare del prossimo valore da estrarre senza rimuoverlo dalla pila
    \item[$Back(Q)$] permette di osservare l'ultimo valore inserito nella pila.
 \end{description}
-Per descrivere queuesort, \'e infine necessaria un ultima operazione che non prevede di utilizzare la coda:\begin{description}\item[$Bypass(\pi_i)$] il valore $\pi_i$ viene aggiunto all'output senza passare dalla coda\end{description}
-Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota o il suo ultimo elemento \'e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento davanti  alla coda non \'e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output. Si svuota la coda nell'output. 
+Per descrivere queuesort, \`e infine necessaria un'ultima operazione che non prevede di utilizzare la coda:\begin{description}\item[$Bypass(\pi_i)$] il valore $\pi_i$ viene aggiunto all'output senza passare dalla coda\end{description}
+Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \`e vuota o il suo ultimo elemento \`e minore di $\pi_i$, si accoda $\pi_i$, altrimenti si tolgono elementi dalla coda ponendoli nell'output fino a che l'elemento in testa alla coda non \`e maggiore di $\pi_i$, poi si aggiunge $\pi_i$ all'output. Si svuota la coda nell'output. 
 \begin{algorithm}[H]
    \caption{operatore Q - queue sort, singola iterazione}
 \begin{algorithmic}[1]
@@ -86,41 +86,41 @@ Per ogni elemento $\pi_i$ della permutazione $\pi$ in input se la coda \'e vuota
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-\paragraph*{Osservazione}\textit{bubblesort} \'e un caso particolare sia di \textit{queue sort} che di \textit{stacksort}.\\
-Se infatti si fissa a 1 la capacit\'a della pila o della coda dei rispettivi operatori il comportamento che questi assumono \'e quello di una cella che, scorrendo l'input, contiene sempre il massimo valore trovato, mentre gli altri vengono messi nell'output, ovvero analogo a quello di bubblesort.
+\paragraph*{Osservazione}\textit{bubblesort} \`e un caso particolare sia di \textit{queue sort} che di \textit{stacksort}.\\
+Se infatti si fissa a 1 la capacit\'a della pila o della coda dei rispettivi operatori il comportamento che questi assumono \`e quello di una cella che, scorrendo l'input, contiene sempre il massimo valore trovato, mentre gli altri vengono messi nell'output, ovvero analogo a quello di bubblesort.
 \paragraph*{left-to-right massimi} In una permutazione i \textit{LTR massimi} sono gli elementi che risultano essere maggiori di ogni altro elemento che li precede. Ad esempio nella permutazione 142387596 i \textit{LTR massimi} sono 1,4,8,9.\\\\
 La nozione di \textit{LTR massimi} risulta molto importante per lo studio di alcuni degli algoritmi di ordinamento presentati. In particolare durante l'esecuzione di \textit{queuesort} i LTR massimi sono tutti e soli gli elementi che entrano nella coda, mentre durante l'esecuzione di \textit{bubblesort} sono gli unici che vengono scambiati; in entrambi gli algoritmi l'ordine relativo degli altri elementi non viene alterato.
-\paragraph*{Contenitori POP}Un caso di studio interessante \'e quello in cui i contenitori di stacksort e queue sort vengano sostituiti dalla loro versione POP, ovvero un contenitore con politiche di estrazione e inserimento analoghe ma quando viene eseguita un estrazione il contenitore viene svuotato completamente. Si definiscono con questa variante, gli algoritmi \textbf{pop-stacksort} e \textbf{pop-queuesort} 
+\paragraph*{Contenitori POP}Un caso di studio interessante \`e quello in cui i contenitori di stacksort e queue sort vengano sostituiti dalla loro versione POP, ovvero un contenitore con politiche di estrazione e inserimento analoghe ma quando viene eseguita un'estrazione il contenitore viene svuotato completamente. Si definiscono con questa variante, gli algoritmi \textbf{pop-stacksort} e \textbf{pop-queuesort} 
 \section*{Classi di pattern di permutazioni}
-Siano $\alpha,\beta$ due sequenze di interi indichiamo con $\alpha \subseteq \beta$ che $\alpha$ \'e una sottosequenza di $\beta$, anche se non necessariamente una sottosequenza consecutiva\cite{bouvel2022preimages}.
-\paragraph*{Standardizzazione}
-Un pattern classico \'e sempre rappresentato dalla \textbf{standardizzazione} di una permutazione.\\Per una sequenza di numeri la sua standardizzazione\cite{claesson2012sorting} \'e un altra sequenza della stessa lunghezza in cui l'elemento minore della sequenza originale \'e stato sostituito da 1, il secondo minore con un 2, ecc.\\
-Ad esempio, la standardizzazione di $5371$ \'e $3241$ .\\\\
-Si dice che una permutazione $\tau$ contine un pattern $\delta$ se esiste $\lambda\subseteq\tau$ la cui standardizzazione \'e uguale a $\delta$, e si indica con $\delta\preceq\tau$. \\Ad esempio $24153$ contiene il pattern $312$ perch\'e $413\subseteq{24153}$ e la standardizzazione di $413$ \'e $312$.
-\paragraph*{Classi di pattern} La relazione \st{di sottopermutazione} \'e una relazione di ordine parziale \st{che viene studiata con dei sottoinsiemi chiamati \textbf{pattern di classi}}. Ogni classe $D$ pu\'o essere caratterizzata dall'insieme \st{minimo} $M$ che evita:$$ D = Av(M) = \{\beta:\mu\not\preceq\beta\forall\mu\in M\}$$
+Siano $\alpha,\beta$ due sequenze di interi indichiamo con $\alpha \subseteq \beta$ che $\alpha$ \`e una sottosequenza di $\beta$, anche se non necessariamente una sottosequenza consecutiva\cite{bouvel2022preimages}.
+\paragraph*{standardizzazione}
+Un pattern classico \`e sempre rappresentato dalla \textbf{standardizzazione} di una permutazione.\\Per una sequenza di numeri la sua standardizzazione\cite{claesson2012sorting} \`e un altra sequenza della stessa lunghezza in cui l'elemento minore della sequenza originale \`e stato sostituito da 1, il secondo minore con un 2, ecc.\\
+Ad esempio, la standardizzazione di $5371$ \`e $3241$ .\\\\
+Si dice che una permutazione $\tau$ contiene un pattern $\delta$ se esiste $\lambda\subseteq\tau$ la cui standardizzazione \`e uguale a $\delta$, e si indica con $\delta\preceq\tau$. \\Ad esempio $24153$ contiene il pattern $312$ perch\'e $413\subseteq{24153}$ e la standardizzazione di $413$ \`e $312$.
+\paragraph*{Classi di pattern} La relazione {di sottopermutazione} \`e una relazione d'ordine parziale {che viene studiata con dei sottoinsiemi chiamati \textbf{pattern di classi}}. Ogni classe $D$ pu\'o essere caratterizzata dall'insieme {minimo} $M$ che evita:$$ D = Av(M) = \{\beta:\mu\not\preceq\beta\forall\mu\in M\}$$
 In questa sezione verranno da qui in poi introdotti brevemente altri tipi di pattern\cite{branden2011mesh} attraverso degli esempi; le macro per la realizzazione delle griglie sono state prodotte dalla \textit{Reykjavik University}\cite{patternmacros}.
-\paragraph*{Plot, rappresentazione grafica di permutazioni} Data una permutazione $\pi = \pi_1\pi_2\dots\pi_n$ la sua rappresentazione grafica \'e data dall'insieme di punti $(i,\pi_i)$. Questi punti possono essere rappresentati in un piano cartesiano, in particolare nella griglia sottostante, che rappresenta il pattern $4231$, le righe verticali rappresentano le ascisse $i$ (numerate a partire da $1$ da quella pi\'u a sinistra) e quelle orizzontali le ordinate, quindi i valori interi $\pi_i$ (numerati a partire da 1 da quella pi\'u in basso).
+\paragraph*{Plot, rappresentazione grafica di permutazioni} Data una permutazione $\pi = \pi_1\pi_2\dots\pi_n$ la sua rappresentazione grafica \`e data dall'insieme di punti $(i,\pi_i)$. Questi punti possono essere rappresentati in un piano cartesiano, in particolare nella griglia sottostante, che rappresenta il pattern $4231$, le righe verticali rappresentano le ascisse $i$ (numerate a partire da $1$ da quella pi\'u a sinistra) e quelle orizzontali le ordinate, quindi i valori interi $\pi_i$ (numerati a partire da 1 da quella pi\'u in basso).
 \begin{center}\mpattern{scale=1.5}{4}{1/4,2/2,3/3,4/1}{}\end{center}
-\paragraph*{Pattern barrati} I pattern classici esprimono in quale relazione di ordine devono essere gli elementi di una sequenza. In alcuni casi pu\'o rivelarsi necessario dover esprimere informazioni ulteriori, come l'assenza di un elemento in una data posizone. Questa informazione pu\'o essere fornita grazie all'utilizzo dei pattern barrati.\\
-Un pattern barrato \'e un pattern in cui ogni numero pu\'o essere barrato.\\
-Un istanza di un pattern barrato \'e rappresentata da un'istanza della parte non barrata del pattern che non si estenda ad un occorrenza della parte barrata. Ad esempio una permutazione $\pi$ contiene il pattern $23\overline{4}1$ se contiene degli elementi $a<b<c$ tali che $\pi=\dots b \dots c \dots a\dots$ e fra $c$ e $a$ non \'e presente un elemento maggiore di $c$.\\
+\paragraph*{Pattern barrati} I pattern classici esprimono in quale relazione d'ordine devono essere gli elementi di una sequenza. In alcuni casi pu\'o rivelarsi necessario dover esprimere informazioni ulteriori, come l'assenza di un elemento in una data posizione. Questa informazione pu\'o essere fornita grazie all'utilizzo dei pattern barrati.\\
+Un pattern barrato \`e un pattern in cui ogni numero pu\'o essere barrato.\\
+Un'istanza di un pattern barrato \`e rappresentata da un'istanza della parte non barrata del pattern che non si estenda ad un'occorrenza della parte barrata. Ad esempio una permutazione $\pi$ contiene il pattern $23\overline{4}1$ se contiene degli elementi $a<b<c$ tali che $\pi=\dots b \dots c \dots a\dots$ e fra $c$ e $a$ non \`e presente un elemento maggiore di $c$.\\
 Una permutazione quindi evita un pattern barrato se ad ogni occorrenza della parte non barrata del pattern corrisponde un'occorrenza della parte non barrata.
 \paragraph*{mesh pattern} I pattern barrati possono essere rappresentati da plot come quello mostrato prima, dove l'area corrispondente all'elemento barrato viene oscurata. Si osservi il seguente pattern a titolo di esempio:
 \begin{center}\mpattern{scale=1.5}{3}{1/1,2/3,3/2}{0/2,1/2,2/2}\end{center}
-Una permutazione $\pi$ di lunghezza $n$ contiene questo pattern se ci sono 3 valori $a<b<c<n$ tali che $\pi=\dots{a}\dots{c}\dots{b}\dots$ e prima di $b$ nessun valore \'e compreso tra $b$ e $c$.\\
-Ad esempio la permutazione $14523$ (mostrata sotto a sinistra) contiene un'istanza di questo pattern mentre la permutazione $3142$ (mostrata a destra) no. In entrambi i casi l'occorenza della parte non barrata del pattern \'e evidenziata.
+Una permutazione $\pi$ di lunghezza $n$ contiene questo pattern se ci sono 3 valori $a<b<c<n$ tali che $\pi=\dots{a}\dots{c}\dots{b}\dots$ e prima di $b$ nessun valore \`e compreso tra $b$ e $c$.\\
+Ad esempio la permutazione $14523$ (mostrata sotto a sinistra) contiene un'istanza di questo pattern mentre la permutazione $3142$ (mostrata a destra) no. In entrambi i casi l'occorrenza della parte non barrata del pattern \`e evidenziata.
 \begin{center}
 \mmpatternwwo{scale=1.5}{5}{1/1,2/4,3/5,4/2,5/3}{}{1/1,2/4,4/2}{0/2,0/3,1/2,1/3,2/2,2/3,3/2,3/3}{}
 \mmpatternwwo{scale=1.7}{4}{1/3,2/1,3/4,4/2}{}{2/1,3/4,4/2}{0/2,0/3,1/2,1/3,2/2,2/3,3/2,3/3}{}
 \end{center}
-\paragraph*{Pattern decorati}Un pattern decorato \'e un mesh-pattern in cui vengono aggiunte informazioni relative alla presenza di elementi in determinate aree. Senza dare la definizione formale descriviamo un esempio di tale pattern grazie al quale introduciamo anche la notazione che verr\'a utilizzata. Nel seguente pattern l'area bianca indicata con $1$ indica che per avere un'istanza di questo pattern in una permutazione, all'interno dell'area deve essere presente almeno un altro elemento della permutazione: 
+\paragraph*{Pattern decorati}Un pattern decorato \`e un mesh-pattern in cui vengono aggiunte informazioni relative alla presenza di elementi in determinate aree. Senza dare la definizione formale descriviamo un esempio di tale pattern grazie al quale introduciamo anche la notazione che verr\'a utilizzata. Nel seguente pattern l'area bianca indicata con $1$ indica che per avere un'istanza di questo pattern in una permutazione, all'interno dell'area deve essere presente almeno un altro elemento della permutazione: 
 \begin{center}
 \mmpattern{scale=1.4}{3}{1/1,2/3,3/2}{3/0,3/1,3/2}{2/3/3/4/1}
 \end{center}
-Questo pattern \'e contenuto, ad esempio, nelle sequenze $1342$, $12453$ o $13524$.
+Questo pattern \`e contenuto, ad esempio, nelle sequenze $1342$, $12453$ o $13524$.
 \section*{Algoritmi di ordinamento e pattern-avoidance}
 Per tutti gli algoritmi presentati all'inizio del capitolo 
-sono gi\'a note le classi di \st{pattern} che garantiscono l'ordinabilit\'a con una sola passata. 
+sono gi\'a note le classi di {pattern} che garantiscono l'ordinabilit\'a con una sola passata. 
 \begin{center}
 \begin{tabular}{ |c|c| } 
 \hline
