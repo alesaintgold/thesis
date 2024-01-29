@@ -47,7 +47,6 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{longtable}
-
 %--------------------------------------------------------------
 \usepackage{dia-classicthesis-ldpkg}
 %\usepackage{classicthesis}
@@ -109,13 +108,9 @@ parts]{classicthesis}
 \pagenumbering{arabic}
 % use \cleardoublepage here to avoid problems with pdfbookmark
 %\include{intro} % use \myChapter command instead of \chapter
-%\tableofcontents\listoffigures\cleardoublepage
-\thispagestyle{empty}
-\begin{flushright}
-\null\vspace{\stretch {1}}
-\emph{"Inserire citazione" \break --- Inserire autore citazione} \vspace{\stretch{2}}\null
-\end{flushright}
-\cleardoublepage
+\tableofcontents%\listoffigures\cleardoublepage
+\include{Chapters/thanks}
+%\thispagestyle{empty}\begin{flushright}\null\vspace{\stretch {1}}\emph{"Inserire citazione" \break --- Inserire autore citazione}\vspace{\stretch{2}}\null\end{flushright}\cleardoublepage
 \include{Chapters/intro}
 \include{Chapters/operators}
 \include{Chapters/software}

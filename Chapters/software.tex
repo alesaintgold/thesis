@@ -1,13 +1,13 @@
 \chapter{Programmi realizzati}
 In questo capitolo presenter\'o il funzionamento di alcuni programmi che ho realizzato come supporto allo studio degli argomenti di questa tesi.\\\\
 Tutto il software che verr\`a presentato \`e stato realizzato con il linguaggio Python, nel seguente ambiente: \texttt{3.11.6 (main) [GCC 13.2.1 20230801]}. Tutti gli script vengono lanciati da linea di comando e mostrano i risultati sulla console.
-\section*{PermutaSort}
+\section{PermutaSort}
 Il primo programma che ho realizzato viene lanciato da linea di comando specificando come argomenti un intero $n$ e un operatore di ordinamento $X$. Il suo scopo \`e quello di enumerare tutte le $n$-permutazioni ordinabili e non ordinabili con una sola passata di $X$, stampando anche i possibili risultati di $X$ su $n$-permutazioni.\\\\
 La classe \texttt{SelectorPermutations} \`e il core del programma, viene inizializzata passando un intero e un operatore al costruttore. Grazie alla funzione \texttt{itertools.permutations} vengono generate le $n$-permutazioni e , scorrendole tutte, vi si applica l'operatore $X$. Il risultato viene aggiunto alla lista \texttt{outcomes} e viene valutato: se questo \`e ordinato la relativa permutazione da cui si \`e ottenuto viene aggiunta alla lista \texttt{sortable}, altrimenti a \texttt{unsortable}.\\La classe fornisce dei \textit{getters} per le liste e non ha altri metodi, oltre al costruttore.\\
 Dopo essere stata istanziata la classe viene usata come riferimento per i dati che ha gi\'a calcolato nel costruttore, e non produce ulteriori risultati.\\Di seguito viene mostrato il listato della classe:
 \\\lstinputlisting[language=Python]{./python/permutasort.py}
 %\pagebreak
-\section*{Pattfinder}
+\section{PattFinder}
 Questo programma ha lo scopo di selezionare tra tutte le permutazioni di una data dimensione quali contengono un dato pattern classico e quali no.\\\\
 Il programma viene lanciato da linea di comando prendendo come argomenti un intero e una sequenza di interi consecutivi eventualmente non ordinati.\\
 Il primo intero rappresenta la lunghezza delle permutazioni da scorrere e la sequenza rappresenta il pattern da ricercare.\\
@@ -18,7 +18,7 @@ La classe presenta i getter per le liste prodotte e due ulteriori metodi:
 \item[\texttt{contains}] verifica se una sequenza contiene un pattern o meno, grazie alla funzione \texttt{itertools.combinations} si ottengono tutte le sottosequenze (anche non consecutive), le si standardizzano e le si confrontano con il pattern da ricercare.
 \end{description}
 \lstinputlisting[language=Python]{./python/pattfinder.py}
-\section*{Script per la verifica dei pattern}
+\section{Script per la verifica dei pattern}
 Spesso si \`e utilizzato un ulteriore script, che si serve delle classi presentate prima, per verificare che i pattern trovati per un dato operatore siano sufficienti a definire tutto l'insieme di permutazioni non ordinabili.\\\\
 Grazie a \texttt{selectorPermutations} vengono generate tutte le permutazioni non ordinabili (l'operatore e la dimensione delle permutazioni vengono passate come argomenti allo script) ed in seguito si scorre la lista di pattern che si vogliono verificare. Per ogni pattern \texttt{PatternAvoid} genera le permutazioni che lo contengono e queste vengono rimosse dalla lista di permutazioni non ordinabili. Se alla fine la lista rimane vuota allora viene stampato a schermo che tutte le permutazioni non ordinabili contengono almeno uno dei pattern specificati, altrimenti elenca quelle rimaste.\\\\
 Lo script viene lanciato da linea di comando con i seguenti argomenti (nell'ordine): l'operatore di ordinamento, la dimensione delle permutazioni, l'elenco di pattern da verificare.\\\\
