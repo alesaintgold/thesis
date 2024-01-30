@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  29 JAN 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  30 JAN 2024 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1336,7 +1336,8 @@ File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 ) (./thesis.aux
 (./titlePage.aux) (./Chapters/thanks.aux) (./Chapters/intro.aux)
 (./Chapters/operators.aux) (./Chapters/software.aux)
-(./Chapters/opcomposition.aux) (./Chapters/conclusion.aux))
+(./Chapters/opcomposition.aux) (./Chapters/conclusion.aux)
+(./Chapters/appendix.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -1580,13 +1581,13 @@ Overfull \hbox (0.82948pt too wide) in paragraph at lines 43--43
  []
 
 
-Overfull \hbox (4.61382pt too wide) in paragraph at lines 45--45
+Overfull \hbox (4.61382pt too wide) in paragraph at lines 46--46
  [][] [][]\T1/pplj/m/n/12 (-20) Composizione di queue-sort con POP-queuesort[] 
 []  
  []
 
 
-Overfull \hbox (8.2359pt too wide) in paragraph at lines 46--46
+Overfull \hbox (8.2359pt too wide) in paragraph at lines 47--47
  [][] [][]\T1/pplj/m/n/12 (-20) Composizione di bub-ble-sort con POP-queuesort[
 ] []  
  []
@@ -1637,16 +1638,39 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-) [5]
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--114
+
+ []
+
+[5]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [6]
 \openout2 = `Chapters/operators.aux'.
 
- (./Chapters/operators.tex [6
-
-
-
-
-
-]
+ (./Chapters/operators.tex
 chapter 2.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1679,7 +1703,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--16
 
  []
 
-[7]
+[7
+
+
+
+
+
+]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 23.
 
@@ -1687,9 +1717,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--31
 
  []
 
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
 [8] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
@@ -1764,7 +1791,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 
 
 
-] [16])
+])
 Underfull \hbox (badness 10000) in paragraph at lines 11--16
 
  []
@@ -1774,6 +1801,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
 
  []
 
+[16]
 
 LaTeX Font Warning: Font shape `T1/fvm/m/sc' undefined
 (Font)              using `T1/fvm/m/n' instead on input line 17.
@@ -1783,7 +1811,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/fvm/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-(./python/pattfinder.py [17] [18])
+(./python/pattfinder.py [17]) [18]
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
@@ -1809,11 +1837,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  []
 
-(./python/result_verify.txt [19] [20]) (./python/test.py [21])) [22]
+(./python/result_verify.txt [19]) (./python/test.py [20])) [21]
 \openout2 = `Chapters/opcomposition.aux'.
 
 
-(./Chapters/opcomposition.tex
+(./Chapters/opcomposition.tex [22
+
+
+
+
+
+]
 chapter 4.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -1827,35 +1861,29 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-[23
-
-
-
-
-
-]
-Overfull \hbox (17.8902pt too wide) in paragraph at lines 11--11
-[] []\T1/pplj/m/sc/12 (-20) u n c a -s o g i à n o -t o : c o m -b i -n a -z i 
+[23]
+Overfull \hbox (15.71172pt too wide) in paragraph at lines 11--11
+[] []\T1/pplj/m/sc/12 (-20) u n c a -s o g i à n o -t o : c o m -p o -s i -z i 
 o -n e d i s t a c k -s o r t c o n b u b -b l e -s o r t[]
  []
 
 [24]
-Overfull \hbox (6.89835pt too wide) in paragraph at lines 33--33
-|[]\T1/pplj/m/sc/12 (-20) c o m -b i -n a -z i o -n i d i u n o p e -r a -t o -
+Overfull \hbox (4.71986pt too wide) in paragraph at lines 33--33
+|[]\T1/pplj/m/sc/12 (-20) c o m -p o -s i -z i o -n i d i u n o p e -r a -t o -
 r e d i o r -d i -n a -m e n -t o c o n b u b -
  []
 
 
-Overfull \hbox (15.29784pt too wide) has occurred while \output is active
+Overfull \hbox (13.26115pt too wide) has occurred while \output is active
  []|[]|
  []
 
@@ -1892,8 +1920,8 @@ Overfull \hbox (6.97589pt too wide) has occurred while \output is active
  []
 
 [27] [28]
-Overfull \hbox (17.74092pt too wide) in paragraph at lines 99--102
-\T1/pplj/m/n/12 (-20) Già dal-l'a-na-li-si del-la com-bi-na-zio-ne pre-ce-den-t
+Overfull \hbox (16.98825pt too wide) in paragraph at lines 99--102
+\T1/pplj/m/n/12 (-20) Già dal-l'a-na-li-si del-la com-po-si-zio-ne pre-ce-den-t
 e è ri-sul-ta-to che $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeu
 s/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
  []
@@ -1912,14 +1940,14 @@ LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 107.
 
 
-Overfull \hbox (17.4242pt too wide) in paragraph at lines 107--107
-|[]\T1/pplj/m/sc/12 (-20) c o m -b i -n a -z i o -n i d i u n o p e -r a -t o -
+Overfull \hbox (15.24571pt too wide) in paragraph at lines 107--107
+|[]\T1/pplj/m/sc/12 (-20) c o m -p o -s i -z i o -n i d i u n o p e -r a -t o -
 r e d i o r -d i -n a -m e n -t o c o n \T1/pplj/m/it/12 (-20) q u e u e -
  []
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 112.
+(Font)              using `T1/pplj/m/it' instead on input line 116.
 
 [29]
 Underfull \hbox (badness 10000) in paragraph at lines 124--127
@@ -1943,54 +1971,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 149.
+(Font)              using `T1/pplj/m/it' instead on input line 151.
 
 [31]
-Overfull \hbox (22.92041pt too wide) detected at line 158
+Overfull \hbox (24.45639pt too wide) detected at line 158
 \U/zeus/m/n/12 ¨\U/zeur/m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m
 /n/12 ©¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 X[]\U/zeus/m/n/12 ¨
 \U/zeur/m/n/12 Y\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 ©©© ) ¨\U/zeur
 /m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m/n/12 ©[]¨\U/zeur/m/n/1
 2 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Y[]X[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y
 \U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Y[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m
-/n/12 ¨\U/zeur/m/n/12 m\U/zeus/m/n/12 ©©
+/n/12 ¨\U/zeur/m/n/12 M\U/zeus/m/n/12 ©©
  []
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 163.
 
-[32]
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
 (Font)              using `T1/pplj/m/it' instead on input line 164.
 
-[33]
-Overfull \hbox (31.4234pt too wide) in paragraph at lines 208--214
-\T1/pplj/m/n/12 (-20) Anche in que-sto ca-so la con-tro-im-ma-gi-ne di $\U/zeur
-/m/n/12 231$ \T1/pplj/m/n/12 (-20) è sta-ta cal-co-la-ta: $\U/zeur/m/n/12 B[]\U
-/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 231\U/zeus/m/n/12
- ©© ½
+[32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 201--205
+
  []
 
 [34]
-Overfull \hbox (33.53491pt too wide) in paragraph at lines 219--222
+Overfull \hbox (33.53491pt too wide) in paragraph at lines 229--232
 \T1/pplj/m/n/12 (-20) È già no-to dai cal-co-li nel-le se-zio-ni pre-ce-den-ti 
 che $\U/zeur/m/n/12 Q[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur
 /m/n/12 231\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 4
 231; 2431\U/zeus/m/n/12 ©$\T1/pplj/m/n/12 (-20) .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
-
- []
-
-
-Overfull \hbox (35.8992pt too wide) in paragraph at lines 230--233
-\T1/pplj/m/n/12 (-20) Si os-ser-va che una par-te dei ri-sul-ta-ti ri-chie-sti 
-è già sta-ta cal-co-la-ta: $\U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av
-\U/zeus/m/n/12 ¨\U/zeur/m/n/12 321\U/zeus/m/n/12 ©© ½
  []
 
 [35]
@@ -1998,8 +2010,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
-[36]
-Overfull \hbox (31.61058pt too wide) in paragraph at lines 255--257
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+ []
+
+[36] [37]
+Overfull \hbox (31.61058pt too wide) in paragraph at lines 266--268
 [] []\T1/pplj/m/sc/12 (-20) 4 3 2 1 :[] \T1/pplj/m/n/12 (-20) Le in-ver-sio-ni 
 del pat-tern 4321 so-no $\U/zeus/m/n/12 ¨\U/zeur/m/n/12 4; 3\U/zeus/m/n/12 ©\U/
 zeur/m/n/12 ; \U/zeus/m/n/12 ¨\U/zeur/m/n/12 4; 2\U/zeus/m/n/12 ©\U/zeur/m/n/12
@@ -2010,76 +2027,91 @@ zeur/m/n/12 3; 1\U/zeus/m/n/12 ©\U/zeur/m/n/12 ; \U/zeus/m/n/12 ¨\U/zeur/m/n/12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
-
- []
-
-[37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
+Overfull \hbox (0.40837pt too wide) detected at line 268
+\U/zeur/m/n/12 Q[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur
+/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 A
+v\U/zeus/m/n/12 ¨\U/zeur/m/n/12 24513; 24531; 34251; 35241; 42513; 42531; 45231
+\U/zeus/m/n/12 ©
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-[39] [40] [41] [42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 356--358
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 299--301
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--371
+[40] [41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 371--374
-
- []
-
-[45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 387--390
+
+ []
+
+[46] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 424--426
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--426
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
 
  []
 
 
-Overfull \hbox (1.69205pt too wide) detected at line 426
-\U/zeus/m/n/12 ¨\U/zeur/m/n/12 BQ[]\U/zeus/m/n/12 ©[]¨\U/zeur/m/n/12 Av\U/zeus/
-m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\
-U/zeur/m/n/12 2431; 4231; 4321; 23514; 35214; 35241; []\U/zeus/m/n/12 ©
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+
  []
 
-) [48]
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+
+ []
+
+
+Overfull \hbox (11.02533pt too wide) detected at line 442
+\U/zeus/m/n/12 ¨\U/zeur/m/n/12 B \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Q[]\U/zeus/m
+/n/12 ©[]¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½
+ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 2431; 4231; 4321; 23514; 35214
+; 35241; []\U/zeus/m/n/12 ©
+ []
+
+[48]) [49]
 \openout2 = `Chapters/conclusion.aux'.
 
- (./Chapters/conclusion.tex
+ (./Chapters/conclusion.tex [50
+
+
+
+
+
+]
 chapter 5.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2092,17 +2124,65 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-[49
+[51]
+Overfull \hbox (30.0199pt too wide) in alignment at lines 26--44
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 46--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--118
+
+ []
+
+[52] [53]
+\openout2 = `Chapters/appendix.aux'.
+
+ (./Chapters/appendix.tex [54
 
 
 
 
 
-]) [50] (./thesis.bbl (./thesis.brf)
+]
+
+Class scrbook Warning: Redefinition of \@makeschapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makeschapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makeschapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+(./Chapters/python/permutasort/permutasort.py [55] [56])
+(./Chapters/python/permutasort/utils.py
+Overfull \hbox (57.72472pt too wide) in paragraph at lines 22--24
+[][][][][][][][][][][][][]  
+ []
+
+[57]) (./Chapters/python/permutasort/operators.py)
+(./Chapters/python/pattfinder/pattfinder.py [58] [59] [60])) [61] (./thesis.bbl
+(./thesis.brf)
 \tf@brf=\write6
 \openout6 = `thesis.brf'.
 
+ [62
 
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -2130,30 +2210,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--57
 acros.tex\T1/pplj/m/n/12 (+20) .
  []
 
-) [51
-
-
-
-
-] (./thesis.aux (./titlePage.aux) (./Chapters/thanks.aux)
+) [63] (./thesis.aux (./titlePage.aux) (./Chapters/thanks.aux)
 (./Chapters/intro.aux) (./Chapters/operators.aux) (./Chapters/software.aux)
-(./Chapters/opcomposition.aux) (./Chapters/conclusion.aux))
+(./Chapters/opcomposition.aux) (./Chapters/conclusion.aux)
+(./Chapters/appendix.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 921516F40ED0D8FF886BCA5AD078085B;1017.
+(rerunfilecheck)             Checksum: B6A3752663063C8B1CC4158D26D1F355;1077.
  ) 
 Here is how much of TeX's memory you used:
- 41562 strings out of 477974
- 831115 string characters out of 5839630
- 1940388 words of memory out of 5000000
- 60172 multiletter control sequences out of 15000+600000
- 598944 words of font info for 485 fonts, out of 8000000 for 9000
+ 41939 strings out of 477974
+ 837481 string characters out of 5839630
+ 1944388 words of memory out of 5000000
+ 60295 multiletter control sequences out of 15000+600000
+ 599878 words of font info for 496 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,23n,146p,10694b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,23n,146p,10694b,2774s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -2166,10 +2242,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
 /share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palati
 no/uplri8a.pfb>
-Output written on thesis.pdf (53 pages, 372077 bytes).
+Output written on thesis.pdf (65 pages, 396503 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 736 compressed objects within 8 object streams
- 303 named destinations out of 1000 (max. 500000)
- 93502 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1146 PDF objects out of 1200 (max. 8388607)
+ 1037 compressed objects within 11 object streams
+ 526 named destinations out of 1000 (max. 500000)
+ 95558 words of extra memory for PDF output out of 106986 (max. 10000000)
 

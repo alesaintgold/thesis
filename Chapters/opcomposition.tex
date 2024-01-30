@@ -1,17 +1,17 @@
 \chapter{Composizioni di operatori di ordinamento}
-Da questo momento si mostreranno le varie combinazioni di operatori e le relazioni tra relative classi di pattern e le loro controimmagini.
+Da questo momento si mostreranno le varie composizioni di operatori e le relazioni tra relative classi di pattern e le loro controimmagini.
 \paragraph*{controimmagini} Sia $X$ un operatore di ordinamento, la controimmagine di una certa permutazione $p$, secondo $X$, indicata con $X^{-1}(p)$ rappresenta l'insieme di tutte le permutazioni la cui immagine secondo l'operatore $X$ \`e uguale a $p$.$$X^{-1}(p) = \{\beta : p = X(\beta)\}$$\\
 $Av(21)$ \`e l'insieme formato dalle sole permutazioni identit\'a, dato che contiene tutte le permutazioni in cui nessun elemento sia disordinato rispetto ad un altro, ovvero solo le permutazioni crescenti. Sia $X$ un operatore di ordinamento si indica con $X^{-1}(Av(21))$ l'insieme di tutte le permutazioni ordinabili da $X$.\\\\
 Ad esempio si scrive $B^{-1}(Av(21)) = Av(231,321)$ per indicare che l'insieme di permutazioni ordinabili dall'operatore bubblesort coincide con l'insieme di permutazioni che evitano i pattern 231,321\cite{claesson2012sorting}.
-\paragraph*{Composizione di operatori} Dati due operatori di ordinamento $X$ e $Y$, la loro composizione verr\'a indicata con $ XY = X \circ Y$, quindi, ad esempio, la composizione di \textit{Stacksort} e \textit{Bubblesort} (in questo ordine) si indica con $SB(\pi) = (S \circ B)(\pi) = S(B(\pi))$.\\\\
+\\\\
 Siano $X,Y$ due operatori tali che sia noto l'insieme $X^{-1}Av(21) = Av(m)$, dove $m$ \`e un insieme minimo di pattern, allora l'insieme di permutazioni ordinabili dalla loro composizione $XY$ \`e dato da:
-$$XY^{-1}(Av(21)) = Y^{-1}X^{-1}(Av(21)) = Y^{-1}Av(m)$$ 
-Dunque conoscendo quali pattern debbano essere evitati per garantire l'ordinabilit\'a da parte di $X$ si possono ricercare le controimmagini di quegli stessi pattern secondo $Y$ per avere l'insieme ordinabile dalla loro combinazione.\\Ogni analisi delle composizioni mostrate in questa tesi inizier\'a con un espressione che mostri quindi quali controimmagini e secondo quale operatore \`e necessario cercare.
+$$X\circ Y^{-1}(Av(21)) = Y^{-1}X^{-1}(Av(21)) = Y^{-1}Av(m)$$ 
+Dunque conoscendo quali pattern debbano essere evitati per garantire l'ordinabilit\'a da parte di $X$ si possono ricercare le controimmagini di quegli stessi pattern secondo $Y$ per avere l'insieme ordinabile dalla loro composizione.\\Ogni analisi delle composizioni mostrate in questa tesi inizier\'a con un espressione che mostri quindi quali controimmagini e secondo quale operatore \`e necessario cercare.
 \paragraph*{Algoritmi per il calcolo di controimmagini} Sono gi\`a stati prodotti alcuni algoritmi per calcolare le controimmagini di pattern secondo gli operatori \textit{bubblesort}\cite{albert2010inverse}, \textit{stacksort}\cite{claesson2012sorting}, \textit{queuesort}\cite{magnusson2013sorting} e \textit{POP-stacksort}\cite{magnusson2013sorting}, che verranno esposti in seguito e utilizzati per l'analisi delle composizioni.
-\paragraph*{Un caso gi\`a noto: Combinazione di Stacksort con Bubblesort} Si considera dunque la composizione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da essa.$$(SB)^{-1}Av(21)=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
+\paragraph*{Un caso gi\`a noto: Composizione di Stacksort con Bubblesort} Si considera dunque la composizione $SB = S\circ{B}$ e ci si chiede quali permutazioni possano essere ordinate da essa.$$(S\circ B)^{-1}Av(21)=B^{-1}S^{-1}(Av(21))=B^{-1}(Av(231))$$
 Dunque ricercando per quali permutazioni \textit{bubblesort} evita il pattern 231 si trovano le condizioni per cui una permutazione risulta ordinabile da \textit{SB}.\\
 Utilizzando l'algoritmo per le controimmagini di bubblesort\cite{albert2010inverse} si ottiene il seguente risultato, che verr\'a verificato in seguito:
-$$(SB)^{-1}(Av(21))=Av(3241, 2341, 4231, 2431)$$
+$$(S\circ B)^{-1}(Av(21))=Av(3241, 2341, 4231, 2431)$$
 \section{Algoritmo per le controimmagini secondo bubblesort}
 Per ottenere una controimmagine di bubblesort di un pattern classico, si applicano le seguenti regole:
 \begin{description}
@@ -30,10 +30,10 @@ Per ottenere una controimmagine di bubblesort di un pattern classico, si applica
 	\end{description}
 	\item applicare ad un candidato le condizioni per tutte le sue inversioni (considerando che se una zona \`e oscurata da una condizione, non pu\`o essere decorata da un altra) fornisce un mesh-pattern decorato che descrive il pattern contenuto nella controimmagine.
 \end{description}
-\section{Combinazioni di un operatore di ordinamento con bubblesort}
-\subsection{Esempio pratico di calcolo di una controimmagine: combinazione di stacksort con bubblesort}
+\section{Composizioni di un operatore di ordinamento con bubblesort}
+\subsection{Esempio pratico di calcolo di una controimmagine: composizione di stacksort con bubblesort}
 Prima di tutto si ricerca di quale classe di pattern nonch\'e tramite quale operatore occorre calcolare le controimmagini:
-$$(SB)^{-1}(Av(21)) = B^{-1}(S^{-1}(Av(21)))=B^{-1}(Av(231))$$
+$$(S\circ B)^{-1}(Av(21)) = B^{-1}(S^{-1}(Av(21)))=B^{-1}(Av(231))$$
 Si ricorda che vale che $S^{-1}Av(21) = Av(231)$
 I pattern candidati ad essere controimmagini di 231 sono i pattern minimale che contengono le coppie $(2,1),(3,1)$, ovvero i pattern 231,321. Si esaminano separatamente i due candidati.
 \paragraph*{231:} si osserva che una condizione per l'inversione $(2,1)$ \`e gi\`a realizzata dall'elemento $3$, applicando le regole descritte prima all'inversione $(3,1)$ si ha il mesh-pattern \mmpattern{scale=0.7}{3}{1/2,2/3,3/1}{}{0/3/3/4/1}, evitare quest'ultimo equivale ad evitare contemporaneamente i pattern classici 2341, 2431, 4231.
@@ -48,9 +48,9 @@ Il pattern finale \`e simile ad un pattern classico 3241, presentando in pi\'u d
 In ultima analisi dunque evitare il mesh-pattern trovato, tenendo anche conto degli altri pattern trovati, equivale ad evitare il pattern classico 3241 che, unito agli altri fornisce esattamente il risultato atteso $(SB)^{-1}(Av(21))=Av(2341, 2431, 4231, 3241)$.\\\\
 Si osservi che il software \texttt{permutasort}, presentato nel capitolo 3, pu\`o aiutare ad arrivare alle stesse conclusioni. Infatti lanciando il programma sull'operatore SB e con $n=4$ si ottengono i seguenti risultati:\\\\\texttt{\$ python permutasort.py 4 SB }\\\dots\\\texttt{The following 4 4-permutations are not sortable with the operator SB:}\\\texttt{(2, 3, 4, 1)}\\\texttt{(2, 4, 3, 1)}\\\texttt{(3, 2, 4, 1)}\\\texttt{(4, 2, 3, 1)}\\\dots\\\\
 Questo risultato \`e utile come indicazione, ma non fornisce garanzia di aver trovato i pattern corretti: infatti non si pu\`o escludere la presenza di pattern classici pi\'u lunghi n\'e la presenza di pattern barrati.\\
-Per quanto quindi questo strumento si sia rivelato molto utile per avere un'idea di quali pattern aspettarsi prima di ricercarli, soprattutto durante le combinazioni pi\'u complesse che presenteremo in seguito, non pu\`o sostituire del tutto un approccio pi\'u formale e teorico, come l'applicazione di uno degli algoritmi introdotti prima.
-\subsection{Combinazione di queuesort con bubblesort}
-$$(QB)^{-1}(Av(21))=B^{-1}Q^{-1}(Av(21))=B^{-1}(Av(321))$$
+Per quanto quindi questo strumento si sia rivelato molto utile per avere un'idea di quali pattern aspettarsi prima di ricercarli, soprattutto durante le composizioni pi\'u complesse che presenteremo in seguito, non pu\`o sostituire del tutto un approccio pi\'u formale e teorico, come l'applicazione di uno degli algoritmi introdotti prima.
+\subsection{Composizione di queuesort con bubblesort}
+$$(Q\circ B)^{-1}(Av(21))=B^{-1}Q^{-1}(Av(21))=B^{-1}(Av(321))$$
 Si osserva che le inversioni in $321$ sono $(3,2),(3,1),(2,1)$ e l'unico pattern minimo che le contiene tutte \`e appunto $321$, che quindi \`e l'unico candidato.\\
 In questo caso a tutte le inversioni deve essere applicata la prima condizione, a parte a $(2,1)$ perch\'e la condizione \`e gi\`a soddisfatta da 3. Il pattern decorato che si ottiene \`e:
 \begin{center}
@@ -61,7 +61,7 @@ Quindi le controimmagini del pattern 321 tramite bubblesort sono date da:
 \begin{center}
 \mmpattern{scale=1.4}{3}{1/3,2/2,3/1}{}{0/3/2/4/1}.
 \end{center}
-Questo mesh pattern corrisponde ai pattern classici $4321,3421$.$$QB^{-1}(Av(21))=Av(4321,3421)$$
+Questo mesh pattern corrisponde ai pattern classici $4321,3421$.$$Q\circ B^{-1}(Av(21))=Av(4321,3421)$$
 \section{Composizioni di un operatore di ordinamento con stacksort}
 L'algoritmo per le controimmagini di \textit{stacksort} \`e abbastanza simile a quello per \textit{bubblesort}.\\
 Si ricava una lista di candidati in modo equivalente al primo algoritmo, e ogni candidato viene processato applicando le seguenti regole ad ogni inversione $(b,a)$ presente nel candidato:
@@ -76,7 +76,7 @@ Si ricava una lista di candidati in modo equivalente al primo algoritmo, e ogni 
 \end{center}
 \end{description}
 \subsection{Composizione  di {queuesort} con {stacksort}}
-$$(QS)^{-1}(Av(21))=S^{-1}Q^{-1}(Av(21))=S^{-1}(Av(321))$$
+$$(Q\circ S)^{-1}(Av(21))=S^{-1}Q^{-1}(Av(21))=S^{-1}(Av(321))$$
 Si ricercano dunque le controimmagini di $321$ secondo \textit{stacksort}.\\$321$ \`e l'unico candidato, quindi sappiamo che tutte le controimmagini devono contenere il pattern $321$.\\
 L'unione delle condizioni per le inversioni $(3,2),(2,1)$ minimizza anche la condizione per l'inversione $(3,1)$, dunque il pattern che si ottiene \`e il seguente:
 \begin{center}
@@ -94,17 +94,17 @@ Altrimenti se $2^+>3$, si possono ottenere due diverse controimmagini:
 	\item[$3^+>2^+$] genera il pattern $35241$
 	\item[$2^+>3^+$] genera il pattern $34251$
 \end{description}
-$$(QS)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
+$$(Q\circ S)^{-1}(Av(21)) = Av(34251, 35241, 45231)$$
 \subsection{Composizione di {bubblesort} con {stacksort}}
-$$(BS)^{-1}(Av(21))=S^{-1}B^{-1}(Av(21))=S^{-1}(Av(231,321))$$
-Gi\`a dall'analisi della combinazione precedente \`e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ quindi \`e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \`e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \`e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\
+$$(B\circ S)^{-1}(Av(21))=S^{-1}B^{-1}(Av(21))=S^{-1}(Av(231,321))$$
+Gi\`a dall'analisi della composizione precedente \`e risultato che $S^{-1}(Av(321))=Av(34251, 35241, 45231)$ quindi \`e necessario calcolare solo $S^{-1}(Av(231))$. Quest'ultimo risultato \`e stato ampiamente studiato in letteratura, in quanto analogo al caso di una variante di \textit{stacksort} che utilizza 2 pile. Il risultato che si ottiene \`e dunque che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$\cite{claesson2012sorting}.\\
 Si uniscono dunque i due risultati:
 $$S^{-1}(Av(231))=Av(2341,3\overline{5}241), S^{-1}(Av(321))=Av(34251, 35241, 45231)$$
 Si osserva che $2341\preceq 34251$, quindi $34251$ non \`e minimo.\\
 Inoltre i pattern $35241, 3\overline{5}241$ insieme, possono essere semplificati dal pattern $3241$, dato che questo debba essere evitato sia quando \`e presente un elemento 5 tra 3 e 2, sia quando \`e assente. Questo ci permette di semplificare anche $34251$, dato che contiene un'occorrenza del pattern $3241$ nella sottosequenza 3251\\
 Il risultato che si ottiene \`e:
-$$(BS)^{-1}(Av(21))=Av(2341,3241,45231)$$
-\section{Combinazioni di un operatore di ordinamento con \textit{queuesort}}
+$$(B\circ S)^{-1}(Av(21))=Av(2341,3241,45231)$$
+\section{Composizioni di un operatore di ordinamento con \textit{queuesort}}
 Come per i due casi precedenti esiste un algoritmo per trovare controimmagini di un pattern applicando decorazioni al relativo mesh-pattern.\\
 Come per i casi precedenti si stabilisce una lista di pattern candidati, e li si esaminano ad uno ad uno, applicando le seguenti condizioni ad ogni inversione $(b,a)$:
 \begin{description} 
@@ -121,7 +121,7 @@ Come per i casi precedenti si stabilisce una lista di pattern candidati, e li si
 	\end{center}
 \end{description}
 \subsection{Composizione di {stacksort} con {queuesort}}
-$$SQ^{-1}(Av(21)) = Q^{-1}S^{-1}(Av(21)) = Q^{-1}(Av(231))$$
+$$S\circ Q^{-1}(Av(21)) = Q^{-1}S^{-1}(Av(21)) = Q^{-1}(Av(231))$$
 Si ricercano dunque le controimmagini di 231 secondo queuesort. Gli stessi elementi che formano un pattern 231 nell'immagine possono formare nella controimmagine lo stesso pattern 231 o un pattern 321. Si esaminano i due casi separatamente.\\\\
 Si applicano alle inversioni di 231 le possibili condizioni espresse precedentemente, ottenendo i seguenti mesh-pattern:
 \begin{center}
@@ -139,40 +139,40 @@ Applicando le regole esposte, ed escludendo quelle che si contraddicono, si otti
 \decpatternww{scale=1.7}{3}{1/2,2/3,3/1}{}{}{0/3}{2/3/3/4/{\mpattern{scale=0.5}{2}{2/1,1/2}{}}}{1/3/2/4/{\mpattern{scale=0.5}{2}{2/1,1/2}{}}}
 \end{center}
 che contiene un'occorrenza del pattern 2431 trovato prima, quindi anche questo pu\`o essere semplificato.\\\\
-Si ottiene che:$$SQ^{-1}(Av(21)) = Av(2431, 4231)$$
+Si ottiene che:$$S\circ Q^{-1}(Av(21)) = Av(2431, 4231)$$
 \subsection{Composizione di {bubblesort} con {queuesort}}
-$$BQ^{-1}(Av(21)) = Q^{-1}(B^{-1}(Av(21))) = Q^{-1}(Av(231,321))$$
+$$B\circ Q^{-1}(Av(21)) = Q^{-1}(B^{-1}(Av(21))) = Q^{-1}(Av(231,321))$$
 L'insieme $Q^{-1}Av(231)$ \`e gi\`a stato calcolato nella sezione precedente, quindi resta da cercare l'insieme $B^{-1}Av(321)$ ed eseguire l'intersezione tra i due.\\321 \`e l'unico candidato per la ricerca delle controimmagini, ed inoltre l'elemento 3 soddisfa gi\`a una delle condizioni per l'inversione $(2,1)$. Applicando le condizioni alle inversioni $(3,1),(3,2)$, si ottengono i seguenti mesh-pattern:
 \begin{center}
 \decpatternww{scale=1.5}{3}{1/3,2/2,3/1}{}{}{}{0/3/1/4/1}{},
 \decpatternww{scale=1.5}{3}{1/3,2/2,3/1}{}{}{}{1/3/2/4/{\mpattern{scale=0.5}{2}{2/1,1/2}{}}}{}.
 \end{center}  
 Entrambi corrispondono a pattern classici, rispettivamente 4321, 35421. Si noti che il secondo contiene un'occorrenza del primo, che quindi \`e l'unico da considerare. Si unisce questo risultato a quelli del capitolo precedente.
-$$BQ^{-1}(Av(21)) = Av(2431, 4231, 4321)$$ 
+$$B\circ Q^{-1}(Av(21)) = Av(2431, 4231, 4321)$$ 
 \section{Contenitori POP}
 %frase da riscrivere
-Lo studio di combinazioni di operatori che utilizzano contenitori POP si rivela pi\'u difficile, in quando si tratta di casi non approfonditi in letteratura.\\
+Lo studio di composizioni di operatori che utilizzano contenitori POP si rivela pi\'u difficile, in quando si tratta di casi non approfonditi in letteratura.\\
 Sono tuttavia noti i pattern che rendono una permutazione non ordinabile, come presentato nel capitolo 2, ovvero:
 $$S_{POP}^{-1}(Av(21)) = Av(231,312)$$$$Q_{POP}^{-1}(Av(21))=Av(321,2413)$$
-Grazie a questi dati, \`e possibile individuare un caso di facile risoluzione: ovvero quello in cui un algoritmo che usa contenitori POP \`e concatenato ad un operatore regolare.
-$$(X_{POP}\circ{Y})(\pi)= X_{POP}(Y(\pi)))\Rightarrow(X_{POP}\circ{Y})^{-1}(\pi) = Y^{-1}X_{POP}^{-1}(\pi)=Y^{-1}(Av(m))$$
-Sapendo l'insieme di pattern $m$ che rendono la permutazione non ordinabile dall'operatore POP baster\'a cercare le loro controimmagini secondo l'operatore regolare con i metodi usati finora, come verr\'a mostrato nelle sezioni seguenti.
-\subsection{POP Queuesort}L'algoritmo POP queuesort richiede una diversa analisi da POP stacksort.\\
+Grazie a questi dati, \`e possibile individuare un caso di facile risoluzione: ovvero quello in cui un algoritmo che usa contenitori POP \`e concatenato ad un operatore classico.
+$$(X_{POP}\circ{Y})(\pi)= X_{POP}(Y(\pi)))\Rightarrow(X_{POP}\circ{Y})^{-1}(\pi) = Y^{-1}X_{POP}^{-1}(\pi)=Y^{-1}(Av(M))$$
+Conoscendo l'insieme di pattern $M$ che rendono la permutazione non ordinabile dall'operatore POP, baster\'a cercare le loro controimmagini secondo l'operatore classico con i metodi usati finora, come verr\'a mostrato nelle sezioni seguenti.
+\subsection{POP-Queuesort - dettagli ulteriori}L'algoritmo POP-queuesort richiede una diversa analisi rispetto agli altri algoritmi.\\
 Esistono diverse versioni di \textit{POP queuesort} ed in particolare ne esistono due ottimali\cite{cioni2021sorting}: \textit{Min} e \textit{Cons}.
 \begin{description}
-	\item[\textit{Min}] in questa versione l'operazione di POP viene eseguita solo se il primo elemento della coda \`e il successivo dell'ultimo elemento aggiunto all'output; se l'elemento in input \`e maggiore dell'ultimo elemento della coda (o se la coda \`e vuota) allora viene accodato mentre negli altri casi, se l'elemento dell'input \`e minore della testa della coda allora bypassa altrimenti si esegue un POP.
-	\item[\textit{Cons}] questa versione si basa sull'idea di avere sempre elementi consecutivi nella coda; \`e la versione che verr\'a adottata in questa tesi; da qui in avanti ogni riferimento a \textit{POP-queuesort} sar\'a riferito a \textit{Cons}
+	\item[\textit{Min}] in questa versione l'operazione di POP viene eseguita se il primo elemento della coda \`e il pi\`u piccolo elemento non ancora in output; se l'elemento in input \`e maggiore dell'ultimo elemento della coda (o se la coda \`e vuota) allora viene accodato mentre negli altri casi, se l'elemento dell'input \`e minore della testa della coda allora bypassa altrimenti si esegue un POP.
+	\item[\textit{Cons}] questa versione si basa sull'idea di avere sempre elementi consecutivi nella coda; \`e la versione che verr\'a adottata in questa tesi; da qui in avanti per lavorare con una coda POP utilizzeremo esclusivamente l'algoritmo \textit{Cons}\cite{cioni2021sorting}.
 \end{description}
-Nell'algoritmo \textit{Cons} si definisce una coda POP come un insieme $Q$, inizialmente vuoto, di interi su cui \`e possibile fare le seguenti operazioni:
+Nell'algoritmo \textit{Cons} si definisce una coda POP come un insieme $Q$, inizialmente vuoto, di interi su cui \`e possibile eseguire le seguenti operazioni:
 \begin{description}
 	\item[Enqueue($\pi_i$, $Q$):] inserisce l'$i$-esimo elemento della permutazione $\pi$ in $Q$, accodandolo alla coda;
 	\item[Pop($Q$):] estrae gli elementi contenuti in $Q$ e li aggiunge all'output nello stesso ordine a cui sono stati aggiunti a $Q$;
 	\item[Bypass($\pi_i$):] posiziona l'$i$-esimo elemento di $\pi$ nell'output.
 \end{description}
-Inoltre si utilizzano le seguenti funzioni:
+Inoltre si utilizzano le seguenti notazioni:
 \begin{description}
-	\item[Back($Q$):] restituisce il valore dell'ultimo elemento aggiunto a $Q$
-	\item[Front($Q$):] restituisce il valore dell'elemento in $Q$ che vi \`e stato inserito per primo
+	\item[Back($Q$):] indica il valore dell'ultimo elemento aggiunto a $Q$,
+	\item[Front($Q$):] restituisce il valore dell'elemento che sta in cima a $Q$.
 \end{description}
 \begin{algorithm}[H]
    \caption{Cons - POP Queuesort}
@@ -195,40 +195,50 @@ Inoltre si utilizzano le seguenti funzioni:
 \EndIf
 \end{algorithmic}
 \end{algorithm}
-La dimostrazione che \textit{Cons} (cos\'i come \textit{Min}) sia un algoritmo ottimale nella classe degli algoritmi \textit{POP-queuesort} si ha dal fatto che esso ordina tutte e sole le sequenze dell'insieme Av(321, 2413), che sono esattamente tutte e sole le permutazioni ordinabili con una POP queue\cite{cioni2021sorting}.
+La dimostrazione che \textit{Cons} (cos\'i come \textit{Min}) sia un algoritmo ottimale nella classe degli algoritmi \textit{POP-queuesort} segue dal fatto che esso ordina tutte e sole le sequenze dell'insieme Av(321, 2413), che sono esattamente tutte e sole le permutazioni ordinabili con una POP queue\cite{cioni2021sorting}.
 \section{Composizioni che includono operatori POP}
 \subsection{Composizione di {POP-stacksort} con {stacksort}}
 $$(S_{POP}\circ{S})^{-1}(Av(21))=S^{-1}(Av(231,312))$$
-Si \`e gi\`a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi manca da calcolare le controimmagini di $312$.\\
-I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.
-Perch\'e gli elementi di un pattern $321$ nella controimmagine generino un pattern $312$ tramite \textit{stacksort} \`e necessario che $3$ entri in pila e ne esca prima che $2$ vi entri, deve quindi essere presente un valore $4$ posizionato tra $3$ e $2$ che provochi l'uscita di $3$, ovvero il pattern $3421$.\\
-Se gli elementi del pattern $312$ nell'immagine formano lo stesso pattern anche nella controimmagine allora anche in questo caso bisogna assicurarsi che $3$ venga estratto dalla pila prima di $1$, si ha quindi il pattern $3412$.\\Si uniscono tutti i risultati:
-$$(S_{POP}S)^{-1}(Av(21))=Av(2341, 3412, 3421, 3\overline{5}241)$$
+Si \`e gi\`a calcolato che $S^{-1}(Av(231))=Av(2341, 3\overline{5}241)$, quindi restano da calcolare le controimmagini di $312$ tramite S.\\
+I pattern candidati che possono generare $312$ sono quelli che contengono le coppie $(3,1),(3,2)$, ovvero $321, 312$.\\\\
+Si considera il candidato 312. Le sue inversioni sono soddisfatte dal seguente mesh-pattern, che corrisponde al pattern classico 3412.
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{1/3/2/4/1}
+\end{center}
+Si considera il candidato 321. Le sue inversioni sono $(3,2),(3,1),(2,1)$. Si noti che l'inversione $(2,1)$ deve essere ordinata. Applicando tutte le condizioni si ottiene il seguente mesh-pattern:
+\begin{center}
+\mmpattern{scale=1.5}{3}{1/3,2/2,3/1}{2/2,2/3}{1/3/2/4/1}$\Rightarrow$\mmpattern{scale=1.5}{4}{1/3,2/4,3/2,4/1}{3/2,3/3,3/4}{}
+\end{center}
+Si esaminano le aree oscurate: se un elemento fosse presente nell'area oscurata pi\`u in basso questo formerebbe un'occorrenza del pattern 3412 con gli elementi precedenti, dunque quella specifica area oscurata, ai fini delle preimmagini e tenendo conto dei pattern precedenti, non fornsice nuove informazioni e dunque pu\`o essere trascurata al fine di semplificare il pattern. Con una motivazione analoga si pu\`o escludere anche l'area oscurata in alto, dato che la presenza di un elemento in tale area forma un pattern 2341. Dalle semplificazioni si ottiene il seguente mesh-pattern:
+\begin{center}
+\mmpattern{scale=1.5}{4}{1/3,2/4,3/2,4/1}{3/3}{} $= 352\overline{4}1$
+\end{center}
+$$(S_{POP}\circ S)^{-1}(Av(21))=Av(2341, 3412, 3421, 3\overline{5}241, 352\overline{4}1)$$
 \subsection{Composizione di {POP-stacksort} con {bubblesort}}
 $$(S_{POP}\circ{B})^{-1}(Av(21))=B^{-1}(Av(231,312))$$
-Anche in questo caso la controimmagine di $231$ \`e stata calcolata: $B^{-1}(Av(231)) = (S\circ{B})^{-1}(Av(21)) = Av(2341, 2431, 3241, 4231)$.\\
-Si ricerca dunque le controimmaigini di 312 secondo bubblesort. \\
+La controimmagine tramite B di $231$ \`e stata calcolata: $B^{-1}(Av(231)) = (S\circ{B})^{-1}(Av(21)) = Av(2341, 2431, 3241, 4231)$.\\
+Si cercano dunque le controimmaigini di 312 secondo bubblesort. \\
 Gli elementi del pattern $312$ nell'immagine possono solo formare un pattern $312$ o $321$ nella controimmagine.\\
 Si pu\`o osservare come gli stessi elementi di un pattern $321$ non possono divenire un $312$. La presenza dell'elemento maggiore del pattern all'inizio di essa evita l'ordinamento degli elementi successivi.\\
 Perch\'e un pattern $312$ rimanga invariato \`e sufficiente la presenza di un elemento maggiore di tutto il pattern in posizione tale da evitare l'ordinamento di $3$ con qualsiasi elemento, applicando le regole descritte prima per \textit{bubblesort}: 
 \begin{center}
 \mmpattern{scale=1.5}{3}{1/3,2/1,3/2}{}{0/3/2/4/1}$=4312,3412$
 \end{center}
-$$(S_{POP}{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
+$$(S_{POP}\circ{B})^{-1}(Av(21))=Av(2341, 2431, 3241, 3412, 4231, 4312)$$
 \subsection{Composizione di {POP-stacksort} con {queuesort}}
 $$(S_{POP}\circ{Q})^{-1}(Av(21))=Q^{-1}(Av(231,312))$$
-\`E gi\`a noto dai calcoli nelle sezioni precedenti che $Q^{-1}(Av(231)=Av(4231,2431)$. Si procede dunque a ricercare controimmagini di 312.\\
+\`E gi\`a noto dai calcoli nelle sezioni precedenti che $Q^{-1}(Av(231)=Av(4231,2431)$. Si cercano le controimmagini di 312 tramite queuesort.\\
 I candidati per la produzione di controimmagini di $312$ sono $312, 321$. Applicando le regole dell'algoritmo per le controimmagini secondo queuesort alle inversioni $(3,1),(3,2)$ si ottengono i seguenti mesh-pattern:
 \begin{center}
 \decpatternww{scale=1.5}{3}{1/3,2/1,3/2}{}{}{}{0/3/1/4/1}{},
 \decpatternww{scale=1.5}{3}{1/3,2/1,3/2}{}{}{0/3}{1/3/2/4/{\mpattern{scale=0.5}{2}{2/1,1/2}{}}}{}.
 \end{center}
 Il primo dei due mesh pattern corrisponde al pattern classico 4312, che \`e contenuto anche nel secondo.\\
-Usando invece 321 come candidato si osserva come l'inversione $(2,1)$ richieda di essere invertita, applicando la relativa condizione si ottiene di aggiungere un area oscurata che include la posizione dell'elemento 3. Dunque il pattern stesso contraddice le condzioni dell'algoritmo e non \`e possibile trovare una controimmagine partendo da questo candidato.\\
-$$(S_{POP}{Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
-\subsection{Composizione di {POP-queuesort} con {stacksort}}
-$$Q_{POP}S^{-1}(Av(21)) = S^{-1}Q_{POP}^{-1}(Av(21)) = S^{-1}(Av(321, 2413))$$
-Si osserva che una parte dei risultati richiesti \`e gi\`a stata calcolata: $S^{-1}(Av(321)) = Av(34251, 35241, 45231)$.\\
+Usando invece 321 come candidato si osserva come l'inversione $(2,1)$ richieda di essere invertita, ma questo non pu\`o verificarsi dato che la presenza dell'elemento 3 rende per 2 impossibile essere un LTR massimo. Dunque il pattern stesso contraddice le condzioni dell'algoritmo e non \`e possibile trovare una controimmagine partendo da questo candidato.\\
+$$(S_{POP}\circ {Q})^{-1}(Av(21))=Av(2431,4231,4312)$$
+\subsection{Composizione di {POP-queuesort} con {stacksort}} 
+$$Q_{POP}\circ S^{-1}(Av(21)) = S^{-1}Q_{POP}^{-1}(Av(21)) = S^{-1}(Av(321, 2413))$$
+Si osserva la controimmagine di 321 tramite S \`e gi\`a stata calcolata: $S^{-1}(Av(321)) = (Q\circ S)^{-1}(Av(21)) = Av(34251, 35241, 45231)$.\\
 Si osserva come questi pattern hanno una forma in comune: essi sono infatti tutti composti da una non inversione seguiti da un pattern 231, dove gli elementi $2,1$ di quest'ultimo sono minori della non inversione iniziale. Di seguito si illustra questa forma con un pattern decorato che chiamiamo (A).
 \begin{center}
 \textbf{(A)}\mmpattern{scale=1.5}{4}{1/3,2/4,3/2,4/1}{}{3/2/4/5/1}
@@ -236,13 +246,14 @@ Si osserva come questi pattern hanno una forma in comune: essi sono infatti tutt
 In questo caso risulta utile evidenziare la forma di questo specifico pattern in quanto ricorrente anche in quelli che troveremo successivamente, e quindi render\`a pi\'u semplice individuare le occorrenze di questi pattern gi\`a noti in quelli che verranno trovati per semplificarli.\\\\
 Si ricerca le controimmagini del pattern 2413 secondo stacksort. I candidati sono: 2413, 2431, 4213, 4231, 4321.
 \paragraph*{2413:} Le inversioni di 2413 sono $(2,1),(4,1),(4,3)$. Si osserva che 4 soddisfa gi\`a la condizione per l'inversione $(2,1)$, e decorando il pattern per soddisfare la condizione per $(4,1)$ si ottiene
-\begin{center}\mmpattern{scale=1.5}{4}{1/2,2/4,3/1,4/3}{}{2/4/3/5/1}\end{center} che soddisfa anche la condizione per l'inversione $(4,3)$, dato che il mesh pattern che si \`e cosi\'i ottenuto equivale al pattern classico 24513, quest'ultimo \`e l'unica controimmagine ricavato da questo candidato.
+\begin{center}\mmpattern{scale=1.5}{4}{1/2,2/4,3/1,4/3}{}{2/4/3/5/1}\end{center} che soddisfa anche la condizione per l'inversione $(4,3)$, il mesh-pattern cos\`i ottenuto equivale al pattern classico 24513, che \`e l'unica controimmagine che si possa ricavare da questo candidato.
 \paragraph*{2431:} Le inversioni di 2431 sono $(2,1),(4,3),(4,1),(3,1)$. La condizione per $(2,1)$ \`e gi\`a soddisfatta, applicando le ulteriori condizioni si ottiene il seguente mesh-pattern
 \begin{center}
 \mmpattern{scale=1.5}{4}{1/2,2/4,3/3,4/1}{3/3,3/4}{2/4/3/5/1},
 \end{center}
-che equivale al pattern classico 24531 con alcune aree barrate. Nell'esaminare le aree barrate si pu\`o osservare che se un elemento le occupasse questo formerebbe un occorrenza del pattern (A) con gli altri elementi del pattern a parte il 2. Se ne deduce che le aree barrate non determinano l'ordinabilit\`a o meno di una permutazione, quindi al fine di individuare le permutazioni ordinabili da $Q_{POP}S$, tenuto conto degli altri pattern individuati, queste possono essere trascurate e il mesh-pattern pu\`o essere considerato equivalente al pattern classico 24531. Simili osservazione verranno utilizzate anche per i successivi candidati. 
-\paragraph*{4213:}Le inversioni di 4213 sono $(4,2),(4,1),(4,3),(2,1)$. Di queste $4,2$ non \`e presente in 2413, e quindi provoca l'inserimento di un area oscurata, poi per soddisfare la condizione per $(4,1)$ si procede ad aggiungere una decorazione che soddisfa anche le condizioni per le inversioni $(4,3)$ e $(2,1)$.
+che equivale al pattern classico 24531 con alcune aree barrate. Nell'esaminare le aree barrate si pu\`o osservare che se un elemento le occupasse questo formerebbe un occorrenza del pattern (A) con gli altri elementi del pattern a parte il 2. Se ne deduce che le aree barrate ai fini
+delle preimmagini e tenendo conto dei pattern precedenti, non fornsicono nuove informazioni e dunque possono essere trascurate al fine di semplificare il pattern, ottenendo il pattern classico 24531. Simili osservazione verranno utilizzate anche per i successivi candidati. 
+\paragraph*{4213:}Le inversioni di 4213 sono $(4,2),(4,1),(4,3),(2,1)$. Di queste $4,2$ non \`e presente in 2413, e quindi provoca l'inserimento di un area oscurata. Per soddisfare la condizione relativa all'inversione $(4,1)$ si procede ad aggiungere una decorazione che  risulta soddisfare anche le condizioni per le inversioni $(4,3)$ e $(2,1)$.
 \begin{center}
 \mmpattern{scale=1.5}{4}{1/4,2/2,3/1,4/3}{1/4}{2/4/3/5/1}
 \end{center}
@@ -251,17 +262,17 @@ L'area oscurata pu\`o essere trascurata dato che la sua occupazione provoca un'o
 \begin{center}
 \mmpattern{scale=1.5}{4}{1/4,2/2,3/3,4/1}{1/4,3/3,3/4}{2/4/3/5/1}
 \end{center}
-In questo, come nei casi precedenti, le aree oscurate si possono trascurare dato che la loro occupazione causa un'occorrenza del pattern (A).
+Si osserva come le aree oscurate possano essere trascurate dato che la loro occupazione causa un'occorrenza del pattern (A), semplificando come nei casi precedenti si ottiene il pattern 42531.
 \paragraph*{4321:} Le inversioni del pattern 4321 sono $(4,3),(4,2),(4,1),(3,2),(3,1),(2,1)$. Applicando tutte le regole si nota come queste siano contradditorie tra di loro, dunque questo candidato non pu\`o generare controimmagini.
 \\\\Si uniscono tutti i risultati ottenuti:
-$$Q_{POP}S^{-1}(Av(21)) = Av(24513, 24531, 34251, 35241, 42513, 45231)$$
+$$Q_{POP}\circ S^{-1}(Av(21)) = Av(24513, 24531, 34251, 35241, 42513, 42531, 45231)$$
 \subsection{Composizione di {POP-queuesort} con {bubblesort}}
-$$(Q_{POP}{B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
+$$(Q_{POP}\circ {B})^{-1}(Av(21)) = B^{-1}Q_{POP}^{-1}(Av(21))=B^{-1}(Av(321,2413))$$
 La classe di pattern $B^{-1}(Av(321))$ \`e gi\`a stata calcolata:
-$$B^{-1}(Av(321)) = QB^{-1}(Av(21)) = Av(3421, 4321)$$
+$$B^{-1}(Av(321)) = (Q\circ B)^{-1}(Av(21)) = Av(3421, 4321)$$
 Si ricerca adesso la classe di pattern corrispondente a $B^{-1}(Av(2413))$. La lista dei candidati \`e la seguente: 2413, 2431, 4213, 4231, 4321.
-\paragraph*{Osservazione:} i pattern 2431, 4231, 4321 contengono l'inversione $(3,1)$ che non presente nel pattern dell'immagine. Questa specifica inversione \`e in posizione tale che nessuno dei due elementi sia un LTR massimo, e dunque l'inversione non possa essere ordinata. In questi 3 pattern infatti, l'elemento 4 si trova all'interno dell'area oscurata che si dovrebbe aggiungere durante l'applicazione dell'algortimo per le controimmagini di bubblesort all'inversione $(3,1)$. Ne consegue che i pattern  2431, 4231, 4321, pur essendo nella lista di candidati non possono generare il pattern 2413.\\
-Si ricercano ora le controimmagini date dagli altri candidati:
+\paragraph*{Osservazione:} i pattern 2431, 4231, 4321 contengono l'inversione $(3,1)$ che non \`e presente nel pattern dell'immagine. Questa specifica inversione \`e in posizione tale che nessuno dei due elementi sia un LTR massimo, e dunque l'inversione non pu\`o essere ordinata. In questi 3 pattern infatti, l'elemento 4 si trova all'interno dell'area oscurata che si dovrebbe aggiungere durante l'applicazione dell'algoritmo per le controimmagini di bubblesort all'inversione $(3,1)$. Ne consegue che i pattern  2431, 4231, 4321, pur essendo nella lista di candidati non possono generare controimmagini del pattern 2413.\\
+Si ricercano ora le controimmagini relative agli altri candidati:
 \paragraph*{2413:}Si osserva che 4 soddisfa gi\`a la condizione per l'inversione $(2,1)$, dunque si prende l'intersezione tra le condizioni per le inversioni $(4,3),(4,1)$ ottenendo il seguente pattern decorato:
 \begin{center}
 \mmpattern{scale=1.2}{4}{1/2,2/4,3/1,4/3}{}{0/4/3/5/1}
@@ -272,14 +283,14 @@ Da questo si ottengono i pattern classici 52413, 25413, 24513.
 \mmpattern{scale=1.2}{4}{1/4,2/2,3/1,4/3}{}{} $\Rightarrow$
 \mmpattern{scale=1.2}{4}{1/4,2/2,3/1,4/3}{0/4,1/4}{}
 \end{center}
-Si osserva poi che 4 soddsfa gi\`a le condizioni per l'inversione $(2,1)$, mentre applicando le condizioni per le altre inversioni, tenendo conto dell'area oscurata si ottiene:
+Si osserva poi che 4 soddisfa gi\`a le condizioni per l'inversione $(2,1)$, mentre applicando le condizioni per le altre inversioni, tenendo conto dell'area oscurata si ottiene:
 \begin{center}
 \mmpattern{scale=1.2}{4}{1/4,2/2,3/1,4/3}{0/4,1/4}{2/4/4/5/1}
 \end{center}
 Trovare l'insieme di pattern classici equivalente a quest'ultimo mesh-pattern non \`e immediato come lo \`e in altri casi, dunque si continuer\`a ad adottare la notazione dei mesh-pattern, invece di quella dei pattern classici, per rappresentare questa soluzione.\\\\Si uniscono i risultati ottenuti.
-$$(Q_{POP}{B})^{-1}(Av(21)) = Av(3421, 4321, 24513, 25413, 52413, \mmpattern{scale=0.9}{4}{1/4,2/2,3/1,4/3}{0/4,1/4}{2/4/4/5/1})$$
+$$(Q_{POP}\circ{B})^{-1}(Av(21)) = Av(3421, 4321, 24513, 25413, 52413, \mmpattern{scale=0.9}{4}{1/4,2/2,3/1,4/3}{0/4,1/4}{2/4/4/5/1})$$
 \subsection{Composizione di {POP-queuesort} con {queuesort}}
-$$Q_{POP}Q^{-1}Av(21) = Q^{-1}Q_{POP}(Av(21)) = Q^{-1}(Av(321, 2413))$$
+$$Q_{POP}\circ Q^{-1}Av(21) = Q^{-1}Q_{POP}^{-1}(Av(21)) = Q^{-1}(Av(321, 2413))$$
 Si ricercano le controimmagini di 321. Si osserva che 3 soddisfa gi\`a una delle condizione per l'inversione $(2,1)$. Applicando le condizioni alle altre inversioni, i pattern minimi che si ottengono sono i seguenti:
 \begin{center}
 \mmpattern{scale=1.7}{3}{1/3,2/2,3/1}{}{0/3/1/4/1}, 
@@ -290,7 +301,7 @@ Si ricercano adesso le controimmagini di 2413. Le inversioni di 2413 sono $(2,1)
 \paragraph*{2413:} I pattern minimi che si ottengono applicando le condizioni sono i seguenti:
 \begin{center}
 \mmpattern{scale=1.7}{4}{1/2,2/4,3/1,4/3}{}{0/4/1/5/1}, 
-\decpatternww{scale=1.7}{4}{1/2,3/1,4/3}{}{}{}{1/3/3/5/{\mpattern{scale=0.5}{2}{2/1,1/2}{}}}{}.
+\decpatternww{scale=1.7}{4}{1/2,3/1,4/3}{}{}{}{1/3/3/5/{\mpattern{scale=0.7}{2}{2/1,1/2}{}}}{}.
 \end{center}
 Le condizioni relative a tutte le inversioni del candidato producono pi\`u di due pattern, ma per ragioni di brevit\`a si mostrano solo questi, di cui tutti gli altri contengono occorrenze, omettendo le semplificazioni. I due mesh-pattern generano rispettivamente i pattern classici 52413 e 25413.
 \paragraph*{2431:} In questo candidato si osserva come l'inversione $(4,3)$ contraddica la condizione per l'inversione $(2,1)$, inoltre l'elemento 4 contraddice la condizione dell'inversione $(3,1)$, dunque questo candidato non pu\`o produrre controimmagini.
@@ -305,7 +316,7 @@ Le condizioni richiedono la presenza di un'inversione di elementi maggiori di 4 
 \end{center} 
 Si osserva come il primo dei due contenga un'occorrenza del pattern 52413 e il secondo di 25413. Dunque le controimmagini ottenute da questo candidato possono essere semplificate.
 \paragraph*{4231:} Anche in questo caso, similmente al caso precedente \`e richiesta la presenza di un'inversione di elementi maggiori di 4 tra 4 e 3 e l'assenza di un'inversione simile tra 4 e 2. Si noti tuttavia come questa eventualit\`a produca necessariamente un pattern 4321, in particolare considerando l'inversione composta da elementi superiori a 4 e gli elementi $3$ e $1$. Dunque il fatto che una permutazione eviti un pattern 4321 comprende anche che essa eviti il pattern trovato e quindi questo candidato non produce controimmagini utili. 
-$$Q_{POP}Q^{-1}Av(21) = Av(4321, 25413, 52413)$$
+$$Q_{POP}\circ Q^{-1}Av(21) = Av(4321, 25413, 52413)$$
 \subsection{Presentazione  dell'algoritmo per la ricerca di controimmagini secondo l'operatore POPstacksort} 
 Si ricercano le condizioni che un candidato deve soddisfare per produrre una voluta immagine. Come negli altri casi, si esaminano le inversioni nel candidato, per ogni inversione $(b,a)$ che non viene ordinata da una passata di POPstacksort si verifica una delle sequenti condizioni:
 \begin{description}
@@ -326,11 +337,16 @@ Se invece ci si vuole assicurare che un'inversione venga ordinata, la decorazion
 \decpatternww{scale=1.7}{2}{1/2,2/1}{}{}{1/0,1/2}{}{1/1/2/2/{\mpattern{scale=0.4}{2}{1/1,2/2}{}}}
 \end{center}
 \paragraph*{Nota:} L'algoritmo, che \`e stato presentato per motivi di completezza, permette di ricavare le controimmagini delle seguenti composizioni: $S_{POP}\circ{S},S_{POP}\circ{Q},S_{POP}\circ{B}$. Questi casi non sono verranno esaminati dato che la loro trattazione richiede troppi dettagli per essere inclusa tra gli argomenti di questa tesi.
+\subsection{Osservazione sulle analisi di composizioni di operatori di ordinamento con POP-queuesort } 
+Non si ha a disposizione un algoritmo per la ricerca di controimmagini di pattern tramite \textit{Cons}. 
+Per questo motivo le classi di pattern delle combinazioni mostrate di seguito, ovvero quelle in cui si compone POP-queuesort ad un altro algoritmo di ordinamento, verranno ricercate con un metodo diverso da quello adottato finora: 
+si presenteranno delle congetture su quali classi di pattern che si ritengono possano coincidere con le preimmagini cercate e si verificher\`a 
+che l'insieme di permutazioni ordinabili dalla composizione e l'insieme mostrato nella congettura coincidano.
 \subsection{Composizione di stacksort con POP-queuesort}
 Grazie a vari risultati ottenuti applicando i software mostrati nel capitolo 3, \`e stato possibile formulare la seguente congettura:
-$$SQ_{POP}^{-1}Av(21) = Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+$$S\circ Q_{POP}^{-1}Av(21) = Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
 Questo equivale a cercare le controimmagini del pattern 231 secondo \textit{Cons}, dato che:
-$$SQ_{POP}^{-1}Av(21) = Q_{POP}^{-1}(S^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231))$$
+$$S\circ Q_{POP}^{-1}Av(21) = Q_{POP}^{-1}(S^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231))$$
 Per dimostrare la congettura occorre dimostrare la doppia inclusione:
 \begin{description}
 \item[(A)]$Cons^{-1}Av(231) \subseteq Av(2431, 4231, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$
@@ -380,9 +396,9 @@ Degli ultimi due mesh pattern mostrati, si ignora il secondo in quanto contiene 
 \end{proof}
 \subsection{Composizione di queuesort con POP-queuesort}
 Similmente a come fatto per la sezione precedente, si vuole adesso dimostrare il seguente risultato:
-$$QQ_{POP}^{-1}Av(21) = Av(4321, 35214, 35241)$$
+$$Q\circ Q_{POP}^{-1}Av(21) = Av(4321, 35214, 35241)$$
 Questo equivale a cercare le controimmagini del pattern 321 secondo \textit{Cons}, dato che:
-$$QQ_{POP}^{-1}Av(21) = Q_{POP}^{-1}(Q^{-1}(Av(21))) = Q_{POP}^{-1}(Av(321))$$
+$$Q\circ Q_{POP}^{-1}Av(21) = Q_{POP}^{-1}(Q^{-1}(Av(21))) = Q_{POP}^{-1}(Av(321))$$
 Per dimostrare la congettura occorre dimostrare la doppia inclusione:
 \begin{description}
 \item[(A)]$Cons^{-1}Av(321) \subseteq Av(4321, 35214, 35241)$
@@ -421,8 +437,8 @@ Se $c$ invece entra in coda, anche se in seguito ad un pop, deve avvenire un pop
 Una permutazione contiene un'occorrenza del pattern decorato cos\'i ottenuto se contiene uno dei seguenti pattern classici: 35421, 35241, 35214. Di questi il primo viene escluso perch\'e contiene a sua volta un'occorrenza del pattern 4321, gi\`a trovato prima.
 \end{proof}
 \subsection{Composizione di bubblesort con POP-queuesort}
-$$(BQ_{POP})^{-1}(Av(21)) = Q_{POP}^{-1}(B^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231, 321))$$
+$$(B\circ Q_{POP})^{-1}(Av(21)) = Q_{POP}^{-1}(B^{-1}(Av(21))) = Q_{POP}^{-1}(Av(231, 321))$$
 La classe di pattern ordinabile dalla composizione di bubblesort con Cons \`e data dall'unione dei risultati ottenuti per stacksort e queuesort.\\\\
-$$(BQ_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, 35214, 35241, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+$$(B\circ Q_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, 35214, 35241, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
 Si osserva che l'insieme non \`e minimo, in quanto alcuni pattern contengono istanze di altri: $2413\preceq35214, 4231\preceq35241$. Eliminati i pattern superflui, si ottiene:
-$$(BQ_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$
+$$(B\circ Q_{POP})^{-1}(Av(21)) = Av(2431, 4231, 4321, 23514, \mmpattern{scale=0.7}{5}{1/3,2/2,3/5,4/1,5/4}{0/4,0/3,0/5,1/3,1/4,1/5}{})$$

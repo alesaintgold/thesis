@@ -1,6 +1,3 @@
-import sys
-from itertools import permutations,combinations
-
 class PatternAvoid():
 	def __init__(self,n, pattern):
 		if n <= 1:

@@ -1,11 +1,15 @@
 \chapter{Introduzione}
-%Presentazione dell’oggetto della tesi
-
-%Obiettivi del lavoro
-	%elenca le ipotesi e le eventuali tesi legate al problema. 
-
-%Metodologia di ricerca
-
-%Breve descrizione della struttura dell’elaborato
-
-%Cenni alle conclusioni
+Gli algoritmi di ordinamento sono uno degli argomenti pi\`u classici dell'informatica.\\
+In questa tesi si esamina una classe di questi algoritmi, ovvero quelli che utilizzano dei contenitori: strutture dati in cui vengono salvati alcuni elementi della sequenza da ordinare. Il pi\`u noto tra questi algoritmi \`e bubblesort.\\\\
+Nel caso di bubblesort, il primo elemento della sequenza in input viene salvato in un contenitore apposito di capacit\`a 1, quindi si continua a scorrere la sequenza; ad uno ad uno  si confrontano gli elementi dell'input con l'elemento contenuto nel contenitore, aggiungendo all'output il minore dei due mentre il maggiore viene salvato nel contenitore.\\
+Due ulteriori algoritmi, stacksort e queuesort, si ottengono generalizzando il contenitore, in particolare sostituendolo con una struttura dati (rispettivamente una pila e una coda) di capacit\`a arbitraria.\\\\
+Gli algoritmi presentati generalmente vengono iterati pi\`u volte sulla stessa sequenza. La ragione \`e che una sola iterazione non garantisce l'ordinamento completo della sequenza.\\
+In questa tesi tuttavia si osserva il caso dell'applicazione di una sola iterazione di questi algoritmi ad una permutazione e delle propriet\`a che permettono di stabilire per ogni algoritmo l'insieme esatto di permutazioni ordinabili da una sola iterazione.\\
+Questo tema \`e stato inizialmente trattato da Donald Knuth, in "Vol. 1: Fundamental Algorithms", \textit{The Art of Computer Programming (1968)}, che aveva individuato esattamente quali permutazioni sono ordinabili da una sola passata di stacksort. Similmente sono state trovate condizioni analoghe per gli altri algoritmi.\\\\
+L'obiettivo di questa tesi \`e quello di utilizzare le condizioni note per ricercare le controimmagini di determinati pattern di permutazioni di interi per individuare condizioni che garantiscono l'ordinabilit\`a di una permutazione da parte della composizione di due algoritmi tra quelli presentati.\\\\
+Per trovare questi risultati si utilizzano degli algoritmi che permettono di ricercare le controimmagini di pattern di permutazioni secondo gli algoritmi in esame, presenti in letteratura.\\
+Ci si \`e avvalsi dell'utilizzo di strumenti software, realizzati appositamente, per esaminare il comportamento di questi algoritmi: uno che enumera le permutazioni ordinabili e non ordinabili da un dato algoritmo di ordinamento, insieme alle possibili immagini prodotte, e uno che mostra quali permutazioni contengano o meno un dato pattern.\\\\
+Nel capitolo 2 di questa tesi vengono introdotti gli algoritmi di ordinamento in esame, nonch\'e alcuni concetti legati alle classi di pattern di permutazioni utilizzati nel corso della trattazione.\\
+Nel capitolo 3 vengono presentati i programmi realizzati e ne viene spiegato l'utilizzo. Il codice sorgente di tali programmi \`e riportato interamente nell'appendice finale.\\
+Nel capitolo 4 vengono mostrati i procedimenti per individuare le classi di pattern ordinabili dalle composizioni; vengono introdotti gli algoritmi per il calcolo di controimmagini e ne viene mostrata l'applicazione.\\
+Nel capitolo finale si riassumono i risultati trovati e si mostra, per ogni composizione, la quantit\`a di permutazioni ordinabili di lunghezza n.
