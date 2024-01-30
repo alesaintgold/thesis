@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  30 JAN 2024 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  30 JAN 2024 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1534,6 +1534,22 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 ))
 [2]
+\openout2 = `Chapters/thanks.aux'.
+
+ (./Chapters/thanks.tex
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+) [1
+
+
+
+] [2
+
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -1546,12 +1562,8 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 Package tocbasic Info: character protrusion at toc deactivated on input line 11
-1.
+2.
 (./thesis.toc
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
-
 Overfull \hbox (2.66165pt too wide) in paragraph at lines 38--38
  [][] [][]\T1/pplj/m/n/12 (-20) Composizione di POP-stacksort con bub-ble-sort[
 ] []  
@@ -1569,12 +1581,7 @@ Overfull \hbox (4.61382pt too wide) in paragraph at lines 42--42
 []  
  []
 
-[1
-
-
-
-
-]
+[3]
 Overfull \hbox (0.82948pt too wide) in paragraph at lines 43--43
  \T1/pplj/m/n/12 (-20) tro-im-ma-gi-ni se-con-do l'o-pe-ra-to-re POP-stack-sort
 [] []  
@@ -1596,21 +1603,10 @@ Overfull \hbox (8.2359pt too wide) in paragraph at lines 47--47
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [2]
-\openout2 = `Chapters/thanks.aux'.
-
- (./Chapters/thanks.tex) [3
-
-]
+ [4]
 \openout2 = `Chapters/intro.aux'.
 
- (./Chapters/intro.tex [4
-
-
-
-
-
-]
+ (./Chapters/intro.tex
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -1663,7 +1659,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--114
 
  []
 
-[5]
+[5
+
+
+
+
+
+]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2129,22 +2131,37 @@ Overfull \hbox (30.0199pt too wide) in alignment at lines 26--44
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 46--118
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--118
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--118
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
 
  []
 
-[52] [53]
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+ []
+
+) [53]
 \openout2 = `Chapters/appendix.aux'.
 
  (./Chapters/appendix.tex [54
@@ -2223,29 +2240,30 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: B6A3752663063C8B1CC4158D26D1F355;1077.
  ) 
 Here is how much of TeX's memory you used:
- 41939 strings out of 477974
- 837481 string characters out of 5839630
+ 41962 strings out of 477974
+ 837766 string characters out of 5839630
  1944388 words of memory out of 5000000
- 60295 multiletter control sequences out of 15000+600000
- 599878 words of font info for 496 fonts, out of 8000000 for 9000
+ 60307 multiletter control sequences out of 15000+600000
+ 604400 words of font info for 508 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,146p,10694b,2774s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/euler/eurm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eus
-m10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/t
-exmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1
-/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palati
-no/uplri8a.pfb>
-Output written on thesis.pdf (65 pages, 396503 bytes).
+s/type1/public/amsfonts/euler/euex10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/euler/eurb10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eur
+m10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pf
+b></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts
+/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/
+uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (65 pages, 405456 bytes).
 PDF statistics:
- 1146 PDF objects out of 1200 (max. 8388607)
- 1037 compressed objects within 11 object streams
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 1052 compressed objects within 11 object streams
  526 named destinations out of 1000 (max. 500000)
- 95558 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 98118 words of extra memory for PDF output out of 106986 (max. 10000000)
 
