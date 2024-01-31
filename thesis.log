@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  30 JAN 2024 19:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.13)  31 JAN 2024 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1949,34 +1949,34 @@ r e d i o r -d i -n a -m e n -t o c o n \T1/pplj/m/it/12 (-20) q u e u e -
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 116.
+(Font)              using `T1/pplj/m/it' instead on input line 117.
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 123--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 151.
+(Font)              using `T1/pplj/m/it' instead on input line 155.
 
 [31]
-Overfull \hbox (24.45639pt too wide) detected at line 158
+Overfull \hbox (24.45639pt too wide) detected at line 157
 \U/zeus/m/n/12 ¨\U/zeur/m/n/12 X[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Y\U/zeus/m
 /n/12 ©¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 X[]\U/zeus/m/n/12 ¨
 \U/zeur/m/n/12 Y\U/zeus/m/n/12 ¨\U/zeur/m/n/12 ^^Y\U/zeus/m/n/12 ©©© ) ¨\U/zeur
@@ -1988,19 +1988,27 @@ Overfull \hbox (24.45639pt too wide) detected at line 158
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 163.
+(Font)              using `T1/pplj/m/it' instead on input line 162.
 
 
 LaTeX Font Warning: Font shape `T1/pplj/m/scit' undefined
-(Font)              using `T1/pplj/m/it' instead on input line 164.
+(Font)              using `T1/pplj/m/it' instead on input line 163.
 
 [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 201--205
+Overfull \hbox (20.62933pt too wide) in paragraph at lines 200--204
+\T1/pplj/m/n/12 (-20) È già no-to dal-le com-po-si-zio-ni pre-ce-den-ti che $\U
+/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12
+ 231\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 2341; 3
+[]241\U/zeus/m/n/12 ©$\T1/pplj/m/n/12 (-20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
 
  []
 
 [34]
-Overfull \hbox (33.53491pt too wide) in paragraph at lines 229--232
+Overfull \hbox (33.53491pt too wide) in paragraph at lines 228--231
 \T1/pplj/m/n/12 (-20) È già no-to dai cal-co-li nel-le se-zio-ni pre-ce-den-ti 
 che $\U/zeur/m/n/12 Q[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur
 /m/n/12 231\U/zeus/m/n/12 © ½ \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 4
@@ -2008,17 +2016,17 @@ che $\U/zeur/m/n/12 Q[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
 
 [36] [37]
-Overfull \hbox (31.61058pt too wide) in paragraph at lines 266--268
+Overfull \hbox (31.61058pt too wide) in paragraph at lines 265--267
 [] []\T1/pplj/m/sc/12 (-20) 4 3 2 1 :[] \T1/pplj/m/n/12 (-20) Le in-ver-sio-ni 
 del pat-tern 4321 so-no $\U/zeus/m/n/12 ¨\U/zeur/m/n/12 4; 3\U/zeus/m/n/12 ©\U/
 zeur/m/n/12 ; \U/zeus/m/n/12 ¨\U/zeur/m/n/12 4; 2\U/zeus/m/n/12 ©\U/zeur/m/n/12
@@ -2029,12 +2037,12 @@ zeur/m/n/12 3; 1\U/zeus/m/n/12 ©\U/zeur/m/n/12 ; \U/zeus/m/n/12 ¨\U/zeur/m/n/12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
 
-Overfull \hbox (0.40837pt too wide) detected at line 268
+Overfull \hbox (0.40837pt too wide) detected at line 267
 \U/zeur/m/n/12 Q[] \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 S[]\U/zeus/m/n/12 ¨\U/zeur
 /m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½ \U/zeur/m/n/12 A
 v\U/zeus/m/n/12 ¨\U/zeur/m/n/12 24513; 24531; 34251; 35241; 42513; 42531; 45231
@@ -2042,62 +2050,62 @@ v\U/zeus/m/n/12 ¨\U/zeur/m/n/12 24513; 24531; 34251; 35241; 42513; 42531; 45231
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 299--301
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
 [40] [41] [42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 383--387
+Underfull \hbox (badness 10000) in paragraph at lines 382--386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--387
+Underfull \hbox (badness 10000) in paragraph at lines 382--386
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 387--390
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
 
  []
 
 [46] [47]
-Underfull \hbox (badness 10000) in paragraph at lines 429--433
+Underfull \hbox (badness 10000) in paragraph at lines 428--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--433
+Underfull \hbox (badness 10000) in paragraph at lines 428--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--433
+Underfull \hbox (badness 10000) in paragraph at lines 428--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--442
+Underfull \hbox (badness 10000) in paragraph at lines 439--441
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--442
+Underfull \hbox (badness 10000) in paragraph at lines 439--441
 
  []
 
 
-Overfull \hbox (11.02533pt too wide) detected at line 442
+Overfull \hbox (11.02533pt too wide) detected at line 441
 \U/zeus/m/n/12 ¨\U/zeur/m/n/12 B \U/zeus/m/n/12 ^^N \U/zeur/m/n/12 Q[]\U/zeus/m
 /n/12 ©[]¨\U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 21\U/zeus/m/n/12 ©© ½
  \U/zeur/m/n/12 Av\U/zeus/m/n/12 ¨\U/zeur/m/n/12 2431; 4231; 4321; 23514; 35214
@@ -2237,14 +2245,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: B6A3752663063C8B1CC4158D26D1F355;1077.
+(rerunfilecheck)             Checksum: 1D6F90B29110E7A0CB2CD806BC723F35;1077.
  ) 
 Here is how much of TeX's memory you used:
- 41962 strings out of 477974
- 837766 string characters out of 5839630
+ 41943 strings out of 477974
+ 837503 string characters out of 5839630
  1944388 words of memory out of 5000000
- 60307 multiletter control sequences out of 15000+600000
- 604400 words of font info for 508 fonts, out of 8000000 for 9000
+ 60295 multiletter control sequences out of 15000+600000
+ 600873 words of font info for 500 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,23n,146p,10694b,2774s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
@@ -2260,10 +2268,10 @@ b></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/
 uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (65 pages, 405425 bytes).
+Output written on thesis.pdf (65 pages, 405771 bytes).
 PDF statistics:
- 1165 PDF objects out of 1200 (max. 8388607)
- 1052 compressed objects within 11 object streams
+ 1164 PDF objects out of 1200 (max. 8388607)
+ 1051 compressed objects within 11 object streams
  526 named destinations out of 1000 (max. 500000)
- 98118 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 95558 words of extra memory for PDF output out of 106986 (max. 10000000)
 
